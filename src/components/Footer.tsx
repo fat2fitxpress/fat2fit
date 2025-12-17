@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
+import Logo from './Logo';
 import Grid from '@mui/material/Grid';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -42,9 +43,9 @@ export default function Footer() {
             <Container maxWidth="lg">
                 <Grid container spacing={4} justifyContent="space-between" alignItems="center">
                     <Grid size={{ xs: 12, sm: 4 }}>
-                        <Typography variant="h6" color="text.primary" gutterBottom>
-                            Fat2Fit
-                        </Typography>
+                        <Box sx={{ mb: 2 }}>
+                            <Logo sx={{ fontSize: 80 }} />
+                        </Box>
                         <Typography variant="body2" color="text.secondary">
                             Your express journey to fitness.
                         </Typography>

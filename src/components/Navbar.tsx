@@ -19,6 +19,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
+import Logo from './Logo';
 
 const pages = [
     { name: 'Home', path: '/' },
@@ -39,9 +40,9 @@ export default function Navbar() {
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ my: 2, fontWeight: 'bold' }}>
-                Fat2Fit
-            </Typography>
+            <Box sx={{ my: 2, display: 'flex', justifyContent: 'center' }}>
+                <Logo sx={{ fontSize: 80 }} />
+            </Box>
             <List>
                 {pages.map((item) => (
                     <ListItem key={item.name} disablePadding>
@@ -70,46 +71,31 @@ export default function Navbar() {
                     </IconButton>
 
                     {/* Desktop Logo */}
-                    <Typography
-                        variant="h6"
-                        noWrap
+                    <Box
                         component={Link}
                         href="/"
                         sx={{
                             mr: 2,
                             display: { xs: 'none', sm: 'flex' },
-                            fontWeight: 700,
-                            letterSpacing: '.1rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                            background: theme.palette.mode === 'dark'
-                                ? 'linear-gradient(45deg, #4285f4, #9b72cb)'
-                                : 'inherit',
-                            WebkitBackgroundClip: theme.palette.mode === 'dark' ? 'text' : 'none',
-                            WebkitTextFillColor: theme.palette.mode === 'dark' ? 'transparent' : 'inherit',
+                            alignItems: 'center',
                         }}
                     >
-                        Fat2Fit
-                    </Typography>
+                        <Logo sx={{ fontSize: 60 }} />
+                    </Box>
 
                     {/* Mobile Logo */}
-                    <Typography
-                        variant="h5"
-                        noWrap
+                    <Box
                         component={Link}
                         href="/"
                         sx={{
                             mr: 2,
                             display: { xs: 'flex', sm: 'none' },
                             flexGrow: 1,
-                            fontWeight: 700,
-                            letterSpacing: '.1rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
+                            alignItems: 'center',
                         }}
                     >
-                        Fat2Fit
-                    </Typography>
+                        <Logo sx={{ fontSize: 50 }} />
+                    </Box>
 
                     {/* Desktop Menu */}
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, justifyContent: 'center' }}>

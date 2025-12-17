@@ -1,0 +1,23 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" style="stop-color:#007bff;stop-opacity:1" />
+<stop offset="100%" style="stop-color:#8a2be2;stop-opacity:1" />
+</linearGradient>
+</defs>
+<rect width="500" height="500" fill="white" fill-opacity="0"/>
+
+<g transform="translate(50, 100)">
+<path d="M50 0 C30 0 20 10 20 30 L20 80 L0 80 L0 120 L20 120 L20 250 L60 250 L60 120 L100 120 L100 80 L60 80 L60 40 C60 30 65 25 75 25 L100 25 L100 0 L50 0 Z" fill="url(#grad1)" />
+<path d="M35 80 C25 90 20 110 20 130 C20 150 25 170 35 180 C45 190 55 195 65 190 C75 185 80 175 80 160 L80 130 C80 110 75 95 65 90 C55 85 45 80 35 80 Z M45 100 C50 100 55 105 55 115 L55 155 C55 165 50 170 45 170 C40 170 35 165 35 155 L35 115 C35 105 40 100 45 100 Z" fill="url(#grad1)" stroke="white" stroke-width="3"/>
+</g>
+
+<g transform="translate(170, 180)" fill="url(#grad1)">
+<text x="0" y="70" font-family="sans-serif" font-size="100" font-weight="bold">at2it</text>
+</g>
+
+<g transform="translate(350, 100)">
+<path d="M50 0 C30 0 20 10 20 30 L20 80 L0 80 L0 120 L20 120 L20 250 L60 250 L60 120 L100 120 L100 80 L60 80 L60 40 C60 30 65 25 75 25 L100 25 L100 0 L50 0 Z" fill="url(#grad1)" />
+<path d="M35 80 C25 85 20 100 20 120 L20 160 C20 175 25 185 35 190 C45 195 55 190 65 180 C75 170 80 150 80 130 C80 110 75 90 65 80 C55 70 45 75 35 80 Z M45 100 C50 95 55 100 55 110 L55 150 C55 160 50 165 45 165 C40 165 35 160 35 150 L35 110 C35 100 40 95 45 100 Z" fill="url(#grad1)" stroke="white" stroke-width="3"/>
+</g>
+</svg>
