@@ -100,10 +100,10 @@ export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
                                 <CalculateIcon color="primary" sx={{ fontSize: 60, mb: 2 }} />
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="div">
-                                        BMI Calculator
+                                        BMR Calculator
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
-                                        Track your body mass index and stay on top of your health metrics.
+                                        Calculate your basal metabolic rate to understand your daily calorie needs.
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
