@@ -10,9 +10,9 @@ import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import Grid from '@mui/material/Grid';
 import Divider from '@mui/material/Divider';
 import InputAdornment from '@mui/material/InputAdornment';
+import Stack from '@mui/material/Stack';
 
 const ACTIVITY_LEVELS = [
     { value: 1.2, label: 'Sedentary (little or no exercise)' },
@@ -83,9 +83,9 @@ export default function CalculatorForm() {
         <Box sx={{ maxWidth: 700, mx: 'auto', mt: 4 }}>
             <Card variant="outlined" sx={{ p: 2 }}>
                 <CardContent>
-                    <Grid container spacing={3} alignItems="center">
-                        {/* Gender Selection */}
-                        <Grid item xs={12} sm={6}>
+                    <Stack spacing={3}>
+                        {/* Gender and Age Row */}
+                        <Box sx={{ display: 'flex', gap: 2 }}>
                             <TextField
                                 select
                                 label="Gender"
@@ -96,10 +96,6 @@ export default function CalculatorForm() {
                                 <MenuItem value="male">Male</MenuItem>
                                 <MenuItem value="female">Female</MenuItem>
                             </TextField>
-                        </Grid>
-
-                        {/* Age Input */}
-                        <Grid item xs={12} sm={6}>
                             <TextField
                                 label="Age"
                                 type="number"
@@ -107,116 +103,104 @@ export default function CalculatorForm() {
                                 value={age}
                                 onChange={(e) => setAge(e.target.value)}
                             />
-                        </Grid>
+                        </Box>
 
-                        <Grid item xs={12}>
-                            <Divider sx={{ my: 1 }} />
-                        </Grid>
+                        <Divider />
 
                         {/* Weight Input Row */}
-                        <Grid item xs={12}>
-                            <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
-                                <TextField
-                                    label="Weight"
-                                    type="number"
-                                    fullWidth
-                                    value={weight}
-                                    onChange={(e) => setWeight(e.target.value)}
-                                    InputProps={{
-                                        endAdornment: <InputAdornment position="end">{weightUnit}</InputAdornment>,
-                                    }}
-                                />
-                                <ToggleButtonGroup
-                                    color="primary"
-                                    value={weightUnit}
-                                    exclusive
-                                    onChange={(e, val) => val && setWeightUnit(val)}
-                                    sx={{ minWidth: 140, height: 56 }}
-                                >
-                                    <ToggleButton value="kg">Kg</ToggleButton>
-                                    <ToggleButton value="lbs">Lbs</ToggleButton>
-                                </ToggleButtonGroup>
-                            </Box>
-                        </Grid>
+                        <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
+                            <TextField
+                                label="Weight"
+                                type="number"
+                                fullWidth
+                                value={weight}
+                                onChange={(e) => setWeight(e.target.value)}
+                                InputProps={{
+                                    endAdornment: <InputAdornment position="end">{weightUnit}</InputAdornment>,
+                                }}
+                            />
+                            <ToggleButtonGroup
+                                color="primary"
+                                value={weightUnit}
+                                exclusive
+                                onChange={(e, val) => val && setWeightUnit(val)}
+                                sx={{ minWidth: 140, height: 56 }}
+                            >
+                                <ToggleButton value="kg">Kg</ToggleButton>
+                                <ToggleButton value="lbs">Lbs</ToggleButton>
+                            </ToggleButtonGroup>
+                        </Box>
 
                         {/* Height Input Row */}
-                        <Grid item xs={12}>
-                            <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
-                                {heightUnit === 'cm' ? (
+                        <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
+                            {heightUnit === 'cm' ? (
+                                <TextField
+                                    label="Height"
+                                    type="number"
+                                    fullWidth
+                                    value={heightCm}
+                                    onChange={(e) => setHeightCm(e.target.value)}
+                                    InputProps={{
+                                        endAdornment: <InputAdornment position="end">cm</InputAdornment>,
+                                    }}
+                                />
+                            ) : (
+                                <Box sx={{ display: 'flex', gap: 2, flexGrow: 1 }}>
                                     <TextField
-                                        label="Height"
+                                        label="Feet"
                                         type="number"
                                         fullWidth
-                                        value={heightCm}
-                                        onChange={(e) => setHeightCm(e.target.value)}
-                                        InputProps={{
-                                            endAdornment: <InputAdornment position="end">cm</InputAdornment>,
-                                        }}
+                                        value={heightFt}
+                                        onChange={(e) => setHeightFt(e.target.value)}
                                     />
-                                ) : (
-                                    <Box sx={{ display: 'flex', gap: 2, flexGrow: 1 }}>
-                                        <TextField
-                                            label="Feet"
-                                            type="number"
-                                            fullWidth
-                                            value={heightFt}
-                                            onChange={(e) => setHeightFt(e.target.value)}
-                                        />
-                                        <TextField
-                                            label="Inches"
-                                            type="number"
-                                            fullWidth
-                                            value={heightIn}
-                                            onChange={(e) => setHeightIn(e.target.value)}
-                                        />
-                                    </Box>
-                                )}
-                                <ToggleButtonGroup
-                                    color="primary"
-                                    value={heightUnit}
-                                    exclusive
-                                    onChange={(e, val) => val && setHeightUnit(val)}
-                                    sx={{ minWidth: 140, height: 56 }}
-                                >
-                                    <ToggleButton value="cm">Cm</ToggleButton>
-                                    <ToggleButton value="ft">Ft/In</ToggleButton>
-                                </ToggleButtonGroup>
-                            </Box>
-                        </Grid>
+                                    <TextField
+                                        label="Inches"
+                                        type="number"
+                                        fullWidth
+                                        value={heightIn}
+                                        onChange={(e) => setHeightIn(e.target.value)}
+                                    />
+                                </Box>
+                            )}
+                            <ToggleButtonGroup
+                                color="primary"
+                                value={heightUnit}
+                                exclusive
+                                onChange={(e, val) => val && setHeightUnit(val)}
+                                sx={{ minWidth: 140, height: 56 }}
+                            >
+                                <ToggleButton value="cm">Cm</ToggleButton>
+                                <ToggleButton value="ft">Ft/In</ToggleButton>
+                            </ToggleButtonGroup>
+                        </Box>
 
-                        <Grid item xs={12}>
-                            <Divider sx={{ my: 1 }} />
-                        </Grid>
+                        <Divider />
 
                         {/* Activity Level */}
-                        <Grid item xs={12}>
-                            <TextField
-                                select
-                                label="Activity Level"
-                                fullWidth
-                                value={activity}
-                                onChange={(e) => setActivity(Number(e.target.value))}
-                            >
-                                {ACTIVITY_LEVELS.map((option) => (
-                                    <MenuItem key={option.value} value={option.value}>
-                                        {option.label}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
-                        </Grid>
+                        <TextField
+                            select
+                            label="Activity Level"
+                            fullWidth
+                            value={activity}
+                            onChange={(e) => setActivity(Number(e.target.value))}
+                        >
+                            {ACTIVITY_LEVELS.map((option) => (
+                                <MenuItem key={option.value} value={option.value}>
+                                    {option.label}
+                                </MenuItem>
+                            ))}
+                        </TextField>
 
-                        <Grid item xs={12}>
-                            <Button
-                                variant="contained"
-                                size="large"
-                                fullWidth
-                                onClick={calculate}
-                                sx={{ py: 1.5, fontSize: '1.1rem' }}
-                            >
-                                Calculate Calories
-                            </Button>
-                        </Grid>
-                    </Grid>
+                        <Button
+                            variant="contained"
+                            size="large"
+                            fullWidth
+                            onClick={calculate}
+                            sx={{ py: 1.5, fontSize: '1.1rem' }}
+                        >
+                            Calculate Calories
+                        </Button>
+                    </Stack>
 
                     {/* Results Display */}
                     {result && (
@@ -225,42 +209,39 @@ export default function CalculatorForm() {
                             <Typography variant="h5" color="primary" gutterBottom>
                                 Your Results
                             </Typography>
-                            <Grid container spacing={2} justifyContent="center">
-                                <Grid item xs={12} md={6}>
-                                    <Box sx={{ p: 2, bgcolor: 'action.hover', borderRadius: 2 }}>
-                                        <Typography variant="subtitle2" color="text.secondary">
-                                            Basal Metabolic Rate (BMR)
-                                        </Typography>
-                                        <Typography variant="h4" fontWeight="bold">
-                                            {result.bmr}
-                                        </Typography>
-                                        <Typography variant="caption" display="block">
-                                            Calories/day (at rest)
-                                        </Typography>
-                                    </Box>
-                                </Grid>
-                                <Grid item xs={12} md={6}>
-                                    <Box
-                                        sx={{
-                                            p: 2,
-                                            bgcolor: 'primary.main',
-                                            color: 'primary.contrastText',
-                                            borderRadius: 2,
-                                            boxShadow: 2,
-                                        }}
-                                    >
-                                        <Typography variant="subtitle2" sx={{ opacity: 0.9 }}>
-                                            Maintenance Calories
-                                        </Typography>
-                                        <Typography variant="h4" fontWeight="bold">
-                                            {result.tdee}
-                                        </Typography>
-                                        <Typography variant="caption" display="block" sx={{ opacity: 0.9 }}>
-                                            Calories/day (to maintain weight)
-                                        </Typography>
-                                    </Box>
-                                </Grid>
-                            </Grid>
+                            <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
+                                <Box sx={{ p: 2, bgcolor: 'action.hover', borderRadius: 2, minWidth: 250 }}>
+                                    <Typography variant="subtitle2" color="text.secondary">
+                                        Basal Metabolic Rate (BMR)
+                                    </Typography>
+                                    <Typography variant="h4" fontWeight="bold">
+                                        {result.bmr}
+                                    </Typography>
+                                    <Typography variant="caption" display="block">
+                                        Calories/day (at rest)
+                                    </Typography>
+                                </Box>
+                                <Box
+                                    sx={{
+                                        p: 2,
+                                        bgcolor: 'primary.main',
+                                        color: 'primary.contrastText',
+                                        borderRadius: 2,
+                                        boxShadow: 2,
+                                        minWidth: 250,
+                                    }}
+                                >
+                                    <Typography variant="subtitle2" sx={{ opacity: 0.9 }}>
+                                        Maintenance Calories
+                                    </Typography>
+                                    <Typography variant="h4" fontWeight="bold">
+                                        {result.tdee}
+                                    </Typography>
+                                    <Typography variant="caption" display="block" sx={{ opacity: 0.9 }}>
+                                        Calories/day (to maintain weight)
+                                    </Typography>
+                                </Box>
+                            </Box>
                         </Box>
                     )}
                 </CardContent>
