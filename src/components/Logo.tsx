@@ -22,6 +22,7 @@ export default function Logo(props: BoxProps) {
                 alt="Fat2Fit Logo"
                 width={500}
                 height={500}
+                priority
                 unoptimized
                 style={{
                     width: '100%',

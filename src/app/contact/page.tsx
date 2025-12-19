@@ -12,6 +12,10 @@ import CardContent from '@mui/material/CardContent';
 import EmailIcon from '@mui/icons-material/Email';
 
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
+import CircularProgress from '@mui/material/CircularProgress';
+import emailjs from '@emailjs/browser';
 
 export default function ContactPage() {
     const [formData, setFormData] = React.useState({
@@ -21,6 +25,13 @@ export default function ContactPage() {
         message: '',
     });
 
+    const [loading, setLoading] = React.useState(false);
+    const [snackbar, setSnackbar] = React.useState({
+        open: false,
+        message: '',
+        severity: 'success' as 'success' | 'error',
+    });
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({
             ...formData,
@@ -28,12 +39,48 @@ export default function ContactPage() {
         });
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleCloseSnackbar = () => {
+        setSnackbar({ ...snackbar, open: false });
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // TODO: Implement form submission logic
-        console.log('Form submitted:', formData);
-        alert('Thank you for your message! We will get back to you soon.');
-        setFormData({ name: '', email: '', subject: '', message: '' });
+        setLoading(true);
+
+        try {
+            const SERVICE_ID = 'service_fat2fitxpress';
+            const TEMPLATE_ID = 'template_vktaim6';
+            const PUBLIC_KEY = 'k5thKtxmZQo4Cd-oF';
+
+            await emailjs.send(
+                SERVICE_ID,
+                TEMPLATE_ID,
+                {
+                    from_name: formData.name,
+                    from_email: formData.email,
+                    subject: formData.subject,
+                    message: formData.message,
+                    to_name: 'Fat2Fit Admin',
+                },
+                PUBLIC_KEY
+            );
+
+            setSnackbar({
+                open: true,
+                message: 'Thank you for your message! We will get back to you soon.',
+                severity: 'success',
+            });
+            setFormData({ name: '', email: '', subject: '', message: '' });
+        } catch (error) {
+            console.error('Email sending failed:', error);
+            setSnackbar({
+                open: true,
+                message: 'Failed to send message. Please try again later or email us directly.',
+                severity: 'error',
+            });
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -60,7 +107,7 @@ export default function ContactPage() {
                         Get In Touch
                     </Typography>
                     <Typography variant="h5" color="text.secondary" paragraph>
-                        Have questions or feedback? We'd love to hear from you.
+                        Have questions or feedback? We&apos;d love to hear from you.
                     </Typography>
                 </Container>
             </Box>
@@ -163,13 +210,10 @@ export default function ContactPage() {
                                         </Grid>
                                         <Grid size={{ xs: 12 }}>
                                             <Button
-                                                type="submit"
-                                                variant="contained"
-                                                size="large"
-                                                fullWidth
-                                                sx={{ py: 1.5, fontSize: '1.1rem', borderRadius: 8 }}
+                                                disabled={loading}
+                                                startIcon={loading ? <CircularProgress size={20} color="inherit" /> : null}
                                             >
-                                                Send Message
+                                                {loading ? 'Sending...' : 'Send Message'}
                                             </Button>
                                         </Grid>
                                     </Grid>
@@ -179,6 +223,17 @@ export default function ContactPage() {
                     </Grid>
                 </Grid>
             </Container>
+
+            <Snackbar
+                open={snackbar.open}
+                autoHideDuration={6000}
+                onClose={handleCloseSnackbar}
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+            >
+                <Alert onClose={handleCloseSnackbar} severity={snackbar.severity} sx={{ width: '100%', borderRadius: 2 }}>
+                    {snackbar.message}
+                </Alert>
+            </Snackbar>
         </Box>
     );
 }
