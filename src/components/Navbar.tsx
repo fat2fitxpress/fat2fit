@@ -27,6 +27,7 @@ const pages = [
     { name: 'Diet', path: '/diet' },
     { name: 'Tips', path: '/tips' },
     { name: 'Calculator', path: '/calculator' },
+    { name: 'Contact', path: '/contact' },
 ];
 
 export default function Navbar() {

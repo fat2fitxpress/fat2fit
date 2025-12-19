@@ -7,7 +7,7 @@ import NextAppDirEmotionCacheProvider from './EmotionCache';
 import { lightTheme, darkTheme } from './theme';
 
 export default function ThemeRegistry({ children }: { children: React.ReactNode }) {
-    const [mode, setMode] = React.useState<'light' | 'dark'>('light');
+    const [mode, setMode] = React.useState<'light' | 'dark'>('dark');
 
     const colorMode = React.useMemo(
         () => ({
@@ -38,5 +38,5 @@ export default function ThemeRegistry({ children }: { children: React.ReactNode 
 
 export const ColorModeContext = React.createContext({
     toggleColorMode: () => { },
-    mode: 'light',
+    mode: 'dark',
 });

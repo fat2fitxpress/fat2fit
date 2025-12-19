@@ -24,25 +24,48 @@ export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
             {/* Hero Section */}
             <Box
                 sx={{
-                    bgcolor: 'background.paper',
+                    position: 'relative',
                     pt: 12,
                     pb: 12,
-                    borderBottom: 1,
-                    borderColor: 'divider',
                     textAlign: 'center',
+                    backgroundImage: 'url(/fitness_hero_background.png)',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    '&::before': {
+                        content: '""',
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        background: 'linear-gradient(135deg, rgba(11, 18, 33, 0.85) 0%, rgba(66, 133, 244, 0.3) 50%, rgba(155, 114, 203, 0.3) 100%)',
+                        zIndex: 1,
+                    },
                 }}
             >
-                <Container maxWidth="md">
+                <Container maxWidth="md" sx={{ position: 'relative', zIndex: 2 }}>
                     <Typography
                         component="h1"
                         variant="h2"
-                        color="text.primary"
                         gutterBottom
-                        sx={{ fontWeight: 'bold' }}
+                        sx={{
+                            fontWeight: 'bold',
+                            color: '#ffffff',
+                            textShadow: '0 2px 10px rgba(0,0,0,0.3)',
+                        }}
                     >
                         Your Express Journey to Fitness
                     </Typography>
-                    <Typography variant="h5" color="text.secondary" paragraph sx={{ mb: 4 }}>
+                    <Typography
+                        variant="h5"
+                        paragraph
+                        sx={{
+                            mb: 4,
+                            color: 'rgba(255, 255, 255, 0.95)',
+                            textShadow: '0 1px 5px rgba(0,0,0,0.2)',
+                        }}
+                    >
                         Personalized diet plans, workout routines, and expert tips to help you
                         achieve your health goals faster and smarter.
                     </Typography>
@@ -51,7 +74,18 @@ export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
                         size="large"
                         component={Link}
                         href="/calculator"
-                        sx={{ px: 4, py: 1.5, fontSize: '1.1rem', borderRadius: 8 }}
+                        sx={{
+                            px: 4,
+                            py: 1.5,
+                            fontSize: '1.1rem',
+                            borderRadius: 8,
+                            background: 'linear-gradient(45deg, #4285f4, #669df6)',
+                            boxShadow: '0 4px 20px rgba(66, 133, 244, 0.4)',
+                            '&:hover': {
+                                background: 'linear-gradient(45deg, #669df6, #8ab4f8)',
+                                boxShadow: '0 6px 25px rgba(66, 133, 244, 0.6)',
+                            },
+                        }}
                     >
                         Get Started
                     </Button>
