@@ -15,10 +15,13 @@ import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import TimerIcon from '@mui/icons-material/Timer';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 
+import Link from 'next/link';
+
 type WorkoutLevel = 'Beginner' | 'Intermediate' | 'Advanced';
 type WorkoutCategory = 'Strength' | 'HIIT' | 'Cardio' | 'Core';
 
 interface WorkoutPlan {
+    slug: string;
     title: string;
     description: string;
     image: string;
@@ -32,6 +35,7 @@ interface WorkoutPlan {
 const workoutPlans: WorkoutPlan[] = [
     // Strength Category
     {
+        slug: 'strength-foundation',
         title: 'Strength Foundation',
         description: 'Build a solid base with fundamental compound movements. Perfect for newcomers to strength training.',
         image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200',
@@ -42,6 +46,7 @@ const workoutPlans: WorkoutPlan[] = [
         exercises: ['Bodyweight Squats', 'Push-ups', 'Dumbbell Rows', 'Planks'],
     },
     {
+        slug: 'power-builder',
         title: 'Power Builder',
         description: 'Intermediate strength program focusing on progressive overload and muscle development.',
         image: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1200',
@@ -52,6 +57,7 @@ const workoutPlans: WorkoutPlan[] = [
         exercises: ['Barbell Squats', 'Bench Press', 'Deadlifts', 'Pull-ups'],
     },
     {
+        slug: 'strength-master',
         title: 'Strength Master',
         description: 'Advanced powerlifting-focused program for maximum strength gains and new PRs.',
         image: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=1200',
@@ -64,6 +70,7 @@ const workoutPlans: WorkoutPlan[] = [
 
     // HIIT Category
     {
+        slug: 'hiit-starter',
         title: 'HIIT Starter',
         description: 'Introduction to high-intensity interval training with manageable work-to-rest ratios.',
         image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200',
@@ -74,6 +81,7 @@ const workoutPlans: WorkoutPlan[] = [
         exercises: ['Jumping Jacks', 'Mountain Climbers', 'Burpees', 'High Knees'],
     },
     {
+        slug: 'full-body-shred',
         title: 'Full Body Shred',
         description: 'Intense circuit training to burn fat and build lean muscle across your entire body.',
         image: 'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?q=80&w=1200',
@@ -84,6 +92,7 @@ const workoutPlans: WorkoutPlan[] = [
         exercises: ['Box Jumps', 'Kettlebell Swings', 'Battle Ropes', 'Sprints'],
     },
     {
+        slug: 'extreme-hiit',
         title: 'Extreme HIIT',
         description: 'Maximum intensity intervals for elite fitness and rapid fat loss. Push your limits.',
         image: 'https://images.unsplash.com/photo-1549060279-7e168fcee0c2?q=80&w=1200',
@@ -96,6 +105,7 @@ const workoutPlans: WorkoutPlan[] = [
 
     // Cardio Category
     {
+        slug: 'cardio-kickstart',
         title: 'Cardio Kickstart',
         description: 'Build your cardiovascular base with moderate-intensity steady-state training.',
         image: 'https://images.unsplash.com/photo-1552674605-db6ffd4facb5?q=80&w=1200',
@@ -106,6 +116,7 @@ const workoutPlans: WorkoutPlan[] = [
         exercises: ['Brisk Walking', 'Light Jogging', 'Cycling', 'Elliptical'],
     },
     {
+        slug: 'endurance-runner',
         title: 'Endurance Runner',
         description: 'Progressive cardio program to improve stamina and cardiovascular health.',
         image: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1200',
@@ -116,6 +127,7 @@ const workoutPlans: WorkoutPlan[] = [
         exercises: ['Running Intervals', 'Tempo Runs', 'Hill Sprints', 'Long Runs'],
     },
     {
+        slug: 'cardio-elite',
         title: 'Cardio Elite',
         description: 'Advanced endurance training for peak cardiovascular performance and stamina.',
         image: 'https://images.unsplash.com/photo-1576678927484-cc907957088c?q=80&w=1200',
@@ -128,6 +140,7 @@ const workoutPlans: WorkoutPlan[] = [
 
     // Core Category
     {
+        slug: 'core-foundation',
         title: 'Core Foundation',
         description: 'Build stability and core strength with fundamental exercises for beginners.',
         image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200',
@@ -138,6 +151,7 @@ const workoutPlans: WorkoutPlan[] = [
         exercises: ['Planks', 'Dead Bugs', 'Bird Dogs', 'Glute Bridges'],
     },
     {
+        slug: 'core-sculptor',
         title: 'Core Sculptor',
         description: 'Intermediate core workout combining stability and dynamic movements for definition.',
         image: 'https://images.unsplash.com/photo-1599058917212-d750089bc07e?q=80&w=1200',
@@ -148,6 +162,7 @@ const workoutPlans: WorkoutPlan[] = [
         exercises: ['Russian Twists', 'Leg Raises', 'Mountain Climbers', 'Bicycle Crunches'],
     },
     {
+        slug: 'core-dominator',
         title: 'Core Dominator',
         description: 'Advanced core training with challenging exercises for maximum strength and definition.',
         image: 'https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=1200',
@@ -305,7 +320,13 @@ export default function WorkoutPage() {
                                     </Typography>
                                 </CardContent>
                                 <Box sx={{ p: 2, pt: 0 }}>
-                                    <Button fullWidth variant="outlined" sx={{ borderRadius: 4 }}>
+                                    <Button
+                                        fullWidth
+                                        variant="outlined"
+                                        sx={{ borderRadius: 4 }}
+                                        component={Link}
+                                        href={`/workout-plan/${plan.slug}`}
+                                    >
                                         View Plan
                                     </Button>
                                 </Box>
