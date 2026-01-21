@@ -1,0 +1,9 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://fat2fitxpress.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

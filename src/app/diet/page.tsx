@@ -15,8 +15,26 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Diet & Nutrition - Fat2Fit',
-    description: 'Discover healthy recipes and nutrition tips to fuel your journey.',
+    title: 'Healthy Meal Plans & Nutrition Guides - Diet Recipes',
+    description: 'Discover healthy meal plans and nutrition guides for weight loss, muscle building, and balanced eating. Keto, vegan, Mediterranean recipes and more.',
+    keywords: ['meal plans', 'nutrition guide', 'healthy recipes', 'diet plans', 'keto diet', 'vegan meals', 'mediterranean diet', 'muscle building nutrition', 'weight loss meals'],
+    alternates: {
+        canonical: '/diet',
+    },
+    openGraph: {
+        title: 'Healthy Meal Plans & Nutrition | Fat2Fit',
+        description: 'Explore nutritious meal plans tailored to your fitness goals. Keto, vegan, muscle-building, and balanced diets.',
+        url: 'https://fat2fitxpress.com/diet',
+        type: 'website',
+    },
+};
+
+const dietSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Healthy Meal Plans',
+    description: 'Collection of nutritious meal plans for various fitness goals',
+    url: 'https://fat2fitxpress.com/diet',
 };
 
 const mealPlans = [
@@ -105,6 +123,10 @@ export default function DietPage() {
                 </Container>
             </Box>
 
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(dietSchema) }}
+            />
             <Container>
                 {/* Category Filter Chips */}
                 <Stack direction="row" spacing={2} justifyContent="center" sx={{ mb: 6 }}>
