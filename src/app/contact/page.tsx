@@ -210,6 +210,10 @@ export default function ContactPage() {
                                         </Grid>
                                         <Grid size={{ xs: 12 }}>
                                             <Button
+                                                type="submit"
+                                                variant="contained"
+                                                size="large"
+                                                fullWidth
                                                 disabled={loading}
                                                 startIcon={loading ? <CircularProgress size={20} color="inherit" /> : null}
                                             >
