@@ -1,0 +1,10 @@
+{
+    "name": "Fat2Fit - Your Express Journey to Fitness",
+    "short_name": "Fat2Fit",
+    "description": "Transform your body with personalized workout plans and nutrition guides",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#1976d2",
+    "icons": []
+}

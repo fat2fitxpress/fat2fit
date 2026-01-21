@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     template: '%s | Fat2Fit'
   },
   description: 'Transform your body and achieve your fitness goals with Fat2Fit. Get personalized workout plans, nutrition guides, calorie calculators, and expert fitness tips.',
+  manifest: '/manifest.json',
   keywords: ['fitness', 'workout plans', 'nutrition', 'calorie calculator', 'weight loss', 'muscle building', 'health', 'diet plans', 'HIIT', 'strength training'],
   authors: [{ name: 'Fat2Fit Team' }],
   creator: 'Fat2Fit',
