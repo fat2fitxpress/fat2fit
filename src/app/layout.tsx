@@ -4,6 +4,7 @@ import ThemeRegistry from '@/theme/ThemeRegistry';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Box from '@mui/material/Box';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://fat2fitxpress.com'),
@@ -87,6 +88,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ''} />
       </body>
     </html>
   );
