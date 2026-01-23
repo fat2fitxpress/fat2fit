@@ -207,7 +207,7 @@ export default function WorkoutPage() {
                         left: 0,
                         right: 0,
                         bottom: 0,
-                        backgroundImage: 'url(/C:/Users/kavis/.gemini/antigravity/brain/f31b8a4a-aba8-4f2c-864b-f67c47185a45/workout_hero_bg_1766119923339.png)',
+                        backgroundImage: 'url(/workout_hero_bg.png)',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         '&::after': {
