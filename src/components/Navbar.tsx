@@ -41,7 +41,7 @@ export default function Navbar() {
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             <Box sx={{ my: 2, display: 'flex', justifyContent: 'center' }}>
-                <Logo sx={{ fontSize: 80 }} />
+                <Logo sx={{ fontSize: 70 }} />
             </Box>
             <List>
                 {pages.map((item) => (
@@ -94,7 +94,7 @@ export default function Navbar() {
                             alignItems: 'center',
                         }}
                     >
-                        <Logo sx={{ fontSize: 50 }} />
+                        <Logo sx={{ fontSize: 45 }} />
                     </Box>
 
                     {/* Desktop Menu */}

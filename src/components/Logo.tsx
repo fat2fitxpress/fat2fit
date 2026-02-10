@@ -4,12 +4,15 @@ import Image from 'next/image';
 import logoImg from '../assets/logo.png';
 
 export default function Logo(props: BoxProps) {
+    // Logo aspect ratio: 1300x486 = ~2.67:1
+    const aspectRatio = 1300 / 486;
+
     return (
         <Box
             {...props}
             component="span"
             sx={{
-                width: '1em',
+                width: `${aspectRatio}em`,
                 height: '1em',
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -20,8 +23,8 @@ export default function Logo(props: BoxProps) {
             <Image
                 src={logoImg}
                 alt="Fat2Fit Logo"
-                width={500}
-                height={500}
+                width={1300}
+                height={486}
                 priority
                 unoptimized
                 style={{
