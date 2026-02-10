@@ -9,6 +9,19 @@ import { lightTheme, darkTheme } from './theme';
 export default function ThemeRegistry({ children }: { children: React.ReactNode }) {
     const [mode, setMode] = React.useState<'light' | 'dark'>('dark');
 
+    // Initialize theme from localStorage on mount
+    React.useEffect(() => {
+        const savedMode = localStorage.getItem('theme-mode') as 'light' | 'dark' | null;
+        if (savedMode) {
+            setMode(savedMode);
+        }
+    }, []);
+
+    // Persist theme changes to localStorage
+    React.useEffect(() => {
+        localStorage.setItem('theme-mode', mode);
+    }, [mode]);
+
     const colorMode = React.useMemo(
         () => ({
             toggleColorMode: () => {
