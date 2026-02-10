@@ -80,7 +80,7 @@ Focusing only on isolation exercises (bicep curls, leg extensions) while avoidin
 ## 5. Doing Too Much Cardio
 
 **The Mistake:**
-Excessive cardio (60+ minutes daily) while trying to build muscle or maintain strength.
+Excessive cardio (60+ minutes daily) while trying to build muscle or maintain strength. If you're interested in efficient cardio, learn about [HIIT workout benefits](/tips/hiit-workout-benefits).
 
 **Why It's Bad:**
 - Interferes with muscle recovery
@@ -108,7 +108,7 @@ Consuming insufficient protein for your training demands.
 **The Fix:**
 - **Consume 0.8-1g protein per pound** of body weight daily
 - **Eat protein at every meal** (20-40g per meal)
-- **Include post-workout protein** within 2 hours of training
+- **Include post-workout protein** within 2 hours of training - see our [nutrition timing guide](/tips/nutrition-timing-guide)
 - **Track protein intake** for at least 2 weeks to establish habits
 
 ## 7. Training the Same Muscles on Consecutive Days
@@ -158,7 +158,7 @@ Not drinking enough water before, during, and after workouts.
 - Causes headaches and fatigue
 
 **The Fix:**
-- **Drink 16-20 oz** 2 hours before training
+- **Drink 16-20 oz** 2 hours before training - see our [hydration guide](/tips/importance-of-hydration)
 - **Sip 7-10 oz every 10-20 minutes** during exercise
 - **Drink 16-24 oz per pound lost** after training
 - **Monitor urine color** - aim for pale yellow
@@ -166,7 +166,7 @@ Not drinking enough water before, during, and after workouts.
 ## 10. Overtraining Without Adequate Recovery
 
 **The Mistake:**
-Training 6-7 days per week with high intensity and no rest days.
+Training 6-7 days per week with high intensity and no rest days. Learn more about [recovery best practices](/tips/recovery-rest-importance).
 
 **Why It's Bad:**
 - Leads to overtraining syndrome
@@ -282,6 +282,37 @@ Trying to figure everything out alone without expert help.
 - **Consult a nutritionist** to optimize your diet
 - **Join fitness communities** for support and accountability
 - **Invest in education** through books, courses, or certifications
+
+## Frequently Asked Questions
+
+### What's the biggest workout mistake beginners make?
+
+The biggest mistake beginners make is using too much weight with poor form. This dramatically increases injury risk, reduces muscle activation, and creates bad movement patterns that limit long-term progress. Always prioritize proper form over heavy weight - ego-lifting will sabotage your results. Master the movement pattern with lighter weights first, then gradually increase weight by 2.5-5 lbs when you can complete all sets with perfect form.
+
+### How long should I rest between sets?
+
+Rest periods depend on your goals: **For strength** (1-5 reps): 3-5 minutes to fully recover; **For muscle growth** (6-12 reps): 60-90 seconds for metabolic stress; **For endurance** (15+ reps): 30-60 seconds. Compound exercises (squats, deadlifts) require longer rest than isolation exercises (bicep curls). Listen to your body - if you're still breathing heavily or feel weak, rest longer. Quality sets matter more than rushed workouts.
+
+### Should I work out when I'm sore?
+
+It depends on the severity. **Mild soreness**: Active recovery (light cardio, yoga, or training different muscle groups) is fine and may help. **Moderate to severe soreness**: Take a rest day or do very light activity - training through excessive soreness increases injury risk and impairs recovery. **Persistent soreness (3+ days)**: This indicates inadequate recovery; take additional rest days. Remember, muscles grow during rest, not during workouts.
+
+### How do I know if I'm overtraining?
+
+Warning signs of overtraining include: persistent muscle fatigue that doesn't improve with rest, decreased performance or strength despite training, increased resting heart rate (5+ bpm above normal), frequent injuries or illness, difficulty sleeping despite being tired, loss of appetite, irritability and mood swings, and lack of motivation to train. If experiencing multiple symptoms, take 3-7 days complete rest and reduce training volume by 30-50% when returning.
+
+### Can I do cardio and weights on the same day?
+
+Yes, but strategy matters. **Optimal approach**: Do weights first (when energy is highest), then cardio. This maximizes strength performance and muscle building. **Separate by time**: If possible, do cardio and weights 6+ hours apart for best recovery. **Keep cardio moderate**: Limit to 20-30 minutes to avoid interfering with muscle recovery. **Or separate days**: For muscle building focus, do weights and cardio on different days. Heavy cardio before weights will impair strength and muscle-building performance.
+
+## Related Articles
+
+Perfect your training technique with these comprehensive guides:
+
+- **[Muscle Building Guide](/tips/muscle-building-guide)** - Build muscle with proper form and progressive overload
+- **[HIIT Workout Benefits](/tips/hiit-workout-benefits)** - Learn the most efficient cardio method
+- **[Recovery and Rest Importance](/tips/recovery-rest-importance)** - Avoid overtraining with strategic recovery
+- **[Nutrition Timing Guide](/tips/nutrition-timing-guide)** - Fuel your workouts for maximum results
 
 ## Conclusion
 

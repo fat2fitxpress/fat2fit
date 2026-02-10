@@ -22,6 +22,8 @@ Your body's nutritional needs vary throughout the day based on activity levels, 
 
 ## Pre-Workout Nutrition: Fuel for Performance
 
+Proper fueling before workouts is essential. If you're doing [HIIT workouts](/tips/hiit-workout-benefits), you'll need quick-digesting carbs for energy.
+
 ### Timing: 2-3 Hours Before Exercise
 
 **What to Eat:**
@@ -78,6 +80,8 @@ Post-workout nutrition:
 
 ## Daily Meal Timing Strategies
 
+Consistent meal timing supports your goals. For more on building muscle through nutrition, see our [muscle building guide](/tips/muscle-building-guide).
+
 ### 1. Breakfast: Break the Fast (Within 1 Hour of Waking)
 
 Eating breakfast kickstarts your metabolism and provides energy for the day. Include:
@@ -132,6 +136,8 @@ If fat loss is your goal, consider:
 
 ## Hydration Timing
 
+Don't forget about water timing! For comprehensive hydration strategies, check our [importance of hydration guide](/tips/importance-of-hydration).
+
 Don't forget about water timing:
 
 - **Morning**: 16-20 oz upon waking
@@ -147,6 +153,37 @@ Don't forget about water timing:
 3. **Not eating enough protein at breakfast**: Misses opportunity for muscle protein synthesis
 4. **Eating too close to bedtime**: Can disrupt sleep quality
 5. **Inconsistent meal timing**: Creates energy fluctuations and hunger issues
+
+## Frequently Asked Questions
+
+### Does the post-workout anabolic window really matter?
+
+While the "anabolic window" is real, it's more flexible than once thought. Consuming protein and carbs within 30-60 minutes post-workout is beneficial for optimal recovery, but research shows the window may extend up to 2-3 hours, especially if you ate a pre-workout meal. Total daily nutrition is more important than precise timing. However, if training fasted or early morning, post-workout nutrition becomes more critical.
+
+### Should I eat before morning workouts?
+
+It depends on your goals and workout type. For high-intensity or strength training, eating a small meal 30-60 minutes before (banana with protein shake) can improve performance. For moderate cardio or fat loss, fasted training may be acceptable if you feel good. However, eating after waking (even something small) can boost performance and prevent muscle breakdown. Experiment to find what works for your body and schedule.
+
+### What should I eat before bed for muscle growth?
+
+Consume 20-40g of slow-digesting protein 30-60 minutes before bed to support overnight muscle protein synthesis. Casein protein (found in cottage cheese, Greek yogurt, or casein powder) is ideal as it digests slowly over 6-8 hours. Pair with a small amount of healthy fats (nuts, nut butter) for sustained energy. Avoid large meals or excessive carbs that might disrupt sleep quality.
+
+### How long should I wait between meals?
+
+For optimal muscle protein synthesis and energy levels, eat every 3-4 hours with 20-40g of protein per meal. This typically results in 4-5 meals daily (breakfast, lunch, snack, dinner, optional evening snack). Eating too frequently (every 1-2 hours) doesn't provide additional benefits and can be inconvenient. Eating too infrequently (2 large meals) may not maximize muscle growth and can cause energy crashes.
+
+### Is intermittent fasting bad for muscle building?
+
+Not necessarily. While nutrient timing can optimize results, total daily nutrition matters most. If intermittent fasting helps you control calories and you hit your protein and calorie targets within your eating window, you can still build muscle. However, distributing protein across more meals (every 3-4 hours) may be slightly more optimal for muscle protein synthesis. Choose the approach that best fits your lifestyle and preferences.
+
+## Related Articles
+
+Optimize your nutrition and performance with these guides:
+
+- **[Muscle Building Guide](/tips/muscle-building-guide)** - Build muscle with optimal protein intake and timing strategies
+- **[HIIT Workout Benefits](/tips/hiit-workout-benefits)** - Learn how to fuel high-intensity interval training properly
+- **[Importance of Hydration](/tips/importance-of-hydration)** - Discover when to drink water for best performance
+- **[Recovery and Rest Importance](/tips/recovery-rest-importance)** - Understand how nutrition supports recovery
 
 ## The Bottom Line
 

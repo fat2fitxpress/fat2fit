@@ -112,6 +112,8 @@ Listen to your body. Warning signs include:
 
 ### 1. Nutrition for Recovery
 
+Proper nutrition accelerates recovery. Learn more about [nutrition timing for recovery](/tips/nutrition-timing-guide).
+
 **Protein:**
 - 1.6-2.2g per kg body weight daily
 - Distribute evenly across meals
@@ -126,6 +128,7 @@ Listen to your body. Warning signs include:
 - Drink 16-24 oz per pound lost during exercise
 - Monitor urine color (pale yellow is ideal)
 - Include electrolytes for intense training
+- Read our [comprehensive hydration guide](/tips/importance-of-hydration) for more details
 
 **Anti-inflammatory Foods:**
 - Berries, fatty fish, turmeric, ginger
@@ -212,9 +215,18 @@ Chronic insufficient recovery leads to overtraining syndrome:
 - Address stress and mental health
 - Consult healthcare professional if symptoms persist
 
+## Related Articles
+
+Maximize your recovery and fitness results with these comprehensive guides:
+
+- **[Muscle Building Guide](/tips/muscle-building-guide)** - Learn how recovery supports muscle growth and strength gains
+- **[Nutrition Timing Guide](/tips/nutrition-timing-guide)** - Optimize your post-workout nutrition for faster recovery
+- **[HIIT Workout Benefits](/tips/hiit-workout-benefits)** - Balance intense training with proper recovery
+- **[Common Workout Mistakes](/tips/common-workout-mistakes)** - Avoid overtraining and other recovery mistakes
+
 ## Conclusion: Rest is Not Lazy
 
-Embracing recovery is not weakness - it's intelligent training. Your body adapts and grows stronger during rest, not during workouts. Prioritize:
+Embracing recovery is not weakness - it's intelligent training. Your body adapts and grows stronger during rest, not during workouts. Want to build muscle effectively? Check our [muscle building guide](/tips/muscle-building-guide). Prioritize:
 
 - **7-9 hours of quality sleep** every night
 - **1-2 rest days** per week minimum
