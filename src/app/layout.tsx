@@ -1,8 +1,9 @@
 import * as React from 'react';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import ThemeRegistry from '@/theme/ThemeRegistry';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import ErrorBoundary from '@/components/ErrorBoundary';
 import Box from '@mui/material/Box';
 import { GoogleAnalytics } from '@next/third-parties/google';
 
@@ -56,6 +57,16 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#121212' },
+  ],
+};
+
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -78,11 +89,18 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeRegistry>
-          <Navbar />
-          <Box component="main" sx={{ flexGrow: 1, minHeight: '80vh' }}>
-            {children}
-          </Box>
-          <Footer />
+          <ErrorBoundary>
+            <Navbar />
+            <Box
+              component="main"
+              id="main-content"
+              role="main"
+              sx={{ flexGrow: 1, minHeight: '80vh' }}
+            >
+              {children}
+            </Box>
+            <Footer />
+          </ErrorBoundary>
         </ThemeRegistry>
         <script
           type="application/ld+json"

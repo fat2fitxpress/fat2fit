@@ -30,6 +30,7 @@ export default function Footer() {
     return (
         <Box
             component="footer"
+            role="contentinfo"
             sx={{
                 py: 6,
                 px: 2,
@@ -51,18 +52,48 @@ export default function Footer() {
                         </Typography>
                     </Grid>
                     <Grid size={{ xs: 12, sm: 4 }} sx={{ textAlign: { xs: 'center', sm: 'right' } }}>
-                        <IconButton color="inherit" component={Link} href="https://facebook.com">
-                            <FacebookIcon />
-                        </IconButton>
-                        <IconButton color="inherit" component={Link} href="https://twitter.com">
-                            <TwitterIcon />
-                        </IconButton>
-                        <IconButton color="inherit" component={Link} href="https://instagram.com">
-                            <InstagramIcon />
-                        </IconButton>
-                        <IconButton color="inherit" component={Link} href="https://linkedin.com">
-                            <LinkedInIcon />
-                        </IconButton>
+                        <Box role="navigation" aria-label="Social media links">
+                            <IconButton
+                                color="inherit"
+                                component={Link}
+                                href="https://facebook.com"
+                                aria-label="Visit our Facebook page"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FacebookIcon />
+                            </IconButton>
+                            <IconButton
+                                color="inherit"
+                                component={Link}
+                                href="https://twitter.com"
+                                aria-label="Visit our Twitter profile"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <TwitterIcon />
+                            </IconButton>
+                            <IconButton
+                                color="inherit"
+                                component={Link}
+                                href="https://instagram.com"
+                                aria-label="Visit our Instagram profile"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <InstagramIcon />
+                            </IconButton>
+                            <IconButton
+                                color="inherit"
+                                component={Link}
+                                href="https://linkedin.com"
+                                aria-label="Visit our LinkedIn page"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <LinkedInIcon />
+                            </IconButton>
+                        </Box>
                     </Grid>
                 </Grid>
                 <Box mt={3}>
