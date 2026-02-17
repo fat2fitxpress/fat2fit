@@ -228,13 +228,13 @@ export default function WorkoutPage() {
                     <Typography variant="h5" sx={{ mb: 4, opacity: 0.9 }}>
                         Choose from our professionally designed workout plans to achieve your fitness goals faster.
                     </Typography>
-                    <Button variant="contained" size="large" sx={{ px: 4, py: 1.5, borderRadius: 8 }}>
+                    <Button variant="contained" size="large" sx={{ px: 4, py: 1.5, borderRadius: 8 }} onClick={() => document.getElementById('workout-plans')?.scrollIntoView({ behavior: 'smooth' })}>
                         Get Started
                     </Button>
                 </Container>
             </Box>
 
-            <Container>
+            <Container id="workout-plans">
                 {/* Category Filter Chips */}
                 <Stack direction="row" spacing={2} justifyContent="center" sx={{ mb: 6, flexWrap: 'wrap', gap: 2 }}>
                     {categories.map((category) => (
@@ -336,20 +336,34 @@ export default function WorkoutPage() {
                 </Grid>
 
                 {/* Training Tips Section */}
-                <Box sx={{ mt: 10, p: 4, bgcolor: 'primary.main', borderRadius: 4, color: 'white' }}>
-                    <Grid container spacing={4} alignItems="center">
-                        <Grid size={{ xs: 12, md: 8 }}>
-                            <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold' }}>
+                <Box sx={{ mt: 10, p: { xs: 3, md: 6 }, bgcolor: 'background.paper', borderRadius: 4, border: '1px solid', borderColor: 'divider' }}>
+                    <Grid container spacing={6} alignItems="center">
+                        <Grid size={{ xs: 12, md: 6 }}>
+                            <Box
+                                component="img"
+                                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800"
+                                alt="Training tips"
+                                sx={{ width: '100%', borderRadius: 4, boxShadow: 3 }}
+                            />
+                        </Grid>
+                        <Grid size={{ xs: 12, md: 6 }}>
+                            <Typography variant="overline" color="primary" sx={{ fontWeight: 'bold' }}>
+                                Expert Advice
+                            </Typography>
+                            <Typography variant="h3" gutterBottom sx={{ fontWeight: 'bold' }}>
                                 Training Tip of the Day
                             </Typography>
-                            <Typography variant="body1">
-                                "Consistency is key. It's not about being perfect, it's about being better than you were yesterday. Start small, stay committed, and you'll see the results you desire."
+                            <Typography variant="body1" color="text.secondary" paragraph sx={{ fontSize: '1.1rem' }}>
+                                Consistency is key. It&apos;s not about being perfect, it&apos;s about being better than you were yesterday. Start small, stay committed, and you&apos;ll see the results you desire.
                             </Typography>
-                        </Grid>
-                        <Grid size={{ xs: 12, md: 4 }} sx={{ textAlign: 'right' }}>
-                            <Button variant="contained" sx={{ bgcolor: 'white', color: 'primary.main', '&:hover': { bgcolor: '#f0f0f0' } }}>
-                                Read More Tips
-                            </Button>
+                            <Typography variant="body1" color="text.secondary" paragraph sx={{ fontSize: '1.1rem' }}>
+                                Focus on progressive overload — gradually increase weight, reps, or sets to keep challenging your muscles and driving growth.
+                            </Typography>
+                            <Link href="/tips" style={{ textDecoration: 'none' }}>
+                                <Button variant="contained" size="large" sx={{ mt: 2, borderRadius: 8 }}>
+                                    Read More Tips
+                                </Button>
+                            </Link>
                         </Grid>
                     </Grid>
                 </Box>

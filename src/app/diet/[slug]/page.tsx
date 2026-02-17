@@ -118,6 +118,7 @@ export default async function DietDetailPage(props: { params: Promise<{ slug: st
             backLabel="Back to All Plans"
             ctaHeading="Ready to transform your nutrition?"
             ctaButtonText="Start This Plan"
+            ctaHref="/calculator"
             schemas={[dietSchema, breadcrumbSchema]}
         />
     );

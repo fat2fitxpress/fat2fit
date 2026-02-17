@@ -4,6 +4,7 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { getAllDiets } from '@/lib/diets';
 import DietClient from './DietClient';
 
@@ -77,7 +78,7 @@ export default function DietPage() {
                     <Typography variant="h5" sx={{ mb: 4, opacity: 0.9 }}>
                         Discover nutrition plans and healthy recipes tailored to your fitness journey.
                     </Typography>
-                    <Button variant="contained" size="large" sx={{ px: 4, py: 1.5, borderRadius: 8 }}>
+                    <Button variant="contained" size="large" sx={{ px: 4, py: 1.5, borderRadius: 8 }} component="a" href="#diet-plans">
                         Explore Recipes
                     </Button>
                 </Container>
@@ -88,7 +89,9 @@ export default function DietPage() {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(dietSchema) }}
             />
 
-            <DietClient initialDiets={diets} />
+            <Box id="diet-plans">
+                <DietClient initialDiets={diets} />
+            </Box>
         </Box>
     );
 }

@@ -25,6 +25,8 @@ interface DetailPageLayoutProps {
     ctaHeading: string;
     /** Call-to-action button text */
     ctaButtonText: string;
+    /** Optional URL for the CTA button (defaults to backHref) */
+    ctaHref?: string;
     /** Schema markup to inject */
     schemas: Record<string, any>[];
 }
@@ -40,6 +42,7 @@ export default function DetailPageLayout({
     backLabel,
     ctaHeading,
     ctaButtonText,
+    ctaHref,
     schemas,
 }: DetailPageLayoutProps) {
     return (
@@ -125,13 +128,15 @@ export default function DetailPageLayout({
                 <Typography variant="h6" gutterBottom color="text.primary">
                     {ctaHeading}
                 </Typography>
-                <Button
-                    variant="contained"
-                    size="large"
-                    sx={{ mt: 2, borderRadius: 8, px: 6 }}
-                >
-                    {ctaButtonText}
-                </Button>
+                <Link href={ctaHref || backHref} style={{ textDecoration: 'none' }}>
+                    <Button
+                        variant="contained"
+                        size="large"
+                        sx={{ mt: 2, borderRadius: 8, px: 6 }}
+                    >
+                        {ctaButtonText}
+                    </Button>
+                </Link>
             </Box>
         </Container>
     );

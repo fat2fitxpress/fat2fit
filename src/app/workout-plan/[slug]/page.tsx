@@ -118,6 +118,7 @@ export default async function WorkoutDetailPage(props: { params: Promise<{ slug:
             backLabel="Back to All Plans"
             ctaHeading="Ready to track your progress?"
             ctaButtonText="Start This Workout"
+            ctaHref="/calculator"
             schemas={[workoutSchema, breadcrumbSchema]}
         />
     );
