@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run sitemap && next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "sitemap": "tsx src/lib/generateSitemap.ts"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -29,6 +30,7 @@
     "baseline-browser-mapping": "^2.9.19",
     "eslint": "^9",
     "eslint-config-next": "16.0.10",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }
