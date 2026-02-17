@@ -47,19 +47,45 @@ export default function ContactPage() {
         e.preventDefault();
         setLoading(true);
 
-        try {
-            const SERVICE_ID = 'service_fat2fitxpress';
-            const TEMPLATE_ID = 'template_vktaim6';
-            const PUBLIC_KEY = 'k5thKtxmZQo4Cd-oF';
+        // Check for environment variables
+        const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+        const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+        const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
+        if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+            console.error('EmailJS environment variables are not configured');
+            setSnackbar({
+                open: true,
+                message: 'Email service is not configured. Please contact us directly at contact@fat2fitxpress.com',
+                severity: 'error',
+            });
+            setLoading(false);
+            return;
+        }
+
+        // Basic input sanitization (remove potential XSS)
+        const sanitize = (input: string) => {
+            return input.replace(/<script[^>]*>.*?<\/script>/gi, '')
+                .replace(/<[^>]+>/g, '')
+                .trim();
+        };
+
+        const sanitizedData = {
+            name: sanitize(formData.name),
+            email: sanitize(formData.email),
+            subject: sanitize(formData.subject),
+            message: sanitize(formData.message),
+        };
+
+        try {
             await emailjs.send(
                 SERVICE_ID,
                 TEMPLATE_ID,
                 {
-                    from_name: formData.name,
-                    from_email: formData.email,
-                    subject: formData.subject,
-                    message: formData.message,
+                    from_name: sanitizedData.name,
+                    from_email: sanitizedData.email,
+                    subject: sanitizedData.subject,
+                    message: sanitizedData.message,
                     to_name: 'Fat2Fit Admin',
                 },
                 PUBLIC_KEY
