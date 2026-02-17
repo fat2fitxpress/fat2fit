@@ -46,13 +46,28 @@ export default function Navbar() {
                 <Logo sx={{ fontSize: 70 }} />
             </Box>
             <List>
-                {pages.map((item) => (
-                    <ListItem key={item.name} disablePadding>
-                        <ListItemButton component={Link} href={item.path} sx={{ textAlign: 'center' }}>
-                            <ListItemText primary={item.name} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
+                {pages.map((item) => {
+                    const isActive = pathname === item.path;
+                    return (
+                        <ListItem key={item.name} disablePadding>
+                            <ListItemButton
+                                component={Link}
+                                href={item.path}
+                                selected={isActive}
+                                sx={{
+                                    textAlign: 'center',
+                                    justifyContent: 'center',
+                                    fontWeight: isActive ? 'bold' : 'normal',
+                                }}
+                            >
+                                <ListItemText
+                                    primary={item.name}
+                                    sx={{ textAlign: 'center' }}
+                                />
+                            </ListItemButton>
+                        </ListItem>
+                    );
+                })}
             </List>
         </Box>
     );
@@ -139,8 +154,8 @@ export default function Navbar() {
                                         sx={{
                                             my: 2,
                                             color: 'text.primary',
-                                            display: 'block',
                                             mx: 1,
+                                            textAlign: 'center',
                                             fontWeight: isActive ? 'bold' : 'normal',
                                             borderBottom: isActive ? '2px solid' : 'none',
                                             borderColor: 'primary.main',
