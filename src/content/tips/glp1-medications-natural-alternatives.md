@@ -1,8 +1,8 @@
 ---
-title: 'GLP-1 Medications (Ozempic, Wegovy) & Natural Alternatives: Complete Guide'
-excerpt: 'Learn how GLP-1 medications like Ozempic and Wegovy work, understand muscle loss risks, and discover natural appetite control strategies for sustainable weight management.'
-date: '2026-02-23'
-author: 'Fat2Fit Team'
+title: "GLP-1 Medications (Ozempic, Wegovy) & Natural Alternatives: Complete Guide"
+excerpt: "Learn how GLP-1 medications like Ozempic and Wegovy work, understand muscle loss risks, and discover natural appetite control strategies for sustainable weight management."
+date: "2026-02-23"
+author: "Fat2Fit Team"
 ---
 
 # GLP-1 Medications (Ozempic, Wegovy) & Natural Alternatives: Complete Guide
