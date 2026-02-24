@@ -1,7 +1,8 @@
 import * as React from 'react';
 import Box, { BoxProps } from '@mui/material/Box';
 import Image from 'next/image';
-import logoImg from '../assets/logo.png';
+import logoImg from '../assets/logo.webp';
+import logoFallback from '../assets/logo_optimized.png';
 
 export default function Logo(props: BoxProps) {
     // Logo aspect ratio: 1300x486 = ~2.67:1
@@ -23,10 +24,9 @@ export default function Logo(props: BoxProps) {
             <Image
                 src={logoImg}
                 alt="Fat2Fit Logo"
-                width={1300}
-                height={486}
+                width={500}
+                height={187}
                 priority
-                unoptimized
                 style={{
                     width: '100%',
                     height: '100%',

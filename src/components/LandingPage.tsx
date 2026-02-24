@@ -14,6 +14,7 @@ import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
 import CalculateIcon from '@mui/icons-material/Calculate';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import Link from 'next/link';
+import Image from 'next/image';
 import TipsGrid from '@/components/TipsGrid';
 import type { Post } from '@/lib/posts';
 
@@ -28,10 +29,7 @@ export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
                     pt: 12,
                     pb: 12,
                     textAlign: 'center',
-                    backgroundImage: 'url(/fitness_hero_background.png)',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
+                    minHeight: '400px',
                     '&::before': {
                         content: '""',
                         position: 'absolute',
@@ -44,6 +42,17 @@ export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
                     },
                 }}
             >
+                <Image
+                    src="/fitness_hero_background.webp"
+                    alt="Fitness Background"
+                    fill
+                    priority
+                    sizes="100vw"
+                    style={{
+                        objectFit: 'cover',
+                        zIndex: 0,
+                    }}
+                />
                 <Container maxWidth="md" sx={{ position: 'relative', zIndex: 2 }}>
                     <Typography
                         component="h1"

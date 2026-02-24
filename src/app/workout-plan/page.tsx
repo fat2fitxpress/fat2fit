@@ -15,6 +15,7 @@ import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import TimerIcon from '@mui/icons-material/Timer';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 
+import Image from 'next/image';
 import Link from 'next/link';
 
 type WorkoutLevel = 'Beginner' | 'Intermediate' | 'Advanced';
@@ -222,7 +223,18 @@ export default function WorkoutPage() {
                     overflow: 'hidden',
                 }}
             >
-                {/* Overlay with generated image */}
+                {/* Optimized background image */}
+                <Image
+                    src="/workout_hero_bg.webp"
+                    alt="Workout Background"
+                    fill
+                    priority
+                    sizes="100vw"
+                    style={{
+                        objectFit: 'cover',
+                        zIndex: 0,
+                    }}
+                />
                 <Box
                     sx={{
                         position: 'absolute',
@@ -230,18 +242,8 @@ export default function WorkoutPage() {
                         left: 0,
                         right: 0,
                         bottom: 0,
-                        backgroundImage: 'url(/workout_hero_bg.png)',
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        '&::after': {
-                            content: '""',
-                            position: 'absolute',
-                            top: 0,
-                            left: 0,
-                            right: 0,
-                            bottom: 0,
-                            bgcolor: 'rgba(0,0,0,0.6)',
-                        },
+                        bgcolor: 'rgba(0,0,0,0.6)',
+                        zIndex: 1,
                     }}
                 />
                 <Container maxWidth="md" sx={{ position: 'relative', zIndex: 1 }}>
