@@ -1,8 +1,8 @@
 ---
-title: 'Fat Loss vs Weight Loss: Why Scale Weight is Misleading & Body Recomposition Strategies'
-excerpt: 'Discover why scale weight doesn't tell the whole story. Learn body recomposition strategies, understand the difference between fat loss and weight loss, and master accurate body composition measurement.'
-date: '2026-02-23'
-author: 'Fat2Fit Team'
+title: "Fat Loss vs Weight Loss: Why Scale Weight is Misleading & Body Recomposition Strategies"
+excerpt: "Discover why scale weight doesn't tell the whole story. Learn body recomposition strategies, understand the difference between fat loss and weight loss, and master accurate body composition measurement."
+date: "2026-02-23"
+author: "Fat2Fit Team"
 ---
 
 # Fat Loss vs Weight Loss: Why Scale Weight is Misleading & Body Recomposition Strategies
