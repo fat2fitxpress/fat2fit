@@ -238,11 +238,11 @@ You should be able to hold a plank for 2+ minutes, perform 20+ hanging leg raise
 
 ## Related Resources
 
-- **[Core Training Benefits](/tips/core-training-benefits)** - Learn why core strength matters
-- **[Body Fat Percentage Guide](/tips/body-fat-percentage)** - Understand body composition
+- **[Core Training Benefits](/tips/hiit-workout-benefits)** - Learn why core strength matters
+- **[Body Fat Percentage Guide](/tips/fat-loss-vs-weight-loss)** - Understand body composition
 - **[Macro Calculator](/calculator)** - Calculate your optimal nutrition plan
 - **[Core Sculptor](/workout-plan/core-sculptor)** - Intermediate program if you need to build up first
-- **[Nutrition for Abs](/tips/nutrition-for-abs)** - Diet strategies for visible abs
+- **[Nutrition for Abs](/tips/nutrition-timing-guide)** - Diet strategies for visible abs
 
 ## Conclusion
 

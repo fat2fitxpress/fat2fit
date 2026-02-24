@@ -234,9 +234,9 @@ Most people notice improved core strength within 2-3 weeks. Visible definition t
 
 ## Related Resources
 
-- **[Core Training Benefits](/tips/core-training-benefits)** - Learn why core strength matters
+- **[Core Training Benefits](/tips/hiit-workout-benefits)** - Learn why core strength matters
 - **[Macro Calculator](/calculator)** - Calculate your optimal nutrition plan
-- **[Body Fat Percentage Guide](/tips/body-fat-percentage)** - Understand body composition
+- **[Body Fat Percentage Guide](/tips/fat-loss-vs-weight-loss)** - Understand body composition
 - **[Core Foundation](/workout-plan/core-foundation)** - Beginner program if you need to start here
 - **[Core Dominator](/workout-plan/core-dominator)** - Advanced program when you're ready
 

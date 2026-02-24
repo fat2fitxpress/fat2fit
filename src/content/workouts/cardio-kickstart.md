@@ -230,11 +230,11 @@ Most beginners notice improved energy and endurance within 2-3 weeks. Visible ch
 
 ## Related Resources
 
-- **[Cardio Training Benefits](/tips/cardio-training-benefits)** - Learn why cardio matters
+- **[Cardio Training Benefits](/tips/hiit-workout-benefits)** - Learn why cardio matters
 - **[Macro Calculator](/calculator)** - Calculate your optimal nutrition plan
-- **[Exercise Motivation Tips](/tips/exercise-motivation)** - Stay motivated and consistent
+- **[Exercise Motivation Tips](/tips/10-tips-for-weight-loss)** - Stay motivated and consistent
 - **[Endurance Runner](/workout-plan/endurance-runner)** - Next step after mastering the basics
-- **[Injury Prevention](/tips/injury-prevention)** - Stay healthy and injury-free
+- **[Injury Prevention](/tips/common-workout-mistakes)** - Stay healthy and injury-free
 
 ## Conclusion
 

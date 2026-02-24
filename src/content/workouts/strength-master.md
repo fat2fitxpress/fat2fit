@@ -376,10 +376,10 @@ Supplements can help but aren't essential. Focus on whole foods first. Consider 
 
 ## Related Resources
 
-- **[Powerlifting Guide](/tips/powerlifting-guide)** - Advanced powerlifting strategies
+- **[Powerlifting Guide](/tips/muscle-building-guide)** - Advanced powerlifting strategies
 - **[Macro Calculator](/calculator)** - Calculate your optimal nutrition plan
-- **[Recovery Strategies](/tips/recovery-strategies)** - Advanced recovery techniques
-- **[Periodization Explained](/tips/periodization-explained)** - Understand training cycles
+- **[Recovery Strategies](/tips/recovery-rest-importance)** - Advanced recovery techniques
+- **[Periodization Explained](/tips/common-workout-mistakes)** - Understand training cycles
 - **[Power Builder](/workout-plan/power-builder)** - Intermediate program if you need to build up first
 
 ## Conclusion

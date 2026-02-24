@@ -232,10 +232,10 @@ Most runners notice improved endurance within 3-4 weeks. Significant improvement
 
 ## Related Resources
 
-- **[Running Form Tips](/tips/running-form-tips)** - Improve your running efficiency
-- **[Endurance Training Benefits](/tips/endurance-training-benefits)** - Learn the science behind running
+- **[Running Form Tips](/tips/common-workout-mistakes)** - Improve your running efficiency
+- **[Endurance Training Benefits](/tips/hiit-workout-benefits)** - Learn the science behind running
 - **[Macro Calculator](/calculator)** - Calculate your optimal nutrition plan
-- **[Injury Prevention for Runners](/tips/injury-prevention-runners)** - Stay healthy and injury-free
+- **[Injury Prevention for Runners](/tips/common-workout-mistakes)** - Stay healthy and injury-free
 - **[Cardio Kickstart](/workout-plan/cardio-kickstart)** - Beginner program if you need to start here
 - **[Cardio Elite](/workout-plan/cardio-elite)** - Advanced program when you're ready
 

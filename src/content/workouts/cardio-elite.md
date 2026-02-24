@@ -234,10 +234,10 @@ Yes, but be strategic. Limit strength training to 2-3 sessions per week, focus o
 
 ## Related Resources
 
-- **[Endurance Training Benefits](/tips/endurance-training-benefits)** - Learn the science behind cardio training
-- **[VO2 Max Explained](/tips/vo2-max-explained)** - Understand cardiovascular fitness
+- **[Endurance Training Benefits](/tips/hiit-workout-benefits)** - Learn the science behind cardio training
+- **[VO2 Max Explained](/tips/hiit-workout-benefits)** - Understand cardiovascular fitness
 - **[Macro Calculator](/calculator)** - Calculate your optimal nutrition plan
-- **[Recovery Strategies](/tips/recovery-strategies)** - Advanced recovery techniques
+- **[Recovery Strategies](/tips/recovery-rest-importance)** - Advanced recovery techniques
 - **[Endurance Runner](/workout-plan/endurance-runner)** - Intermediate program if you need to build up first
 
 ## Conclusion

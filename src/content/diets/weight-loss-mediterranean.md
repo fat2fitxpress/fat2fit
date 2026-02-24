@@ -190,10 +190,10 @@ The Mediterranean approach can be followed long-term. It's a sustainable lifesty
 
 ## Related Resources
 
-- **[Mediterranean Diet Guide](/tips/mediterranean-diet-guide)** - Comprehensive Mediterranean eating information
-- **[Weight Loss Strategies](/tips/weight-loss-strategies)** - Effective weight loss techniques
+- **[Mediterranean Diet Guide](/diet/weight-loss-mediterranean)** - Comprehensive Mediterranean eating information
+- **[Weight Loss Strategies](/tips/10-tips-for-weight-loss)** - Effective weight loss techniques
 - **[Macro Calculator](/calculator)** - Calculate your optimal nutrition plan
-- **[Portion Control Tips](/tips/portion-control)** - Learn proper portion sizes
+- **[Portion Control Tips](/tips/10-tips-for-weight-loss)** - Learn proper portion sizes
 - **[Standard Mediterranean Diet](/diet/balanced-standard-med)** - Higher calorie maintenance option
 
 ## Conclusion

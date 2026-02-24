@@ -191,10 +191,10 @@ Occasional higher-calorie meals are fine and can help adherence. Don't let them 
 
 ## Related Resources
 
-- **[Lean Bulking Guide](/tips/lean-bulking-guide)** - Comprehensive lean bulking strategies
-- **[Muscle Building Nutrition](/tips/muscle-building-nutrition)** - Nutrition for muscle growth
+- **[Lean Bulking Guide](/tips/muscle-building-guide)** - Comprehensive lean bulking strategies
+- **[Muscle Building Nutrition](/tips/muscle-building-guide)** - Nutrition for muscle growth
 - **[Macro Calculator](/calculator)** - Calculate your optimal nutrition plan
-- **[Body Composition Tracking](/tips/body-composition-tracking)** - Monitor your progress
+- **[Body Composition Tracking](/tips/10-tips-for-weight-loss)** - Monitor your progress
 - **[Power Lifter's Fuel](/diet/muscle-builder-power-fuel)** - Higher calorie option for serious athletes
 
 ## Conclusion

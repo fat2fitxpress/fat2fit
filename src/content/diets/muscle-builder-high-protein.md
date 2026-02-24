@@ -189,10 +189,10 @@ Total daily intake matters most. However, eating around workouts (pre and post) 
 
 ## Related Resources
 
-- **[Muscle Building Nutrition](/tips/muscle-building-nutrition)** - Comprehensive muscle building guide
-- **[Bulking Strategies](/tips/bulking-strategies)** - Advanced bulking techniques
+- **[Muscle Building Nutrition](/tips/muscle-building-guide)** - Comprehensive muscle building guide
+- **[Bulking Strategies](/tips/muscle-building-guide)** - Advanced bulking techniques
 - **[Macro Calculator](/calculator)** - Calculate your optimal nutrition plan
-- **[Recovery Nutrition](/tips/recovery-nutrition)** - Post-workout nutrition strategies
+- **[Recovery Nutrition](/tips/nutrition-timing-guide)** - Post-workout nutrition strategies
 - **[Lean Bulk Diet](/diet/muscle-builder-lean-bulk)** - Lower calorie option for lean gains
 
 ## Conclusion

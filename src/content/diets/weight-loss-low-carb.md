@@ -190,10 +190,10 @@ Check calorie intake - low-carb still requires a calorie deficit. Track accurate
 
 ## Related Resources
 
-- **[Low-Carb Diet Guide](/tips/low-carb-guide)** - Comprehensive low-carb information
-- **[Weight Loss Strategies](/tips/weight-loss-strategies)** - Effective weight loss techniques
+- **[Low-Carb Diet Guide](/tips/10-tips-for-weight-loss)** - Comprehensive low-carb information
+- **[Weight Loss Strategies](/tips/10-tips-for-weight-loss)** - Effective weight loss techniques
 - **[Macro Calculator](/calculator)** - Calculate your optimal nutrition plan
-- **[Muscle Preservation During Weight Loss](/tips/muscle-preservation)** - Maintain muscle while losing fat
+- **[Muscle Preservation During Weight Loss](/tips/muscle-building-guide)** - Maintain muscle while losing fat
 - **[Keto Diet](/diet/weight-loss-keto)** - More restrictive low-carb option
 
 ## Conclusion

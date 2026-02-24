@@ -182,10 +182,10 @@ Combine complementary proteins: legumes + grains (rice and beans), legumes + see
 
 ## Related Resources
 
-- **[Vegan Nutrition Guide](/tips/vegan-nutrition-guide)** - Comprehensive vegan nutrition information
-- **[Plant-Based Protein Sources](/tips/plant-based-protein)** - High-protein vegan foods
+- **[Vegan Nutrition Guide](/tips/10-tips-for-weight-loss)** - Comprehensive vegan nutrition information
+- **[Plant-Based Protein Sources](/tips/nutrition-timing-guide)** - High-protein vegan foods
 - **[Macro Calculator](/calculator)** - Calculate your optimal nutrition plan
-- **[Recovery Nutrition](/tips/recovery-nutrition)** - Post-workout nutrition strategies
+- **[Recovery Nutrition](/tips/nutrition-timing-guide)** - Post-workout nutrition strategies
 - **[Vegan Whole Food Diet](/diet/vegan-whole-food)** - Alternative vegan approach
 
 ## Conclusion

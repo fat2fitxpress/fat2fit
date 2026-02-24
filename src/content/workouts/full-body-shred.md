@@ -257,8 +257,8 @@ Most people notice improved endurance and energy within 2-3 weeks. Visible chang
 
 ## Related Resources
 
-- **[Circuit Training Benefits](/tips/circuit-training-benefits)** - Learn why circuit training works
-- **[Fat Loss Strategies](/tips/fat-loss-strategies)** - Science-backed fat loss tips
+- **[Circuit Training Benefits](/tips/hiit-workout-benefits)** - Learn why circuit training works
+- **[Fat Loss Strategies](/tips/fat-loss-vs-weight-loss)** - Science-backed fat loss tips
 - **[Macro Calculator](/calculator)** - Calculate your optimal nutrition plan
 - **[HIIT Starter](/workout-plan/hiit-starter)** - Beginner program if you need to start here
 - **[Extreme HIIT](/workout-plan/extreme-hiit)** - Advanced program when you're ready

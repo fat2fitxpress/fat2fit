@@ -193,10 +193,10 @@ Check calorie intake - keto still requires a deficit. Track accurately, ensure y
 
 ## Related Resources
 
-- **[Keto Diet Guide](/tips/keto-diet-guide)** - Comprehensive keto information
-- **[Ketosis Explained](/tips/ketosis-explained)** - Understand how ketosis works
+- **[Keto Diet Guide](/tips/10-tips-for-weight-loss)** - Comprehensive keto information
+- **[Ketosis Explained](/tips/10-tips-for-weight-loss)** - Understand how ketosis works
 - **[Macro Calculator](/calculator)** - Calculate your optimal keto macros
-- **[Keto Meal Prep](/tips/keto-meal-prep)** - Simplify keto meal preparation
+- **[Keto Meal Prep](/tips/nutrition-timing-guide)** - Simplify keto meal preparation
 - **[Low-Carb Diet](/diet/weight-loss-low-carb)** - Less restrictive low-carb option
 
 ## Conclusion

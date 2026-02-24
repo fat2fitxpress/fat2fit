@@ -257,10 +257,10 @@ No. This program is for advanced athletes only. Beginners should start with [HII
 
 ## Related Resources
 
-- **[HIIT Training Benefits](/tips/hiit-training-benefits)** - Learn the science behind HIIT
-- **[Recovery Strategies](/tips/recovery-strategies)** - Advanced recovery techniques
+- **[HIIT Training Benefits](/tips/hiit-workout-benefits)** - Learn the science behind HIIT
+- **[Recovery Strategies](/tips/recovery-rest-importance)** - Advanced recovery techniques
 - **[Macro Calculator](/calculator)** - Calculate your optimal nutrition plan
-- **[Overtraining Prevention](/tips/overtraining-prevention)** - Stay healthy and avoid burnout
+- **[Overtraining Prevention](/tips/common-workout-mistakes)** - Stay healthy and avoid burnout
 - **[HIIT Starter](/workout-plan/hiit-starter)** - Beginner program if you need to start here
 - **[Full Body Shred](/workout-plan/full-body-shred)** - Intermediate program to build up first
 

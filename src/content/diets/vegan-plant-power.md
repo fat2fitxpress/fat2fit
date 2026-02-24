@@ -188,10 +188,10 @@ Yes, soy is safe and beneficial for most people. It provides complete protein an
 
 ## Related Resources
 
-- **[Plant-Based Protein Guide](/tips/plant-based-protein)** - Comprehensive protein information
-- **[Vegan Muscle Building](/tips/vegan-muscle-building)** - Building muscle on a vegan diet
+- **[Plant-Based Protein Guide](/tips/nutrition-timing-guide)** - Comprehensive protein information
+- **[Vegan Muscle Building](/tips/muscle-building-guide)** - Building muscle on a vegan diet
 - **[Macro Calculator](/calculator)** - Calculate your protein needs
-- **[Complete Protein Combinations](/tips/complete-proteins)** - How to combine plant proteins
+- **[Complete Protein Combinations](/tips/nutrition-timing-guide)** - How to combine plant proteins
 - **[Vegan Athlete Diet](/diet/vegan-athlete)** - Higher calorie option for athletes
 
 ## Conclusion

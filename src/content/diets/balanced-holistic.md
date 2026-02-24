@@ -185,11 +185,11 @@ Yes, when combined with portion awareness and activity. The focus on whole foods
 
 ## Related Resources
 
-- **[Balanced Nutrition Guide](/tips/balanced-nutrition-guide)** - Learn about balanced eating
-- **[Mindful Eating Tips](/tips/mindful-eating-tips)** - Practice mindful eating
+- **[Balanced Nutrition Guide](/tips/nutrition-timing-guide)** - Learn about balanced eating
+- **[Mindful Eating Tips](/tips/10-tips-for-weight-loss)** - Practice mindful eating
 - **[Macro Calculator](/calculator)** - Understand your nutritional needs
-- **[Meal Prep Tips](/tips/meal-prep-tips)** - Simplify meal preparation
-- **[Whole Foods Guide](/tips/whole-foods-guide)** - Benefits of whole foods
+- **[Meal Prep Tips](/tips/nutrition-timing-guide)** - Simplify meal preparation
+- **[Whole Foods Guide](/tips/nutrition-timing-guide)** - Benefits of whole foods
 
 ## Conclusion
 

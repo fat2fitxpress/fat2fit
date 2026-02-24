@@ -212,11 +212,11 @@ When you can easily complete all sets with proper form, increase hold times, rep
 
 ## Related Resources
 
-- **[Core Training Benefits](/tips/core-training-benefits)** - Learn why core strength matters
+- **[Core Training Benefits](/tips/hiit-workout-benefits)** - Learn why core strength matters
 - **[Macro Calculator](/calculator)** - Calculate your optimal nutrition plan
-- **[Posture Improvement Tips](/tips/posture-improvement)** - How core strength improves posture
+- **[Posture Improvement Tips](/tips/common-workout-mistakes)** - How core strength improves posture
 - **[Core Sculptor](/workout-plan/core-sculptor)** - Next step after mastering the basics
-- **[Back Pain Prevention](/tips/back-pain-prevention)** - How core training helps
+- **[Back Pain Prevention](/tips/common-workout-mistakes)** - How core training helps
 
 ## Conclusion
 

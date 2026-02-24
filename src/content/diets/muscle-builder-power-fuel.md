@@ -191,10 +191,10 @@ Eat calorie-dense foods, add healthy fats, drink calories (smoothies, milk), and
 
 ## Related Resources
 
-- **[Muscle Building Nutrition](/tips/muscle-building-nutrition)** - Comprehensive muscle building guide
-- **[Powerlifting Nutrition](/tips/powerlifting-nutrition)** - Specific powerlifter nutrition strategies
+- **[Muscle Building Nutrition](/tips/muscle-building-guide)** - Comprehensive muscle building guide
+- **[Powerlifting Nutrition](/tips/muscle-building-guide)** - Specific powerlifter nutrition strategies
 - **[Macro Calculator](/calculator)** - Calculate your optimal nutrition plan
-- **[Recovery Nutrition](/tips/recovery-nutrition)** - Post-workout nutrition strategies
+- **[Recovery Nutrition](/tips/nutrition-timing-guide)** - Post-workout nutrition strategies
 - **[Lean Bulk Diet](/diet/muscle-builder-lean-bulk)** - Lower calorie option for lean gains
 
 ## Conclusion

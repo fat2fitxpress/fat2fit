@@ -185,10 +185,10 @@ Whole foods are less calorie-dense, so you may need larger portions. Include sta
 
 ## Related Resources
 
-- **[Whole Food Plant Based Guide](/tips/wfpb-guide)** - Comprehensive WFPB information
-- **[Plant-Based Protein Sources](/tips/plant-based-protein)** - High-protein plant foods
+- **[Whole Food Plant Based Guide](/tips/10-tips-for-weight-loss)** - Comprehensive WFPB information
+- **[Plant-Based Protein Sources](/tips/nutrition-timing-guide)** - High-protein plant foods
 - **[Macro Calculator](/calculator)** - Calculate your nutritional needs
-- **[Meal Prep for WFPB](/tips/meal-prep-wfpb)** - Simplify WFPB meal preparation
+- **[Meal Prep for WFPB](/tips/nutrition-timing-guide)** - Simplify WFPB meal preparation
 - **[Vegan Athlete Diet](/diet/vegan-athlete)** - Higher calorie option for active individuals
 
 ## Conclusion

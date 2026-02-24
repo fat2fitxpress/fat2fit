@@ -185,10 +185,10 @@ Dairy is included in moderation, especially yogurt and cheese (like feta). Choos
 
 ## Related Resources
 
-- **[Mediterranean Diet Guide](/tips/mediterranean-diet-guide)** - Comprehensive guide to Mediterranean eating
-- **[Heart Health Tips](/tips/heart-health-tips)** - How the Mediterranean Diet supports heart health
+- **[Mediterranean Diet Guide](/diet/weight-loss-mediterranean)** - Comprehensive guide to Mediterranean eating
+- **[Heart Health Tips](/tips/10-tips-for-weight-loss)** - How the Mediterranean Diet supports heart health
 - **[Macro Calculator](/calculator)** - Calculate your optimal nutrition plan
-- **[Meal Prep for Mediterranean Diet](/tips/meal-prep-mediterranean)** - Simplify meal preparation
+- **[Meal Prep for Mediterranean Diet](/tips/nutrition-timing-guide)** - Simplify meal preparation
 - **[Zone Diet](/diet/balanced-zone-diet)** - Alternative balanced approach
 
 ## Conclusion

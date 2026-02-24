@@ -180,9 +180,9 @@ Alcohol doesn't fit Zone blocks well and can disrupt blood sugar. If consuming, 
 ## Related Resources
 
 - **[Macro Calculator](/calculator)** - Calculate your Zone Diet blocks and calories
-- **[Balanced Nutrition Guide](/tips/balanced-nutrition-guide)** - Learn about balanced eating
-- **[Meal Prep Tips](/tips/meal-prep-tips)** - Simplify Zone Diet meal preparation
-- **[Blood Sugar Management](/tips/blood-sugar-management)** - Understand stable energy
+- **[Balanced Nutrition Guide](/tips/nutrition-timing-guide)** - Learn about balanced eating
+- **[Meal Prep Tips](/tips/nutrition-timing-guide)** - Simplify Zone Diet meal preparation
+- **[Blood Sugar Management](/tips/nutrition-timing-guide)** - Understand stable energy
 - **[Standard Mediterranean Diet](/diet/balanced-standard-med)** - Alternative balanced approach
 
 ## Conclusion
