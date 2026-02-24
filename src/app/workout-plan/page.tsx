@@ -174,6 +174,25 @@ const workoutPlans: WorkoutPlan[] = [
     },
 ];
 
+const workoutListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Workout Plans - Strength, HIIT, Cardio & Core Training',
+    description:
+        'Browse professionally designed workout plans for all fitness levels. Choose from strength, HIIT, cardio, and core training programs for fat loss, muscle building, and overall fitness.',
+    url: 'https://fat2fitxpress.com/workout-plan',
+    mainEntity: {
+        '@type': 'ItemList',
+        itemListElement: workoutPlans.map((plan, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            url: `https://fat2fitxpress.com/workout-plan/${plan.slug}`,
+            name: plan.title,
+            description: plan.description,
+        })),
+    },
+};
+
 export default function WorkoutPage() {
     const [selectedCategory, setSelectedCategory] = React.useState<WorkoutCategory | 'All'>('All');
 
@@ -185,6 +204,10 @@ export default function WorkoutPage() {
 
     return (
         <Box sx={{ bgcolor: 'background.default', pb: 10 }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(workoutListSchema) }}
+            />
             {/* Hero Section */}
             <Box
                 sx={{
@@ -235,6 +258,22 @@ export default function WorkoutPage() {
             </Box>
 
             <Container id="workout-plans">
+                <Typography
+                    variant="h3"
+                    component="h2"
+                    sx={{ fontWeight: 'bold', mb: 2, textAlign: 'center' }}
+                >
+                    Find the right workout plan for your goal
+                </Typography>
+                <Typography
+                    variant="body1"
+                    color="text.secondary"
+                    sx={{ mb: 6, maxWidth: 800, mx: 'auto', textAlign: 'center' }}
+                >
+                    Explore strength, HIIT, cardio, and core training programs designed for fat loss, muscle building,
+                    and overall fitness. Filter by category to quickly discover the routine that matches your current
+                    level and goals.
+                </Typography>
                 {/* Category Filter Chips */}
                 <Stack direction="row" spacing={2} justifyContent="center" sx={{ mb: 6, flexWrap: 'wrap', gap: 2 }}>
                     {categories.map((category) => (

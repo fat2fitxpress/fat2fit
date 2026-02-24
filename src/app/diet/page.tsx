@@ -20,19 +20,45 @@ export const metadata: Metadata = {
         description: 'Explore nutritious meal plans tailored to your fitness goals. Keto, vegan, muscle-building, and balanced diets.',
         url: 'https://fat2fitxpress.com/diet',
         type: 'website',
+        siteName: 'Fat2Fit',
+        images: [
+            {
+                url: '/og-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'Fat2Fit Diet Plans',
+            },
+        ],
     },
-};
-
-const dietSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: 'Healthy Meal Plans',
-    description: 'Collection of nutritious meal plans for various fitness goals',
-    url: 'https://fat2fitxpress.com/diet',
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Healthy Meal Plans & Nutrition | Fat2Fit',
+        description: 'Explore nutritious meal plans tailored to your fitness goals. Keto, vegan, muscle-building, and balanced diets.',
+        images: ['/og-image.png'],
+    },
 };
 
 export default function DietPage() {
     const diets = getAllDiets();
+
+    const dietSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        name: 'Healthy Meal Plans & Nutrition Guides',
+        description:
+            'Collection of nutritious meal plans for weight loss, muscle building, vegan, and balanced eating, organized by goal and dietary preference.',
+        url: 'https://fat2fitxpress.com/diet',
+        mainEntity: {
+            '@type': 'ItemList',
+            itemListElement: diets.map((diet, index) => ({
+                '@type': 'ListItem',
+                position: index + 1,
+                url: `https://fat2fitxpress.com/diet/${diet.slug}`,
+                name: diet.title,
+                description: diet.description,
+            })),
+        },
+    };
 
     return (
         <Box sx={{ bgcolor: 'background.default', pb: 10 }}>
@@ -90,6 +116,24 @@ export default function DietPage() {
             />
 
             <Box id="diet-plans">
+                <Container maxWidth="lg" sx={{ mb: 6 }}>
+                    <Typography
+                        variant="h3"
+                        component="h2"
+                        sx={{ fontWeight: 'bold', mb: 2, textAlign: 'center' }}
+                    >
+                        Choose the best meal plan for your goal
+                    </Typography>
+                    <Typography
+                        variant="body1"
+                        color="text.secondary"
+                        sx={{ maxWidth: 800, mx: 'auto', textAlign: 'center' }}
+                    >
+                        Explore weight-loss, muscle-building, vegan, and balanced diets with clear calories, prep time,
+                        and categories so you can quickly find a plan that matches your lifestyle and fitness targets.
+                    </Typography>
+                </Container>
+
                 <DietClient initialDiets={diets} />
             </Box>
         </Box>

@@ -12,6 +12,21 @@ export const metadata: Metadata = {
         description: '12 expertly designed workout plans across 4 categories. Find the perfect program for your fitness goals.',
         url: 'https://fat2fitxpress.com/workout-plan',
         type: 'website',
+        siteName: 'Fat2Fit',
+        images: [
+            {
+                url: '/og-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'Fat2Fit Workout Plans',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Professional Workout Plans | Fat2Fit',
+        description: 'Strength, HIIT, cardio, and core training plans for every fitness level.',
+        images: ['/og-image.png'],
     },
 };
 
