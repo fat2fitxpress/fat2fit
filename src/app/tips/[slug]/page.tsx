@@ -1,10 +1,7 @@
 import { getAllPosts, getPostBySlug } from '@/lib/posts';
 import { extractFAQs } from '@/lib/faqUtils';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import ReactMarkdown from 'react-markdown';
 import { notFound } from 'next/navigation';
+import DetailPageLayout from '@/components/DetailPageLayout';
 
 export async function generateStaticParams() {
     const posts = getAllPosts();
@@ -144,33 +141,22 @@ export default async function PostPage(props: { params: Promise<{ slug: string }
         })),
     } : null;
 
+    const schemas = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSchema] : [])];
+
     return (
-        <Container maxWidth="md" sx={{ py: 8 }}>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-            />
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-            />
-            {faqSchema && (
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-                />
-            )}
-
-            <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: 'bold' }}>
-                {post.title}
-            </Typography>
-            <Typography variant="subtitle1" color="text.secondary" gutterBottom>
-                {post.date} | By {post.author}
-            </Typography>
-
-            <Box sx={{ mt: 4, '& p': { mb: 2, lineHeight: 1.7 }, '& h1, & h2, & h3': { mt: 4, mb: 2 } }}>
-                <ReactMarkdown>{post.content}</ReactMarkdown>
-            </Box>
-        </Container>
+        <DetailPageLayout
+            content={post.content}
+            breadcrumbs={[
+                { label: 'Fitness Tips', href: '/tips' },
+                { label: post.title, href: `/tips/${params.slug}` },
+            ]}
+            backHref="/tips"
+            backLabel="Back to All Tips"
+            ctaHeading="Want more fitness tips?"
+            ctaButtonText="Explore More Tips"
+            ctaHref="/tips"
+            schemas={schemas}
+        />
     );
 }
+
