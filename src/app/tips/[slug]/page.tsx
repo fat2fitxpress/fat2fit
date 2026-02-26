@@ -22,17 +22,41 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
     const articleUrl = `https://fat2fitxpress.com/tips/${slug}`;
 
+    const baseKeywords = [
+        'fitness tips',
+        'workout advice',
+        'health tips',
+        'nutrition guide',
+        'exercise tips',
+        post.title.toLowerCase().split(' ').slice(0, 3).join(' '),
+    ];
+
+    const extraKeywords: string[] = [];
+
+    if (slug === 'cortisol-stress-hormonal-health') {
+        extraKeywords.push(
+            'cortisol belly fat',
+            'stress weight gain',
+            'high cortisol symptoms',
+            'morning routine to lower cortisol',
+            'sleep and cortisol',
+        );
+    }
+
+    if (slug === 'glp1-medications-natural-alternatives') {
+        extraKeywords.push(
+            'GLP-1 medications',
+            'Ozempic alternatives',
+            'Wegovy alternatives',
+            'Ozempic natural alternatives',
+            'GLP-1 weight loss',
+        );
+    }
+
     return {
         title: `${post.title} | Fat2Fit`,
         description: post.excerpt,
-        keywords: [
-            'fitness tips',
-            'workout advice',
-            'health tips',
-            'nutrition guide',
-            'exercise tips',
-            post.title.toLowerCase().split(' ').slice(0, 3).join(' ')
-        ],
+        keywords: [...baseKeywords, ...extraKeywords],
         authors: [{ name: post.author }],
         alternates: {
             canonical: `/tips/${slug}`,

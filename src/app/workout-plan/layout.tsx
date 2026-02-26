@@ -3,7 +3,22 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
     title: 'Workout Plans - Strength, HIIT, Cardio & Core Training',
     description: 'Browse professional workout plans for all fitness levels. Choose from strength training, HIIT, cardio, and core workouts designed by experts. Beginner to advanced programs available.',
-    keywords: ['workout plans', 'strength training', 'HIIT workouts', 'cardio exercises', 'core training', 'fitness programs', 'beginner workouts', 'advanced training'],
+    keywords: [
+        'workout plans',
+        'strength training',
+        'HIIT workouts',
+        'cardio exercises',
+        'core training',
+        'fitness programs',
+        'beginner workouts',
+        'advanced training',
+        'full body workout plan',
+        'home workout plan',
+        '30 minute workouts',
+        'fat burning workout',
+        'muscle building program',
+        'workout plan for busy professionals',
+    ],
     alternates: {
         canonical: '/workout-plan',
     },

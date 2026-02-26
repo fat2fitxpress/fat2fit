@@ -29,7 +29,17 @@ export const metadata: Metadata = {
         'pre workout nutrition',
         'post workout nutrition',
         'how to build muscle',
-        'fitness mistakes to avoid'
+        'fitness mistakes to avoid',
+        'cortisol and stress',
+        'cortisol belly fat',
+        'stress weight gain',
+        'GLP-1 natural alternatives',
+        'Ozempic alternatives',
+        'Wegovy for weight loss',
+        'sleep and fat loss',
+        'morning routine for weight loss',
+        'cold showers for fat loss',
+        'circadian rhythm and metabolism',
     ],
     alternates: {
         canonical: '/tips',

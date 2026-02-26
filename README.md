@@ -35,8 +35,18 @@ Six science-backed calculators to help track and optimize your fitness journey:
 
 ### 💡 Expert Tips & Blog
 - Latest fitness articles and expert advice
-- Topics covering workout techniques, nutrition timing, recovery, hydration, and more
+- Topics covering:
+  - Workout techniques, common mistakes, and programming
+  - Nutrition timing, hydration, recovery, and rest
+  - **Cortisol, stress & hormonal health** (e.g. *“Is stress making you gain belly fat?”*)
+  - **GLP‑1 medications (Ozempic, Wegovy) & natural alternatives**
+  - **Sleep, morning/evening routines, cold exposure, sunlight & circadian rhythm optimization**
 - Markdown-based content management for easy updates
+
+### 🌓 Theming & UX
+- Light/dark mode toggle with consistent typography across pages
+- Accessible link colors and contrast in both themes
+- Dedicated hero imagery for key sections (Home, Workout Plans, Diet, Tips, Calculators, Contact)
 
 ### 📧 Contact Form
 - Integrated contact form with EmailJS
@@ -202,8 +212,12 @@ Each markdown file uses frontmatter for metadata (title, description, date, etc.
 
 ## 🌐 SEO & Performance
 
-- Comprehensive metadata and Open Graph tags
-- Structured data (JSON-LD) for better search engine understanding
+- Comprehensive route-level metadata and Open Graph tags
+- Keyword strategy includes high-intent, viral topics such as:
+  - **Cortisol belly fat**, **stress weight gain**, **high cortisol symptoms**
+  - **GLP‑1 medications**, **Ozempic / Wegovy alternatives**, **natural appetite control**
+  - **Sleep and fat loss**, **morning routine for weight loss**, **cold showers & circadian health**
+- Structured data (JSON-LD) for better search engine understanding (articles, collection pages, HowTo, ExercisePlan, FAQPage)
 - Automatic sitemap generation
 - PWA-ready manifest.json
 - Optimized for Core Web Vitals
