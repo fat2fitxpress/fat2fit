@@ -1,6 +1,5 @@
----
-title: 'Cortisol, Stress & Hormonal Health: Is Stress Making You Gain Fat?'
-excerpt: 'Discover how chronic stress and cortisol affect belly fat, sleep, cravings, and performance—and use simple daily routines to rebalance your hormones for better fat loss, energy, and focus.'
+title: 'Cortisol, Stress & Belly Fat: How to Fix Hormones for Sustainable Fat Loss'
+excerpt: 'Is stress making you gain stubborn belly fat? Learn how cortisol, sleep, and daily habits affect hormonal health—and follow simple morning and evening routines to reduce stress, balance hormones, and accelerate sustainable fat loss.'
 date: '2026-02-26'
 author: 'Fat2Fit Team'
 ---
@@ -43,7 +42,7 @@ When this happens, fat loss slows, cravings increase, and burnout becomes almost
 
 ---
 
-## Is Stress Making You Fat? How Cortisol Drives Weight Gain
+## Is Stress Making You Gain Belly Fat? How Cortisol Drives Weight Gain
 
 Chronic stress can absolutely make fat loss harder—even if you’re “eating clean” and working out.
 
