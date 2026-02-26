@@ -17,6 +17,8 @@ interface DetailPageLayoutProps {
     content: string;
     /** Breadcrumb items for navigation */
     breadcrumbs: BreadcrumbItem[];
+    /** Whether to show breadcrumbs (default true) */
+    showBreadcrumbs?: boolean;
     /** URL to navigate back to */
     backHref: string;
     /** Label for the back button */
@@ -44,6 +46,7 @@ export default function DetailPageLayout({
     ctaButtonText,
     ctaHref,
     schemas,
+    showBreadcrumbs = true,
 }: DetailPageLayoutProps) {
     return (
         <Container maxWidth="md" sx={{ py: 8 }}>
@@ -57,7 +60,7 @@ export default function DetailPageLayout({
             ))}
 
             {/* Breadcrumbs Navigation */}
-            <BreadcrumbsNav items={breadcrumbs} />
+            {showBreadcrumbs && <BreadcrumbsNav items={breadcrumbs} />}
 
             {/* Back Button */}
             <Link
@@ -90,8 +93,8 @@ export default function DetailPageLayout({
                     },
                     '& h2': {
                         color: 'text.primary',
-                        mt: 6,
-                        mb: 3,
+                        mt: 4,
+                        mb: 2,
                         fontWeight: 'bold',
                         borderBottom: '2px solid',
                         borderColor: 'primary.main',
@@ -99,20 +102,22 @@ export default function DetailPageLayout({
                         pb: 1,
                     },
                     '& h3': {
-                        mt: 4,
-                        mb: 2,
+                        mt: 3,
+                        mb: 1.5,
                         color: 'primary.light',
                         fontWeight: 'bold',
                     },
                     '& p': {
-                        mb: 2,
-                        lineHeight: 1.8,
+                        mb: 1.25,
+                        fontSize: 16,
+                        lineHeight: 1.7,
                         color: 'text.secondary',
                     },
                     '& li': {
-                        mb: 1.5,
+                        mb: 1,
+                        fontSize: 16,
                         color: 'text.secondary',
-                        lineHeight: 1.6,
+                        lineHeight: 1.5,
                     },
                     '& hr': {
                         my: 6,

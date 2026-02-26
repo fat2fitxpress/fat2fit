@@ -16,6 +16,7 @@ import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 import CircularProgress from '@mui/material/CircularProgress';
 import emailjs from '@emailjs/browser';
+import Image from 'next/image';
 
 export default function ContactPage() {
     const [formData, setFormData] = React.useState({
@@ -110,29 +111,61 @@ export default function ContactPage() {
     };
 
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-            {/* Hero Section */}
+        <Box
+            sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                minHeight: '100vh',
+                bgcolor: 'background.default',
+                color: 'text.primary',
+            }}
+        >
+            {/* Hero Section with Background Image */}
             <Box
                 sx={{
-                    bgcolor: 'background.paper',
-                    pt: 12,
-                    pb: 12,
+                    position: 'relative',
+                    height: 320,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    textAlign: 'center',
                     borderBottom: 1,
                     borderColor: 'divider',
-                    textAlign: 'center',
+                    overflow: 'hidden',
                 }}
             >
-                <Container maxWidth="md">
+                <Image
+                    src="/contact_hero_bg.jpg"
+                    alt="Contact background"
+                    fill
+                    priority
+                    sizes="100vw"
+                    style={{
+                        objectFit: 'cover',
+                        zIndex: 0,
+                    }}
+                />
+                <Box
+                    sx={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        bgcolor: 'rgba(0,0,0,0.55)',
+                        zIndex: 1,
+                    }}
+                />
+                <Container maxWidth="md" sx={{ position: 'relative', zIndex: 2 }}>
                     <Typography
                         component="h1"
                         variant="h2"
-                        color="text.primary"
                         gutterBottom
-                        sx={{ fontWeight: 'bold' }}
+                        sx={{ fontWeight: 'bold', color: '#ffffff' }}
                     >
                         Get In Touch
                     </Typography>
-                    <Typography variant="h5" color="text.secondary" paragraph>
+                    <Typography variant="h5" component="p" sx={{ color: 'rgba(255,255,255,0.9)' }}>
                         Have questions or feedback? We&apos;d love to hear from you.
                     </Typography>
                 </Container>

@@ -20,7 +20,15 @@ import type { Post } from '@/lib/posts';
 
 export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <Box
+            sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                minHeight: '100vh',
+                bgcolor: 'background.default',
+                color: 'text.primary',
+            }}
+        >
 
             {/* Hero Section */}
             <Box

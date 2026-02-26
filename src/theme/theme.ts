@@ -39,10 +39,6 @@ export const lightTheme = createTheme({
             fontSize: '2.5rem',
             fontWeight: 600,
         },
-        h2: {
-            fontSize: '2rem',
-            fontWeight: 500,
-        },
     },
     components: {
         MuiButton: {

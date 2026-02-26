@@ -150,6 +150,7 @@ export default async function PostPage(props: { params: Promise<{ slug: string }
                 { label: 'Fitness Tips', href: '/tips' },
                 { label: post.title, href: `/tips/${params.slug}` },
             ]}
+            showBreadcrumbs={false}
             backHref="/tips"
             backLabel="Back to All Tips"
             ctaHeading="Want more fitness tips?"

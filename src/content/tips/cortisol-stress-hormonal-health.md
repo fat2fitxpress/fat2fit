@@ -1,3 +1,4 @@
+---
 title: 'Cortisol, Stress & Belly Fat: How to Fix Hormones for Sustainable Fat Loss'
 excerpt: 'Is stress making you gain stubborn belly fat? Learn how cortisol, sleep, and daily habits affect hormonal health—and follow simple morning and evening routines to reduce stress, balance hormones, and accelerate sustainable fat loss.'
 date: '2026-02-26'

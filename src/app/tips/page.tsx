@@ -1,7 +1,9 @@
 import { getAllPosts } from '@/lib/posts';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 import TipsGrid from '@/components/TipsGrid';
+import Image from 'next/image';
 
 import type { Metadata } from 'next';
 
@@ -128,20 +130,79 @@ export default function TipsPage() {
     const posts = getAllPosts();
 
     return (
-        <Container maxWidth="lg" sx={{ py: 8 }}>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(tipsSchema) }}
-            />
-            <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: 'bold', mb: 2, textAlign: 'center' }}>
-                Fitness Tips & Expert Health Advice
-            </Typography>
-            <Typography variant="h6" component="p" sx={{ textAlign: 'center', mb: 6, color: 'text.secondary', maxWidth: '800px', mx: 'auto' }}>
-                Science-backed fitness guides, workout strategies, and nutrition tips to help you build muscle, lose fat, and achieve your health goals faster.
-            </Typography>
+        <Box
+            sx={{
+                minHeight: '100vh',
+                bgcolor: 'background.default',
+                color: 'text.primary',
+            }}
+        >
+            {/* Hero Section with Background Image */}
+            <Box
+                sx={{
+                    position: 'relative',
+                    height: 320,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    textAlign: 'center',
+                    mb: 8,
+                    overflow: 'hidden',
+                }}
+            >
+                <Image
+                    src="/tips_hero_bg.jpg"
+                    alt="Fitness tips background"
+                    fill
+                    priority
+                    sizes="100vw"
+                    style={{
+                        objectFit: 'cover',
+                        zIndex: 0,
+                    }}
+                />
+                <Box
+                    sx={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        bgcolor: 'rgba(0,0,0,0.55)',
+                        zIndex: 1,
+                    }}
+                />
+                <Container maxWidth="md" sx={{ position: 'relative', zIndex: 2 }}>
+                    <Typography
+                        variant="h2"
+                        component="h1"
+                        gutterBottom
+                        sx={{ fontWeight: 'bold', mb: 2, color: '#ffffff' }}
+                    >
+                        Fitness Tips & Expert Health Advice
+                    </Typography>
+                    <Typography
+                        variant="h6"
+                        component="p"
+                        sx={{
+                            maxWidth: '800px',
+                            mx: 'auto',
+                            color: 'rgba(255,255,255,0.9)',
+                        }}
+                    >
+                        Science-backed fitness guides, workout strategies, and nutrition tips to help you build muscle, lose fat, and achieve your health goals faster.
+                    </Typography>
+                </Container>
+            </Box>
 
-            <TipsGrid posts={posts} />
-        </Container>
+            <Container maxWidth="lg" sx={{ pb: 8 }}>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(tipsSchema) }}
+                />
+                <TipsGrid posts={posts} />
+            </Container>
+        </Box>
     );
 }
 
