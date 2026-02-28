@@ -9,16 +9,21 @@ import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardActionArea from '@mui/material/CardActionArea';
+import { useTheme } from '@mui/material/styles';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
 import CalculateIcon from '@mui/icons-material/Calculate';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
+import AndroidIcon from '@mui/icons-material/Android';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import Link from 'next/link';
 import Image from 'next/image';
 import TipsGrid from '@/components/TipsGrid';
 import type { Post } from '@/lib/posts';
 
 export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
+    const theme = useTheme();
+    const isDarkMode = theme.palette.mode === 'dark';
     return (
         <Box
             sx={{
@@ -177,6 +182,96 @@ export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
                     </Grid>
                 </Grid>
             </Container>
+
+            {/* Android App Promotion Section */}
+            <Box
+                sx={{
+                    py: { xs: 8, md: 10 },
+                    background: isDarkMode
+                        ? 'linear-gradient(135deg, #131b2f 0%, #0b1221 100%)'
+                        : 'linear-gradient(135deg, #f8faff 0%, #e8f0fe 100%)',
+                    overflow: 'hidden',
+                    borderTop: isDarkMode ? '1px solid rgba(255,255,255,0.05)' : 'none',
+                    borderBottom: isDarkMode ? '1px solid rgba(255,255,255,0.05)' : 'none',
+                }}
+            >
+                <Container maxWidth="lg">
+                    <Grid container spacing={6} alignItems="center">
+                        <Grid size={{ xs: 12, md: 6 }}>
+                            <Box sx={{ display: 'inline-flex', alignItems: 'center', px: 2, py: 0.5, borderRadius: 5, bgcolor: 'primary.main', color: 'white', mb: 3 }}>
+                                <AndroidIcon sx={{ mr: 1, fontSize: 20 }} />
+                                <Typography variant="subtitle2" sx={{ fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: 1 }}>
+                                    Coming Soon
+                                </Typography>
+                            </Box>
+                            <Typography variant="h3" component="h2" gutterBottom sx={{ fontWeight: 'bold', color: 'text.primary' }}>
+                                Get Fat2Fit on Your Android Device
+                            </Typography>
+                            <Typography variant="h6" sx={{ mb: 4, color: 'text.secondary', fontWeight: 'normal', lineHeight: 1.6 }}>
+                                We're hard at work building the ultimate fitness companion for your mobile. Take your workout plans and nutrition tracking wherever you go.
+                            </Typography>
+
+                            <Box sx={{ mb: 4 }}>
+                                <Box sx={{ display: 'flex', alignItems: 'center', mb: 1.5 }}>
+                                    <CheckCircleOutlineIcon color="primary" sx={{ mr: 1.5 }} />
+                                    <Typography variant="body1">Offline access to workout routines</Typography>
+                                </Box>
+                                <Box sx={{ display: 'flex', alignItems: 'center', mb: 1.5 }}>
+                                    <CheckCircleOutlineIcon color="primary" sx={{ mr: 1.5 }} />
+                                    <Typography variant="body1">Real-time calorie & macro tracking</Typography>
+                                </Box>
+                                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                                    <CheckCircleOutlineIcon color="primary" sx={{ mr: 1.5 }} />
+                                    <Typography variant="body1">Personalized daily notifications</Typography>
+                                </Box>
+                            </Box>
+
+                            <Button
+                                variant="outlined"
+                                size="large"
+                                disabled
+                                sx={{
+                                    borderRadius: 2,
+                                    borderWidth: 2,
+                                    '&.Mui-disabled': {
+                                        borderWidth: 2,
+                                        color: 'text.secondary',
+                                        borderColor: 'divider'
+                                    }
+                                }}
+                            >
+                                Google Play Store (Coming Soon)
+                            </Button>
+                        </Grid>
+                        <Grid size={{ xs: 12, md: 6 }}>
+                            <Box
+                                sx={{
+                                    position: 'relative',
+                                    height: { xs: 300, md: 500 },
+                                    width: '100%',
+                                    borderRadius: 4,
+                                    overflow: 'hidden',
+                                    boxShadow: isDarkMode
+                                        ? '0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(66, 133, 244, 0.1)'
+                                        : '0 20px 40px rgba(0,0,0,0.1)',
+                                    transform: { md: 'perspective(1000px) rotateY(-5deg)' },
+                                    transition: 'transform 0.5s ease-in-out',
+                                    '&:hover': {
+                                        transform: { md: 'perspective(1000px) rotateY(0deg)' }
+                                    }
+                                }}
+                            >
+                                <Image
+                                    src="/android_app_promo.png"
+                                    alt="Fat2Fit Android App Preview"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                />
+                            </Box>
+                        </Grid>
+                    </Grid>
+                </Container>
+            </Box>
 
             {/* Latest Tips Section */}
             <Box sx={{ bgcolor: 'action.hover', py: 10 }}>

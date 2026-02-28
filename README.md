@@ -38,10 +38,11 @@ Six science-backed calculators to help track and optimize your fitness journey:
 - Topics covering:
   - Workout techniques, common mistakes, and programming
   - Nutrition timing, hydration, recovery, and rest
+  - **Zone 2 Cardio** (low-intensity training science, mitochondrial health)
   - **Cortisol, stress & hormonal health** (e.g. *“Is stress making you gain belly fat?”*)
   - **GLP‑1 medications (Ozempic, Wegovy) & natural alternatives**
   - **Sleep, morning/evening routines, cold exposure, sunlight & circadian rhythm optimization**
-- Markdown-based content management for easy updates
+- Markdown-based content management with optimized spacing and layout
 
 ### 🌓 Theming & UX
 - Light/dark mode toggle with consistent typography across pages
@@ -51,6 +52,10 @@ Six science-backed calculators to help track and optimize your fitness journey:
 ### 📧 Contact Form
 - Integrated contact form with EmailJS
 - Direct communication channel for user inquiries
+
+### 📱 Mobile App (Coming Soon)
+- Upcoming Android application promotion on the landing page
+- Feature highlights: Offline access, real-time tracking, and personalized notifications
 
 ## 🛠️ Technology Stack
 
@@ -214,6 +219,7 @@ Each markdown file uses frontmatter for metadata (title, description, date, etc.
 
 - Comprehensive route-level metadata and Open Graph tags
 - Keyword strategy includes high-intent, viral topics such as:
+  - **Zone 2 cardio benefits**, **how to train in Zone 2**, **Zone 2 vs HIIT**
   - **Cortisol belly fat**, **stress weight gain**, **high cortisol symptoms**
   - **GLP‑1 medications**, **Ozempic / Wegovy alternatives**, **natural appetite control**
   - **Sleep and fat loss**, **morning routine for weight loss**, **cold showers & circadian health**
