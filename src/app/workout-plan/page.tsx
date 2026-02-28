@@ -194,6 +194,25 @@ const workoutListSchema = {
     },
 };
 
+const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+        {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://fat2fitxpress.com',
+        },
+        {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Workout Plans',
+            item: 'https://fat2fitxpress.com/workout-plan',
+        },
+    ],
+};
+
 export default function WorkoutPage() {
     const [selectedCategory, setSelectedCategory] = React.useState<WorkoutCategory | 'All'>('All');
 
@@ -208,6 +227,10 @@ export default function WorkoutPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(workoutListSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
             {/* Hero Section */}
             <Box

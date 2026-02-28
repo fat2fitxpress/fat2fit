@@ -30,6 +30,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             'meal plan',
             'nutrition guide',
             'healthy eating',
+            'weight loss recipes',
+            'muscle building diet',
+            'meal prep ideas',
             diet.title.toLowerCase(),
             diet.category?.toLowerCase() || ''
         ],
@@ -44,7 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             siteName: 'Fat2Fit',
             images: [
                 {
-                    url: '/og-image.png',
+                    url: diet.image || '/og-image.png',
                     width: 1200,
                     height: 630,
                     alt: `${diet.title} - Fat2Fit`,
@@ -55,7 +58,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             card: 'summary_large_image',
             title: `${diet.title} | Fat2Fit`,
             description: `Complete ${diet.title} meal plan with detailed ingredients and steps.`,
-            images: ['/og-image.png'],
+            images: [diet.image || '/og-image.png'],
+            site: '@fat2fit',
+            creator: '@fat2fit',
         },
     };
 }

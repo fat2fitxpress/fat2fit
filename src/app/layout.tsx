@@ -37,6 +37,11 @@ export const metadata: Metadata = {
     'morning routine for fat loss',
     'cold showers benefits',
     'circadian rhythm optimization',
+    'fat2fit',
+    'fitness journey',
+    'personalized fitness',
+    'nutrition guides',
+    'express fitness',
   ],
   authors: [{ name: 'Fat2Fit Team' }],
   creator: 'Fat2Fit',
@@ -76,6 +81,8 @@ export const metadata: Metadata = {
     title: 'Fat2Fit - Your Express Journey to Fitness',
     description: 'Transform your body with personalized workout plans and nutrition guides.',
     images: ['/og-image.png'],
+    site: '@fat2fit',
+    creator: '@fat2fit',
   },
 };
 

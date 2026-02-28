@@ -11,6 +11,7 @@ export interface Post {
     date: string;
     content: string;
     author: string;
+    image?: string;
 }
 
 export function getPostSlugs() {
@@ -29,7 +30,8 @@ export function getPostBySlug(slug: string): Post {
         excerpt: data.excerpt,
         date: data.date,
         content,
-        author: data.author
+        author: data.author,
+        image: data.image
     };
 }
 

@@ -27,6 +27,10 @@ export const metadata: Metadata = {
         'meal plan for busy professionals',
         'glucose friendly diet',
         'GLP-1 friendly diet ideas',
+        'nutritious eating',
+        'balanced diet guides',
+        'fitness nutrition',
+        'personalized meal planning',
     ],
     alternates: {
         canonical: '/diet',
@@ -51,7 +55,28 @@ export const metadata: Metadata = {
         title: 'Healthy Meal Plans & Nutrition | Fat2Fit',
         description: 'Explore nutritious meal plans tailored to your fitness goals. Keto, vegan, muscle-building, and balanced diets.',
         images: ['/og-image.png'],
+        site: '@fat2fit',
+        creator: '@fat2fit',
     },
+};
+
+const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+        {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://fat2fitxpress.com',
+        },
+        {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Diet Plans',
+            item: 'https://fat2fitxpress.com/diet',
+        },
+    ],
 };
 
 export default function DietPage() {
@@ -129,6 +154,10 @@ export default function DietPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(dietSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
 
             <Box id="diet-plans">

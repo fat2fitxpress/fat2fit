@@ -64,6 +64,8 @@ export const metadata: Metadata = {
         title: 'Expert Fitness Tips & Health Advice | Fat2Fit',
         description: 'Free expert fitness tips on muscle building, HIIT, nutrition, and recovery.',
         images: ['/og-image.png'],
+        site: '@fat2fit',
+        creator: '@fat2fit',
     },
 };
 

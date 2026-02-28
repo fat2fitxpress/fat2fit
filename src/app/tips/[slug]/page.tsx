@@ -82,7 +82,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             card: 'summary_large_image',
             title: post.title,
             description: post.excerpt,
-            images: ['/og-image.png'],
+            images: [post.image || '/og-image.png'],
+            site: '@fat2fit',
+            creator: '@fat2fit',
         },
     };
 }

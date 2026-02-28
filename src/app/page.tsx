@@ -21,6 +21,19 @@ const websiteSchema = {
   description: 'Personalized fitness and nutrition platform',
 };
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://fat2fitxpress.com',
+    },
+  ],
+};
+
 export default function Home() {
   const posts = getAllPosts();
   const recentPosts = posts.slice(0, 2); // Get latest 2 posts
@@ -30,6 +43,10 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <LandingPage recentPosts={recentPosts} />
     </>

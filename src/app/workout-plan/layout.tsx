@@ -18,6 +18,10 @@ export const metadata: Metadata = {
         'fat burning workout',
         'muscle building program',
         'workout plan for busy professionals',
+        'personalized workout routines',
+        'exercise programming',
+        'fitness goals',
+        'strength and conditioning',
     ],
     alternates: {
         canonical: '/workout-plan',
@@ -42,6 +46,8 @@ export const metadata: Metadata = {
         title: 'Professional Workout Plans | Fat2Fit',
         description: 'Strength, HIIT, cardio, and core training plans for every fitness level.',
         images: ['/og-image.png'],
+        site: '@fat2fit',
+        creator: '@fat2fit',
     },
 };
 

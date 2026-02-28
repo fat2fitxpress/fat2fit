@@ -30,7 +30,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             'exercise routine',
             'fitness program',
             'strength training',
-            workout.title.toLowerCase()
+            'muscle building',
+            'fat loss workout',
+            'home exercise',
+            workout.title.toLowerCase(),
+            workout.category?.toLowerCase() || ''
         ],
         alternates: {
             canonical: `/workout-plan/${slug}`,
@@ -43,7 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             siteName: 'Fat2Fit',
             images: [
                 {
-                    url: '/og-image.png',
+                    url: workout.image || '/og-image.png',
                     width: 1200,
                     height: 630,
                     alt: `${workout.title} - Fat2Fit`,
@@ -54,7 +58,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             card: 'summary_large_image',
             title: `${workout.title} | Fat2Fit`,
             description: `Complete ${workout.title} with detailed exercises, sets, and reps.`,
-            images: ['/og-image.png'],
+            images: [workout.image || '/og-image.png'],
+            site: '@fat2fit',
+            creator: '@fat2fit',
         },
     };
 }

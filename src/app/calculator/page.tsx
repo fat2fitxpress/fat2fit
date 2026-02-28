@@ -25,6 +25,10 @@ export const metadata: Metadata = {
         'macros for bulking',
         'TDEE calculator for fat loss',
         'online fitness calculator',
+        'body composition calculator',
+        'health tools',
+        'fitness assessment',
+        'science based calculators',
     ],
     alternates: {
         canonical: '/calculator',
@@ -34,12 +38,43 @@ export const metadata: Metadata = {
         description: 'Calculate your TDEE, BMI, body fat %, macros, one rep max, and ideal weight with our free science-backed calculators.',
         url: 'https://fat2fitxpress.com/calculator',
         type: 'website',
+        siteName: 'Fat2Fit',
+        images: [
+            {
+                url: '/og-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'Fat2Fit Fitness Calculators',
+            },
+        ],
     },
     twitter: {
-        card: 'summary',
+        card: 'summary_large_image',
         title: 'Free Fitness Calculators - TDEE, BMI, Macros & More',
         description: 'All-in-one fitness calculators using scientifically-validated formulas.',
+        images: ['/og-image.png'],
+        site: '@fat2fit',
+        creator: '@fat2fit',
     },
+};
+
+const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+        {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://fat2fitxpress.com',
+        },
+        {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Fitness Calculators',
+            item: 'https://fat2fitxpress.com/calculator',
+        },
+    ],
 };
 
 const calculatorSchema = {
@@ -121,6 +156,10 @@ export default function CalculatorPage() {
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(calculatorSchema) }}
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
                 />
 
                 <CalculatorTabs />

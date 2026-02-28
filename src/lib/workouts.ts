@@ -8,6 +8,8 @@ export interface WorkoutDetail {
     slug: string;
     content: string;
     title: string;
+    image?: string;
+    category?: string;
 }
 
 export function getWorkoutBySlug(slug: string): WorkoutDetail {
@@ -20,6 +22,8 @@ export function getWorkoutBySlug(slug: string): WorkoutDetail {
         slug: realSlug,
         content,
         title: data.title || realSlug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '),
+        image: data.image,
+        category: data.category,
     };
 }
 
