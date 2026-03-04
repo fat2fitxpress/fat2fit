@@ -53,6 +53,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         );
     }
 
+    if (slug === 'fitness-tracking-wearable-technology') {
+        extraKeywords.push(
+            'best fitness tracker 2026',
+            'smartwatch vs smart ring',
+            'best smart ring 2026',
+            'Oura Ring 4 review',
+            'Garmin Venu 4 review',
+            'Apple Watch fitness tracking',
+            'Samsung Galaxy Ring review',
+            'fitness wearable technology',
+            'health tracking wearables',
+            'wearable fitness device comparison',
+        );
+    }
+
     return {
         title: `${post.title} | Fat2Fit`,
         description: post.excerpt,

@@ -1,4 +1,4 @@
-# Fat2Fit - Your Express Journey to Fitness
+﻿# Fat2Fit - Your Express Journey to Fitness
 
 A comprehensive fitness and nutrition web application built with Next.js, providing personalized workout plans, diet guides, fitness calculators, and expert tips to help users achieve their health and fitness goals.
 
@@ -35,13 +35,14 @@ Six science-backed calculators to help track and optimize your fitness journey:
 
 ### 💡 Expert Tips & Blog
 - Latest fitness articles and expert advice
-- Topics covering:
+- **12 expert tips articles** covering:
   - Workout techniques, common mistakes, and programming
   - Nutrition timing, hydration, recovery, and rest
   - **Zone 2 Cardio** (low-intensity training science, mitochondrial health)
   - **Cortisol, stress & hormonal health** (e.g. *“Is stress making you gain belly fat?”*)
   - **GLP‑1 medications (Ozempic, Wegovy) & natural alternatives**
   - **Sleep, morning/evening routines, cold exposure, sunlight & circadian rhythm optimization**
+  - **Fitness Tracking Wearable Technology** - Top 3 smartwatches and smart rings of 2026 with feature comparisons, pros/cons (Garmin Venu 4, Apple Watch Series 11, Oura Ring 4, Samsung Galaxy Ring, and more)
 - Markdown-based content management with optimized spacing and layout
 
 ### 🌓 Theming & UX
@@ -223,7 +224,10 @@ Each markdown file uses frontmatter for metadata (title, description, date, etc.
   - **Cortisol belly fat**, **stress weight gain**, **high cortisol symptoms**
   - **GLP‑1 medications**, **Ozempic / Wegovy alternatives**, **natural appetite control**
   - **Sleep and fat loss**, **morning routine for weight loss**, **cold showers & circadian health**
-- Structured data (JSON-LD) for better search engine understanding (articles, collection pages, HowTo, ExercisePlan, FAQPage)
+  - **Best smartwatch 2026**, **best smart ring 2026**, **wearable fitness technology**
+  - **Oura Ring 4**, **Garmin Venu 4**, **Samsung Galaxy Ring**, **smartwatch vs smart ring**
+- Full Twitter Card support on all pages (title, description, image)
+- Structured data (JSON-LD) for better search engine understanding (articles, collection pages, HowTo, ExercisePlan, FAQPage, WebApplication, ContactPage)
 - Automatic sitemap generation
 - PWA-ready manifest.json
 - Optimized for Core Web Vitals

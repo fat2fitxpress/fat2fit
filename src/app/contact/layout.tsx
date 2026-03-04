@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import * as React from 'react';
 
 export const metadata: Metadata = {
     title: 'Contact Us - Get in Touch with Fat2Fit',
@@ -12,6 +13,8 @@ export const metadata: Metadata = {
         'online nutritionist support',
         'workout plan help',
         'diet plan help',
+        'fat2fit contact',
+        'fitness app support',
     ],
     alternates: {
         canonical: '/contact',
@@ -21,6 +24,23 @@ export const metadata: Metadata = {
         description: 'Get in touch with our team. We\'re here to answer your fitness and nutrition questions.',
         url: 'https://fat2fitxpress.com/contact',
         type: 'website',
+        siteName: 'Fat2Fit',
+        images: [
+            {
+                url: '/og-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'Contact Fat2Fit',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Contact Fat2Fit | Customer Support',
+        description: 'Get in touch with our team for fitness and nutrition support.',
+        images: ['/og-image.png'],
+        site: '@fat2fit',
+        creator: '@fat2fit',
     },
 };
 
