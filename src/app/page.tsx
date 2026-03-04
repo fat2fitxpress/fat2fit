@@ -3,10 +3,13 @@ import { getAllPosts } from '@/lib/posts';
 import LandingPage from '@/components/LandingPage';
 
 export const metadata: Metadata = {
-  title: 'Fat2Fit - Your Express Journey to Fitness',
-  description: 'Transform your body and achieve your fitness goals with Fat2Fit. Get personalized workout plans, nutrition guides, calorie calculators, and expert fitness tips.',
+  title: 'Fat 2 Fit - Transformation & Professional Fitness Blog',
+  description: 'Embark on your Fat 2 Fit journey with expert-led transformation guides, science-backed workout plans, nutrition guides, and free fitness calculators. Start your transformation today.',
   keywords: [
+    'Fat 2 Fit',
+    'Fat2Fit',
     'fitness platform',
+    'professional fitness blog',
     'personalized workout plans',
     'nutrition guides',
     'calorie calculator',
@@ -16,28 +19,27 @@ export const metadata: Metadata = {
     'diet plans',
     'fitness tips',
     'free fitness tools',
-    'fat2fit',
   ],
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Fat2Fit - Your Express Journey to Fitness',
-    description: 'Transform your body with expert workout plans and nutrition guidance.',
+    title: 'Fat 2 Fit - Your Transformation & Fitness Hub',
+    description: 'Transform your body with expert Fat 2 Fit workout plans and nutrition guidance.',
     url: 'https://fat2fitxpress.com',
     type: 'website',
-    siteName: 'Fat2Fit',
+    siteName: 'Fat 2 Fit',
     images: [{
       url: '/og-image.png',
       width: 1200,
       height: 630,
-      alt: 'Fat2Fit - Fitness & Nutrition Platform',
+      alt: 'Fat 2 Fit - Fitness & Nutrition Platform',
     }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fat2Fit - Your Express Journey to Fitness',
-    description: 'Transform your body with personalized workout plans, diet guides, and free fitness calculators.',
+    title: 'Fat 2 Fit - Transformation & Professional Fitness Blog',
+    description: 'Professional transformation guides, personalized workout plans, diet guides, and free fitness calculators.',
     images: ['/og-image.png'],
     site: '@fat2fit',
     creator: '@fat2fit',
@@ -47,9 +49,14 @@ export const metadata: Metadata = {
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'Fat2Fit',
+  name: 'Fat 2 Fit',
   url: 'https://fat2fitxpress.com',
-  description: 'Personalized fitness and nutrition platform',
+  description: 'Professional transformation & fitness hub providing science-backed guides and tools.',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: 'https://fat2fitxpress.com/search?q={search_term_string}',
+    'query-input': 'required name=search_term_string'
+  }
 };
 
 const breadcrumbSchema = {
