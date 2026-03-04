@@ -1,11 +1,12 @@
 {
-  "name": "temp_app",
+  "name": "fat2fit-web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "npm run sitemap && next build",
-    "start": "next start",
+    "start": "serve out",
+    "preview": "npm run build && npm run start",
     "lint": "eslint",
     "sitemap": "tsx src/lib/generateSitemap.ts"
   },
@@ -21,7 +22,8 @@
     "next": "^16.1.6",
     "react": "19.2.1",
     "react-dom": "19.2.1",
-    "react-markdown": "^10.1.0"
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -30,6 +32,7 @@
     "baseline-browser-mapping": "^2.9.19",
     "eslint": "^9",
     "eslint-config-next": "16.0.10",
+    "serve": "^14.2.4",
     "sharp": "^0.34.5",
     "tsx": "^4.21.0",
     "typescript": "^5"

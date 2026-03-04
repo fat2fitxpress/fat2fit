@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import Link from 'next/link';
 import BreadcrumbsNav from '@/components/BreadcrumbsNav';
 
@@ -108,24 +109,99 @@ export default function DetailPageLayout({
                         fontWeight: 'bold',
                     },
                     '& p': {
-                        mb: 1.25,
+                        mb: 2,
                         fontSize: 16,
                         lineHeight: 1.7,
                         color: 'text.secondary',
+                    },
+                    '& ul, & ol': {
+                        mb: 3,
+                        pl: 3,
                     },
                     '& li': {
                         mb: 1,
                         fontSize: 16,
                         color: 'text.secondary',
-                        lineHeight: 1.5,
+                        lineHeight: 1.6,
                     },
                     '& hr': {
                         my: 6,
                         opacity: 0.1,
                     },
+                    '& strong': {
+                        color: 'text.primary',
+                        fontWeight: 600,
+                    },
+                    '& blockquote': {
+                        borderLeft: '4px solid',
+                        borderColor: 'primary.main',
+                        pl: 3,
+                        py: 1,
+                        my: 3,
+                        bgcolor: 'action.hover',
+                        borderRadius: 1,
+                        '& p': { mb: 0 },
+                    },
+                    // ── Table styles ──────────────────────────────────────
+                    '& .table-wrapper': {
+                        overflowX: 'auto',
+                        my: 4,
+                        borderRadius: 2,
+                        border: '1px solid',
+                        borderColor: 'divider',
+                        boxShadow: '0 2px 12px rgba(0,0,0,0.05)',
+                    },
+                    '& table': {
+                        width: '100%',
+                        borderCollapse: 'collapse',
+                        minWidth: '600px',
+                    },
+                    '& thead': {
+                        bgcolor: 'primary.main',
+                    },
+                    '& thead th': {
+                        color: '#ffffff',
+                        fontWeight: 700,
+                        px: 2,
+                        py: 2,
+                        textAlign: 'left',
+                        fontSize: '0.95rem',
+                    },
+                    '& tbody tr': {
+                        borderBottom: '1px solid',
+                        borderColor: 'divider',
+                        '&:nth-of-type(even)': {
+                            bgcolor: 'action.hover',
+                        },
+                        '&:hover': {
+                            bgcolor: 'action.selected',
+                        },
+                    },
+                    '& td': {
+                        px: 2,
+                        py: 1.5,
+                        color: 'text.secondary',
+                        fontSize: '0.9rem',
+                        lineHeight: 1.5,
+                    },
+                    '& td:first-of-type': {
+                        color: 'text.primary',
+                        fontWeight: 500,
+                    },
                 }}
             >
-                <ReactMarkdown>{content}</ReactMarkdown>
+                <ReactMarkdown
+                    remarkPlugins={[remarkGfm]}
+                    components={{
+                        table: ({ ...props }) => (
+                            <div className="table-wrapper">
+                                <table {...props} />
+                            </div>
+                        ),
+                    }}
+                >
+                    {content}
+                </ReactMarkdown>
             </Box>
 
             {/* Call to Action */}
@@ -146,3 +222,5 @@ export default function DetailPageLayout({
         </Container>
     );
 }
+
+
