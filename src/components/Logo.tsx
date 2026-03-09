@@ -22,10 +22,10 @@ export default function Logo(props: BoxProps) {
             }}
         >
             <Image
-                src="/logo.svg"
+                src={logoImg}
                 alt="Fat2Fit Logo"
-                width={200}
-                height={75}
+                width={500}
+                height={187}
                 priority
                 style={{
                     width: '100%',
