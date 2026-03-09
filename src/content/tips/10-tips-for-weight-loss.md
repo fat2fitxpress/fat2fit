@@ -229,3 +229,4 @@ Sustainable weight loss isn't about quick fixes or extreme measures. It's about 
 Remember: weight loss is a marathon, not a sprint. Small, consistent actions compound into massive results over time. Focus on building healthy habits that you can maintain for life, and the weight loss will follow naturally.
 
 Start by implementing 2-3 of these tips this week, then gradually add more as they become habits. You've got this! 💪
+

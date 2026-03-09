@@ -97,7 +97,8 @@ export default function Navbar() {
             >
                 Skip to main content
             </Link>
-            <AppBar position="sticky" color="default" elevation={1} sx={{ top: 0, zIndex: 1100 }} component="nav" role="navigation">
+            <AppBar position="sticky" color="default" elevation={1} sx={{ top: 0, zIndex: 1100 }} component="nav" aria-label="Main Navigation">
+
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
                         {/* Mobile Menu Icon */}
@@ -111,34 +112,21 @@ export default function Navbar() {
                             <MenuIcon />
                         </IconButton>
 
-                        {/* Desktop Logo */}
+                        {/* Logo Link (Single implementation with Responsive sizing) */}
                         <Box
                             component={Link}
                             href="/"
                             aria-label="Fat2Fit Home"
                             sx={{
                                 mr: 2,
-                                display: { xs: 'none', sm: 'flex' },
+                                display: 'flex',
                                 alignItems: 'center',
+                                flexGrow: { xs: 1, sm: 0 },
                             }}
                         >
-                            <Logo sx={{ fontSize: 60 }} />
+                            <Logo sx={{ fontSize: { xs: 45, sm: 60 } }} />
                         </Box>
 
-                        {/* Mobile Logo */}
-                        <Box
-                            component={Link}
-                            href="/"
-                            aria-label="Fat2Fit Home"
-                            sx={{
-                                mr: 2,
-                                display: { xs: 'flex', sm: 'none' },
-                                flexGrow: 1,
-                                alignItems: 'center',
-                            }}
-                        >
-                            <Logo sx={{ fontSize: 45 }} />
-                        </Box>
 
                         {/* Desktop Menu */}
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, justifyContent: 'center' }} role="menubar">
@@ -149,18 +137,27 @@ export default function Navbar() {
                                         key={item.name}
                                         component={Link}
                                         href={item.path}
+                                        variant="outlined"
                                         aria-current={isActive ? 'page' : undefined}
                                         role="menuitem"
                                         sx={{
                                             my: 2,
-                                            color: 'text.primary',
                                             mx: 1,
-                                            textAlign: 'center',
+                                            px: 2,
+                                            borderRadius: 4,
                                             fontWeight: isActive ? 'bold' : 'normal',
-                                            borderBottom: isActive ? '2px solid' : 'none',
-                                            borderColor: 'primary.main',
+                                            color: isActive ? 'primary.main' : 'text.primary',
+                                            borderColor: isActive ? 'primary.main' : 'divider',
+                                            bgcolor: isActive ? (theme) => theme.palette.mode === 'dark' ? 'rgba(138, 180, 248, 0.1)' : 'rgba(25, 118, 210, 0.05)' : 'transparent',
+                                            transition: 'all 0.3s ease',
+                                            '&:hover': {
+                                                borderColor: 'primary.main',
+                                                bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.04)',
+                                            }
                                         }}
                                     >
+
+
                                         {item.name}
                                     </Button>
                                 );

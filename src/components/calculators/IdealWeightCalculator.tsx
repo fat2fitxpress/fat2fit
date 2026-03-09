@@ -104,7 +104,7 @@ export default function IdealWeightCalculator() {
 
     return (
         <Box sx={{ maxWidth: 700, mx: 'auto', mt: 4 }}>
-            <Card variant="outlined" sx={{ p: 2 }}>
+            <Card variant="outlined" sx={{ p: 2, borderRadius: 4 }}>
                 <CardContent>
                     <Stack spacing={3}>
                         {/* Gender */}
@@ -138,7 +138,19 @@ export default function IdealWeightCalculator() {
                             </ToggleButtonGroup>
                         </Box>
 
-                        <Button variant="contained" size="large" fullWidth onClick={calculate} sx={{ py: 1.5, fontSize: '1.1rem' }}>
+                        <Button
+                            variant="contained"
+                            size="large"
+                            fullWidth
+                            onClick={calculate}
+                            sx={{
+                                py: 1.25,
+                                fontSize: '1rem',
+                                textTransform: 'none',
+                                fontWeight: 600,
+                                borderRadius: 4
+                            }}
+                        >
                             Calculate Ideal Weight
                         </Button>
                     </Stack>
@@ -151,7 +163,7 @@ export default function IdealWeightCalculator() {
                             </Typography>
 
                             {/* Average result */}
-                            <Box sx={{ p: 3, bgcolor: 'primary.main', color: 'primary.contrastText', borderRadius: 2, display: 'inline-block', mb: 3 }}>
+                            <Box sx={{ p: 3, bgcolor: 'primary.main', color: 'primary.contrastText', borderRadius: 4, display: 'inline-block', mb: 3 }}>
                                 <Typography variant="subtitle2" sx={{ opacity: 0.9 }}>Average Ideal Weight</Typography>
                                 <Typography variant="h3" fontWeight="bold">
                                     {result.average} kg
@@ -203,7 +215,7 @@ export default function IdealWeightCalculator() {
                                 </Table>
                             </TableContainer>
 
-                            <Box sx={{ mt: 3, textAlign: 'left', bgcolor: 'action.hover', p: 2, borderRadius: 2 }}>
+                            <Box sx={{ mt: 3, textAlign: 'left', bgcolor: 'action.hover', p: 2, borderRadius: 4 }}>
                                 <Typography variant="body2" color="text.secondary">
                                     <strong>Note:</strong> These formulas provide general estimates based on height and gender.
                                     They do not account for body composition, muscle mass, or frame size.

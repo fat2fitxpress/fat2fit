@@ -84,7 +84,7 @@ export default function MacroCalculator() {
 
     return (
         <Box sx={{ maxWidth: 700, mx: 'auto', mt: 4 }}>
-            <Card variant="outlined" sx={{ p: 2 }}>
+            <Card variant="outlined" sx={{ p: 2, borderRadius: 4 }}>
                 <CardContent>
                     <Stack spacing={3}>
                         {/* Calories input */}
@@ -156,7 +156,19 @@ export default function MacroCalculator() {
                             </Typography>
                         </Box>
 
-                        <Button variant="contained" size="large" fullWidth onClick={calculate} sx={{ py: 1.5, fontSize: '1.1rem' }}>
+                        <Button
+                            variant="contained"
+                            size="large"
+                            fullWidth
+                            onClick={calculate}
+                            sx={{
+                                py: 1.25,
+                                fontSize: '1rem',
+                                textTransform: 'none',
+                                fontWeight: 600,
+                                borderRadius: 4
+                            }}
+                        >
                             Calculate Macros
                         </Button>
                     </Stack>
@@ -173,7 +185,7 @@ export default function MacroCalculator() {
 
                             <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap', mt: 2 }}>
                                 {/* Protein */}
-                                <Box sx={{ p: 2, bgcolor: '#e3f2fd', borderRadius: 2, minWidth: 160, flex: 1 }}>
+                                <Box sx={{ p: 2, bgcolor: '#e3f2fd', borderRadius: 4, minWidth: 160, flex: 1 }}>
                                     <Typography variant="subtitle2" color="text.secondary">Protein</Typography>
                                     <Typography variant="h4" fontWeight="bold" color="#1565c0">{result.protein}g</Typography>
                                     <Typography variant="caption" display="block" color="text.secondary">
@@ -182,7 +194,7 @@ export default function MacroCalculator() {
                                 </Box>
 
                                 {/* Carbs */}
-                                <Box sx={{ p: 2, bgcolor: '#fff3e0', borderRadius: 2, minWidth: 160, flex: 1 }}>
+                                <Box sx={{ p: 2, bgcolor: '#fff3e0', borderRadius: 4, minWidth: 160, flex: 1 }}>
                                     <Typography variant="subtitle2" color="text.secondary">Carbs</Typography>
                                     <Typography variant="h4" fontWeight="bold" color="#e65100">{result.carbs}g</Typography>
                                     <Typography variant="caption" display="block" color="text.secondary">
@@ -191,7 +203,7 @@ export default function MacroCalculator() {
                                 </Box>
 
                                 {/* Fat */}
-                                <Box sx={{ p: 2, bgcolor: '#fce4ec', borderRadius: 2, minWidth: 160, flex: 1 }}>
+                                <Box sx={{ p: 2, bgcolor: '#fce4ec', borderRadius: 4, minWidth: 160, flex: 1 }}>
                                     <Typography variant="subtitle2" color="text.secondary">Fat</Typography>
                                     <Typography variant="h4" fontWeight="bold" color="#c62828">{result.fat}g</Typography>
                                     <Typography variant="caption" display="block" color="text.secondary">
@@ -209,7 +221,7 @@ export default function MacroCalculator() {
 
                             {/* Protein per bodyweight */}
                             {weightVal && parseFloat(weightVal) > 0 && (
-                                <Box sx={{ mt: 3, bgcolor: 'action.hover', p: 2, borderRadius: 2 }}>
+                                <Box sx={{ mt: 3, bgcolor: 'action.hover', p: 2, borderRadius: 4 }}>
                                     <Typography variant="body2" color="text.secondary">
                                         Protein per bodyweight:{' '}
                                         <strong>

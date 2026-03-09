@@ -142,7 +142,21 @@ export default function DietClient({ initialDiets }: DietClientProps) {
                         <Typography variant="body1" color="text.secondary" paragraph sx={{ fontSize: '1.1rem' }}>
                             This approach helps prevent burnout and makes a healthy lifestyle achievable in the long term.
                         </Typography>
-                        <Button variant="contained" size="large" sx={{ mt: 2, borderRadius: 8 }} component={Link} href="/tips">
+                        <Button
+                            variant="contained"
+                            size="large"
+                            sx={{
+                                mt: 2,
+                                borderRadius: 4,
+                                px: 4,
+                                py: 1.25,
+                                fontSize: '1rem',
+                                textTransform: 'none',
+                                fontWeight: 600
+                            }}
+                            component={Link}
+                            href="/tips"
+                        >
                             More Nutrition Tips
                         </Button>
                     </Grid>

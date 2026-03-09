@@ -9,8 +9,8 @@ import { getAllDiets } from '@/lib/diets';
 import DietClient from './DietClient';
 
 export const metadata: Metadata = {
-    title: 'Healthy Meal Plans & Nutrition Guides - Diet Recipes',
-    description: 'Discover healthy meal plans and nutrition guides for weight loss, muscle building, and balanced eating. Keto, vegan, Mediterranean recipes and more.',
+    title: 'Healthy Meal Plans & Nutrition Guides',
+    description: 'Discover bio-individual meal plans and gut health nutrition guides. Anti-inflammatory recipes, microbiome optimization, and keto/vegan diets for weight loss.',
     keywords: [
         'meal plans',
         'nutrition guide',
@@ -25,11 +25,13 @@ export const metadata: Metadata = {
         'fat loss meal plan',
         'meal prep for weight loss',
         'meal plan for busy professionals',
-        'glucose friendly diet',
+        'nutrigenomics diet',
+        'anti-inflammatory meal plan',
+        'gut health recipes',
+        'microbiome optimization',
+        'glucose-friendly meals',
         'GLP-1 friendly diet ideas',
-        'nutritious eating',
-        'balanced diet guides',
-        'fitness nutrition',
+        'metabolic health nutrition',
         'personalized meal planning',
     ],
     alternates: {

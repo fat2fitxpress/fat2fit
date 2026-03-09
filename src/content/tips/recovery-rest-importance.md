@@ -212,3 +212,4 @@ Embracing recovery is not weakness - it's intelligent training. Your body adapts
 Remember: more training is not always better. Strategic recovery is what separates those who achieve their goals from those who burn out or get injured.
 
 Rest is not the opposite of progress - it's an essential part of it. Embrace recovery, and watch your fitness results soar!
+

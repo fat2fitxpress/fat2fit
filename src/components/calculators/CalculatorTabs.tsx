@@ -47,7 +47,7 @@ export default function CalculatorTabs() {
 
     return (
         <Box>
-            <Paper variant="outlined" sx={{ mb: 3 }}>
+            <Paper variant="outlined" sx={{ mb: 3, borderRadius: 4 }}>
                 <Tabs
                     value={tab}
                     onChange={(_, v) => setTab(v)}
@@ -55,15 +55,34 @@ export default function CalculatorTabs() {
                     scrollButtons="auto"
                     allowScrollButtonsMobile
                     aria-label="Fitness calculator tabs"
+                    TabIndicatorProps={{
+                        style: { display: 'none' }
+                    }}
                     sx={{
+                        '& .MuiTabs-flexContainer': {
+                            gap: 1,
+                            p: 1,
+                        },
                         '& .MuiTab-root': {
                             textTransform: 'none',
                             fontWeight: 600,
                             fontSize: '0.95rem',
-                            minHeight: 56,
+                            minHeight: 48,
+                            transition: 'all 0.3s ease',
+                            borderRadius: 4,
+                            border: '1px solid',
+                            borderColor: 'divider',
+                            color: 'text.secondary',
+                            '&.Mui-selected': {
+                                color: 'primary.main',
+                                borderColor: 'primary.main',
+                                bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(138, 180, 248, 0.1)' : 'rgba(25, 118, 210, 0.05)',
+                            },
                         },
                     }}
                 >
+
+
                     {TABS.map((t, i) => (
                         <Tab
                             key={t.label}
@@ -83,7 +102,7 @@ export default function CalculatorTabs() {
             <TabPanel value={tab} index={0}>
                 <CalculatorForm />
                 <Box sx={{ mt: 6, maxWidth: 700, mx: 'auto' }}>
-                    <Paper variant="outlined" sx={{ p: 4, bgcolor: 'background.default' }}>
+                    <Paper variant="outlined" sx={{ p: 4, bgcolor: 'background.default', borderRadius: 4 }}>
                         <Typography variant="h5" gutterBottom fontWeight="bold">
                             Scientific Reference
                         </Typography>
@@ -122,7 +141,7 @@ export default function CalculatorTabs() {
             <TabPanel value={tab} index={1}>
                 <BMICalculator />
                 <Box sx={{ mt: 6, maxWidth: 700, mx: 'auto' }}>
-                    <Paper variant="outlined" sx={{ p: 4, bgcolor: 'background.default' }}>
+                    <Paper variant="outlined" sx={{ p: 4, bgcolor: 'background.default', borderRadius: 4 }}>
                         <Typography variant="h5" gutterBottom fontWeight="bold">
                             Scientific Reference
                         </Typography>
@@ -159,7 +178,7 @@ export default function CalculatorTabs() {
             <TabPanel value={tab} index={2}>
                 <BodyFatCalculator />
                 <Box sx={{ mt: 6, maxWidth: 700, mx: 'auto' }}>
-                    <Paper variant="outlined" sx={{ p: 4, bgcolor: 'background.default' }}>
+                    <Paper variant="outlined" sx={{ p: 4, bgcolor: 'background.default', borderRadius: 4 }}>
                         <Typography variant="h5" gutterBottom fontWeight="bold">
                             Scientific Reference
                         </Typography>
@@ -200,7 +219,7 @@ export default function CalculatorTabs() {
             <TabPanel value={tab} index={3}>
                 <MacroCalculator />
                 <Box sx={{ mt: 6, maxWidth: 700, mx: 'auto' }}>
-                    <Paper variant="outlined" sx={{ p: 4, bgcolor: 'background.default' }}>
+                    <Paper variant="outlined" sx={{ p: 4, bgcolor: 'background.default', borderRadius: 4 }}>
                         <Typography variant="h5" gutterBottom fontWeight="bold">
                             Scientific Reference
                         </Typography>
@@ -244,7 +263,7 @@ export default function CalculatorTabs() {
             <TabPanel value={tab} index={4}>
                 <OneRepMaxCalculator />
                 <Box sx={{ mt: 6, maxWidth: 700, mx: 'auto' }}>
-                    <Paper variant="outlined" sx={{ p: 4, bgcolor: 'background.default' }}>
+                    <Paper variant="outlined" sx={{ p: 4, bgcolor: 'background.default', borderRadius: 4 }}>
                         <Typography variant="h5" gutterBottom fontWeight="bold">
                             Scientific Reference
                         </Typography>
@@ -285,7 +304,7 @@ export default function CalculatorTabs() {
             <TabPanel value={tab} index={5}>
                 <IdealWeightCalculator />
                 <Box sx={{ mt: 6, maxWidth: 700, mx: 'auto' }}>
-                    <Paper variant="outlined" sx={{ p: 4, bgcolor: 'background.default' }}>
+                    <Paper variant="outlined" sx={{ p: 4, bgcolor: 'background.default', borderRadius: 4 }}>
                         <Typography variant="h5" gutterBottom fontWeight="bold">
                             Scientific Reference
                         </Typography>

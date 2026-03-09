@@ -10,8 +10,8 @@ import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 export const metadata: Metadata = {
   metadataBase: new URL('https://fat2fitxpress.com'),
   title: {
-    default: 'Fat 2 Fit | Expert Fitness Blog & Personalized Health Guides',
-    template: '%s | Fat 2 Fit'
+    default: 'Fat2Fit | Science-Backed Fitness Blog & Transformation Guides',
+    template: '%s | Fat2Fit'
   },
   description: 'Transform your body and achieve your fitness goals with the Fat 2 Fit journey. Get personalized workout plans, nutrition guides, calorie calculators, and expert fitness coaching.',
   manifest: '/manifest.json',
@@ -22,10 +22,13 @@ export const metadata: Metadata = {
     'Fat2FitXpress',
     'best fitness blog 2026',
     'expert health advice',
-    'AI fitness coaching',
+    'AI fitness coach',
     'longevity training',
     'metabolic health',
-    'mitochondrial health',
+    'biohacking protocols',
+    'gut health diet',
+    'nervous system regulation',
+    'cellular health fitness',
     'science-backed weight loss',
     'personalized workout plans',
     'nutrition guides',
@@ -65,9 +68,9 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://fat2fitxpress.com',
-    siteName: 'Fat 2 Fit',
-    title: 'Fat 2 Fit | Expert Fitness Blog & Transformation Guides',
-    description: 'The ultimate Fat 2 Fit journey. Science-backed workout plans, nutrition guides, and expert wellness tips for a better you.',
+    siteName: 'Fat2Fit',
+    title: 'Fat2Fit | Expert Fitness Blog & Transformation Guides',
+    description: 'Transform your body with Fat2Fit. Science-backed workout plans, personalized longevity coaching, and expert gut health nutrition guides.',
     images: [
       {
         url: '/og-image.png',
@@ -100,8 +103,8 @@ export const viewport: Viewport = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Fat 2 Fit',
-  alternateName: ['Fat2Fit', 'Fat 2 Fit Xpress'],
+  name: 'Fat2Fit',
+  alternateName: ['Fat 2 Fit', 'Fat 2 Fit Xpress'],
   url: 'https://fat2fitxpress.com',
   logo: 'https://fat2fitxpress.com/logo.png',
   sameAs: [

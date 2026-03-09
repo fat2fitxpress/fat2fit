@@ -171,6 +171,6 @@ Proper hydration is one of the simplest yet most powerful tools for improving yo
 
 Ready to optimize other aspects of your fitness journey? Check out our guides on [nutrition timing](/tips/nutrition-timing-guide), [HIIT workout benefits](/tips/hiit-workout-benefits), and [recovery and rest importance](/tips/recovery-rest-importance) to maximize your results.
 
----
 
 *Stay hydrated, stay healthy, and keep pushing toward your fitness goals!*
+

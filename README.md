@@ -35,15 +35,13 @@ Six science-backed calculators to help track and optimize your fitness journey:
 
 ### 💡 Expert Tips & Blog
 - Latest fitness articles and expert advice
-- **12 expert tips articles** covering:
-  - Workout techniques, common mistakes, and programming
-  - Nutrition timing, hydration, recovery, and rest
+  - **Japanese Interval Walking** (The 3-minute interval walking trend for 2026, mitochondrial health, and fat loss)
   - **Zone 2 Cardio** (low-intensity training science, mitochondrial health)
   - **Cortisol, stress & hormonal health** (e.g. *“Is stress making you gain belly fat?”*)
   - **GLP‑1 medications (Ozempic, Wegovy) & natural alternatives**
   - **Sleep, morning/evening routines, cold exposure, sunlight & circadian rhythm optimization**
-  - **Fitness Tracking Wearable Technology** - Top 3 smartwatches and smart rings of 2026 with feature comparisons, pros/cons (Garmin Venu 4, Apple Watch Series 11, Oura Ring 4, Samsung Galaxy Ring, and more)
-- Markdown-based content management with optimized spacing and layout
+  - **Fitness Tracking Wearable Technology** (Garmin Venu 4, Apple Watch Series 11, Oura Ring 4, and more)
+- **Markdown-based CMS**: Optimized spacing, layout, and structured E-E-A-T elements
 
 ### 🌓 Theming & UX
 - Light/dark mode toggle with consistent typography across pages
@@ -51,8 +49,9 @@ Six science-backed calculators to help track and optimize your fitness journey:
 - Dedicated hero imagery for key sections (Home, Workout Plans, Diet, Tips, Calculators, Contact)
 
 ### 📧 Contact Form
-- Integrated contact form with EmailJS
-- Direct communication channel for user inquiries
+- **Integrated EmailJS**: Direct communication channel for user inquiries
+- **Robust Validations**: Client-side field checks with real-time MUI validation feedback for Name, Email, Subject, and Message
+
 
 ### 📱 Mobile App (Coming Soon)
 - Upcoming Android application promotion on the landing page
@@ -218,20 +217,19 @@ Each markdown file uses frontmatter for metadata (title, description, date, etc.
 
 ## 🌐 SEO & Performance
 
-- Comprehensive route-level metadata and Open Graph tags
-- Keyword strategy includes high-intent, viral topics such as:
+- **Comprehensive Metadata**: Route-level Open Graph and Twitter tags for maximum social visibility
+- **E-E-A-T Focused**: Author bylines and publication dates on all content articles
+- **Structured Data (JSON-LD)**: Enhanced Rich Results with `BlogPosting`, `Article`, `CollectionPage`, `BreadcrumbList`, and `WebApplication` schemas
+- **Keyword Strategy**: Optimized for high-intent, viral 2026 topics:
+  - **Japanese Interval Walking**, **3-minute walking habit**, **metabolic health 2026**
   - **Zone 2 cardio benefits**, **how to train in Zone 2**, **Zone 2 vs HIIT**
   - **Cortisol belly fat**, **stress weight gain**, **high cortisol symptoms**
   - **GLP‑1 medications**, **Ozempic / Wegovy alternatives**, **natural appetite control**
-  - **Sleep and fat loss**, **morning routine for weight loss**, **cold showers & circadian health**
+  - **Sleep and fat loss**, **morning routine for weight loss**, **personalized wellness**
   - **Best smartwatch 2026**, **best smart ring 2026**, **wearable fitness technology**
-  - **Oura Ring 4**, **Garmin Venu 4**, **Samsung Galaxy Ring**, **smartwatch vs smart ring**
-- Full Twitter Card support on all pages (title, description, image)
-- Structured data (JSON-LD) for better search engine understanding (articles, collection pages, HowTo, ExercisePlan, FAQPage, WebApplication, ContactPage)
-- Automatic sitemap generation
-- PWA-ready manifest.json
-- Optimized for Core Web Vitals
-- Security headers configured
+- **Refined Hierarchy**: Proper SEO structure using semantic H1/H2 tags for titles and headings
+- **Optimized Assets**: Automatic sitemap generation and PWA-ready manifest
+- **Security Headers**: Configured CSP, XSS protection, and HSTS for a secure experience
 
 ## 📱 Progressive Web App
 

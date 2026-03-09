@@ -91,7 +91,7 @@ export default function BodyFatCalculator() {
 
     return (
         <Box sx={{ maxWidth: 700, mx: 'auto', mt: 4 }}>
-            <Card variant="outlined" sx={{ p: 2 }}>
+            <Card variant="outlined" sx={{ p: 2, borderRadius: 4 }}>
                 <CardContent>
                     <Stack spacing={3}>
                         {/* Gender */}
@@ -172,7 +172,19 @@ export default function BodyFatCalculator() {
                             </ToggleButtonGroup>
                         </Box>
 
-                        <Button variant="contained" size="large" fullWidth onClick={calculate} sx={{ py: 1.5, fontSize: '1.1rem' }}>
+                        <Button
+                            variant="contained"
+                            size="large"
+                            fullWidth
+                            onClick={calculate}
+                            sx={{
+                                py: 1.25,
+                                fontSize: '1rem',
+                                textTransform: 'none',
+                                fontWeight: 600,
+                                borderRadius: 4
+                            }}
+                        >
                             Calculate Body Fat %
                         </Button>
                     </Stack>
@@ -188,7 +200,7 @@ export default function BodyFatCalculator() {
                             </Typography>
                             <Typography
                                 variant="h6"
-                                sx={{ mt: 1, px: 3, py: 0.5, display: 'inline-block', borderRadius: 2, bgcolor: result.color, color: '#fff' }}
+                                sx={{ mt: 1, px: 3, py: 0.5, display: 'inline-block', borderRadius: 4, bgcolor: result.color, color: '#fff' }}
                             >
                                 {result.category}
                             </Typography>
@@ -213,7 +225,7 @@ export default function BodyFatCalculator() {
                             {/* Mass breakdown */}
                             {result.leanMass > 0 && (
                                 <Box sx={{ mt: 3, display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
-                                    <Box sx={{ p: 2, bgcolor: 'action.hover', borderRadius: 2, minWidth: 180 }}>
+                                    <Box sx={{ p: 2, bgcolor: 'action.hover', borderRadius: 4, minWidth: 180 }}>
                                         <Typography variant="subtitle2" color="text.secondary">Lean Mass</Typography>
                                         <Typography variant="h5" fontWeight="bold">{result.leanMass} kg</Typography>
                                     </Box>
@@ -224,7 +236,7 @@ export default function BodyFatCalculator() {
                                 </Box>
                             )}
 
-                            <Box sx={{ mt: 3, textAlign: 'left', bgcolor: 'action.hover', p: 2, borderRadius: 2 }}>
+                            <Box sx={{ mt: 3, textAlign: 'left', bgcolor: 'action.hover', p: 2, borderRadius: 4 }}>
                                 <Typography variant="body2" color="text.secondary">
                                     <strong>US Navy Method:</strong> This estimates body fat using circumference measurements.
                                     For more accuracy, consider DEXA scans or hydrostatic weighing.

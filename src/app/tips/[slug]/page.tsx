@@ -117,8 +117,9 @@ export default async function PostPage(props: { params: Promise<{ slug: string }
     // Article Schema Markup
     const articleSchema = {
         '@context': 'https://schema.org',
-        '@type': 'Article',
+        '@type': 'BlogPosting',
         headline: post.title,
+
         description: post.excerpt,
         author: {
             '@type': 'Person',
@@ -198,7 +199,10 @@ export default async function PostPage(props: { params: Promise<{ slug: string }
             ctaButtonText="Explore More Tips"
             ctaHref="/tips"
             schemas={schemas}
+            author={post.author}
+            date={post.date}
         />
+
     );
 }
 

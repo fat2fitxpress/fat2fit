@@ -33,19 +33,87 @@ export default function ContactPage() {
         severity: 'success' as 'success' | 'error',
     });
 
+    const [errors, setErrors] = React.useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+    });
+
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value,
+            [name]: value,
         });
+        // Clear error when user starts typing
+        if (errors[name as keyof typeof errors]) {
+            setErrors({
+                ...errors,
+                [name]: '',
+            });
+        }
     };
+
 
     const handleCloseSnackbar = () => {
         setSnackbar({ ...snackbar, open: false });
     };
 
+    const validate = () => {
+        const newErrors = {
+            name: '',
+            email: '',
+            subject: '',
+            message: '',
+        };
+        let isValid = true;
+
+        if (!formData.name.trim()) {
+            newErrors.name = 'Name is required';
+            isValid = false;
+        } else if (formData.name.trim().length < 2) {
+            newErrors.name = 'Name must be at least 2 characters';
+            isValid = false;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!formData.email.trim()) {
+            newErrors.email = 'Email is required';
+            isValid = false;
+        } else if (!emailRegex.test(formData.email)) {
+            newErrors.email = 'Please enter a valid email address';
+            isValid = false;
+        }
+
+        if (!formData.subject.trim()) {
+            newErrors.subject = 'Subject is required';
+            isValid = false;
+        } else if (formData.subject.trim().length < 3) {
+            newErrors.subject = 'Subject must be at least 3 characters';
+            isValid = false;
+        }
+
+        if (!formData.message.trim()) {
+            newErrors.message = 'Message is required';
+            isValid = false;
+        } else if (formData.message.trim().length < 10) {
+            newErrors.message = 'Message must be at least 10 characters';
+            isValid = false;
+        }
+
+        setErrors(newErrors);
+        return isValid;
+    };
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        if (!validate()) {
+            return;
+        }
+
         setLoading(true);
 
         // Check for environment variables
@@ -109,6 +177,7 @@ export default function ContactPage() {
             setLoading(false);
         }
     };
+
 
     return (
         <Box
@@ -228,8 +297,11 @@ export default function ContactPage() {
                                                 name="name"
                                                 value={formData.name}
                                                 onChange={handleChange}
+                                                error={!!errors.name}
+                                                helperText={errors.name}
                                                 variant="outlined"
                                             />
+
                                         </Grid>
                                         <Grid size={{ xs: 12, sm: 6 }}>
                                             <TextField
@@ -240,8 +312,11 @@ export default function ContactPage() {
                                                 type="email"
                                                 value={formData.email}
                                                 onChange={handleChange}
+                                                error={!!errors.email}
+                                                helperText={errors.email}
                                                 variant="outlined"
                                             />
+
                                         </Grid>
                                         <Grid size={{ xs: 12 }}>
                                             <TextField
@@ -251,8 +326,11 @@ export default function ContactPage() {
                                                 name="subject"
                                                 value={formData.subject}
                                                 onChange={handleChange}
+                                                error={!!errors.subject}
+                                                helperText={errors.subject}
                                                 variant="outlined"
                                             />
+
                                         </Grid>
                                         <Grid size={{ xs: 12 }}>
                                             <TextField
@@ -264,8 +342,11 @@ export default function ContactPage() {
                                                 rows={6}
                                                 value={formData.message}
                                                 onChange={handleChange}
+                                                error={!!errors.message}
+                                                helperText={errors.message}
                                                 variant="outlined"
                                             />
+
                                         </Grid>
                                         <Grid size={{ xs: 12 }}>
                                             <Button

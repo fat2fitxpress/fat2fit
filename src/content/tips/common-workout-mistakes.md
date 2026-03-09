@@ -301,3 +301,4 @@ Avoiding these common mistakes can dramatically accelerate your fitness progress
 ✅ **Patience and realistic expectations**
 
 Remember: fitness is a marathon, not a sprint. Make these corrections, stay consistent, and the results will follow. Your future self will thank you for training smart, not just hard!
+

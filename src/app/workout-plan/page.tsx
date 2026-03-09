@@ -1,37 +1,46 @@
-'use client';
-
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
-import Chip from '@mui/material/Chip';
-import Stack from '@mui/material/Stack';
-import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
-import TimerIcon from '@mui/icons-material/Timer';
-import WhatshotIcon from '@mui/icons-material/Whatshot';
-
 import Image from 'next/image';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import WorkoutClient, { WorkoutPlan } from './WorkoutClient';
 
-type WorkoutLevel = 'Beginner' | 'Intermediate' | 'Advanced';
-type WorkoutCategory = 'Strength' | 'HIIT' | 'Cardio' | 'Core';
-
-interface WorkoutPlan {
-    slug: string;
-    title: string;
-    description: string;
-    image: string;
-    duration: string;
-    level: WorkoutLevel;
-    calories: string;
-    category: WorkoutCategory;
-    exercises: string[];
-}
+export const metadata: Metadata = {
+    title: 'Workout Plans - Strength, HIIT & Cardio Training',
+    description: 'Scientifically-designed workout plans for longevity and performance. Choose from functional training, HIIT, and strength programs optimized for metabolic health.',
+    keywords: [
+        'workout plans',
+        'functional training routines',
+        'longevity workouts',
+        'low-impact cardio',
+        'somatic movement exercises',
+        'breathwork for recovery',
+        'metabolic conditioning',
+        'biohacking fitness',
+    ],
+    alternates: {
+        canonical: '/workout-plan',
+    },
+    openGraph: {
+        title: 'Workout Plans - Strength, HIIT, Cardio & Core | Fat2Fit',
+        description: 'Professionally designed workout plans for fat loss, muscle building, and peak fitness.',
+        url: 'https://fat2fitxpress.com/workout-plan',
+        type: 'website',
+        siteName: 'Fat2Fit',
+        images: [
+            {
+                url: '/og-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'Fat2Fit Workout Plans',
+            },
+        ],
+    },
+};
 
 const workoutPlans: WorkoutPlan[] = [
     // Strength Category
@@ -214,14 +223,6 @@ const breadcrumbSchema = {
 };
 
 export default function WorkoutPage() {
-    const [selectedCategory, setSelectedCategory] = React.useState<WorkoutCategory | 'All'>('All');
-
-    const filteredPlans = selectedCategory === 'All'
-        ? workoutPlans
-        : workoutPlans.filter(plan => plan.category === selectedCategory);
-
-    const categories: Array<WorkoutCategory | 'All'> = ['All', 'Strength', 'HIIT', 'Cardio', 'Core'];
-
     return (
         <Box sx={{ bgcolor: 'background.default', pb: 10 }}>
             <script
@@ -249,7 +250,7 @@ export default function WorkoutPage() {
                 {/* Optimized background image */}
                 <Image
                     src="/workout_hero_bg.webp"
-                    alt="Workout Background"
+                    alt="Transformation journey through professional workout plans"
                     fill
                     priority
                     sizes="100vw"
@@ -269,144 +270,27 @@ export default function WorkoutPage() {
                         zIndex: 1,
                     }}
                 />
-                <Container maxWidth="md" sx={{ position: 'relative', zIndex: 1 }}>
+                <Container maxWidth="md" sx={{ position: 'relative', zIndex: 1 }} component="section" aria-label="Workout transformation hero">
                     <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: 'bold' }}>
                         Transform Your Body
                     </Typography>
                     <Typography variant="h5" sx={{ mb: 4, opacity: 0.9 }}>
                         Choose from our professionally designed workout plans to achieve your fitness goals faster.
                     </Typography>
-                    <Button variant="contained" size="large" sx={{ px: 4, py: 1.5, borderRadius: 8 }} onClick={() => document.getElementById('workout-plans')?.scrollIntoView({ behavior: 'smooth' })}>
-                        Get Started
-                    </Button>
                 </Container>
             </Box>
 
-            <Container id="workout-plans">
-                <Typography
-                    variant="h3"
-                    component="h2"
-                    sx={{ fontWeight: 'bold', mb: 2, textAlign: 'center' }}
-                >
-                    Find the right workout plan for your goal
-                </Typography>
-                <Typography
-                    variant="body1"
-                    color="text.secondary"
-                    sx={{ mb: 6, maxWidth: 800, mx: 'auto', textAlign: 'center' }}
-                >
-                    Explore strength, HIIT, cardio, and core training programs designed for fat loss, muscle building,
-                    and overall fitness. Filter by category to quickly discover the routine that matches your current
-                    level and goals.
-                </Typography>
-                {/* Category Filter Chips */}
-                <Stack direction="row" spacing={2} justifyContent="center" sx={{ mb: 6, flexWrap: 'wrap', gap: 2 }}>
-                    {categories.map((category) => (
-                        <Chip
-                            key={category}
-                            label={category === 'All' ? 'All Plans' : category}
-                            color={selectedCategory === category ? 'primary' : 'default'}
-                            variant={selectedCategory === category ? 'filled' : 'outlined'}
-                            onClick={() => setSelectedCategory(category)}
-                            sx={{
-                                cursor: 'pointer',
-                                transition: 'all 0.3s ease',
-                                '&:hover': {
-                                    transform: 'scale(1.05)',
-                                }
-                            }}
-                        />
-                    ))}
-                </Stack>
+            <WorkoutClient plans={workoutPlans} />
 
-                <Grid container spacing={4}>
-                    {filteredPlans.map((plan, index) => (
-                        <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
-                            <Card
-                                elevation={0}
-                                sx={{
-                                    height: '100%',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    borderRadius: 4,
-                                    bgcolor: 'background.paper',
-                                    border: '1px solid',
-                                    borderColor: 'divider',
-                                    transition: 'transform 0.3s ease-in-out',
-                                    '&:hover': {
-                                        transform: 'translateY(-8px)',
-                                        boxShadow: '0px 10px 20px rgba(0,0,0,0.15)',
-                                    }
-                                }}
-                            >
-                                <CardMedia
-                                    component="img"
-                                    height="200"
-                                    image={plan.image}
-                                    alt={plan.title}
-                                />
-                                <CardContent sx={{ flexGrow: 1, p: 3 }}>
-                                    <Stack direction="row" spacing={1} sx={{ mb: 1 }}>
-                                        <Typography variant="overline" color="primary" sx={{ fontWeight: 'bold' }}>
-                                            {plan.category}
-                                        </Typography>
-                                        <Typography variant="overline" color="text.secondary">
-                                            • {plan.level}
-                                        </Typography>
-                                    </Stack>
-                                    <Typography gutterBottom variant="h5" component="h2" sx={{ fontWeight: 'bold' }}>
-                                        {plan.title}
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary" paragraph>
-                                        {plan.description}
-                                    </Typography>
-
-                                    <Stack direction="row" spacing={2} alignItems="center" sx={{ mb: 1 }}>
-                                        <Stack direction="row" spacing={0.5} alignItems="center">
-                                            <TimerIcon sx={{ fontSize: 18, color: 'text.secondary' }} />
-                                            <Typography variant="caption" color="text.secondary">
-                                                {plan.duration}
-                                            </Typography>
-                                        </Stack>
-                                        <Stack direction="row" spacing={0.5} alignItems="center">
-                                            <WhatshotIcon sx={{ fontSize: 18, color: 'text.secondary' }} />
-                                            <Typography variant="caption" color="text.secondary">
-                                                {plan.calories} kcal
-                                            </Typography>
-                                        </Stack>
-                                    </Stack>
-
-                                    <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mt: 2 }}>
-                                        Sample exercises:
-                                    </Typography>
-                                    <Typography variant="caption" color="text.secondary">
-                                        {plan.exercises.join(' • ')}
-                                    </Typography>
-                                </CardContent>
-                                <Box sx={{ p: 2, pt: 0 }}>
-                                    <Button
-                                        fullWidth
-                                        variant="outlined"
-                                        sx={{ borderRadius: 4 }}
-                                        component={Link}
-                                        href={`/workout-plan/${plan.slug}`}
-                                    >
-                                        View Plan
-                                    </Button>
-                                </Box>
-                            </Card>
-                        </Grid>
-                    ))}
-                </Grid>
-
+            <Container>
                 {/* Training Tips Section */}
-                <Box sx={{ mt: 10, p: { xs: 3, md: 6 }, bgcolor: 'background.paper', borderRadius: 4, border: '1px solid', borderColor: 'divider' }}>
+                <Box sx={{ mt: 10, p: { xs: 3, md: 6 }, bgcolor: 'background.paper', borderRadius: 4, border: '1px solid', borderColor: 'divider' }} component="section" aria-label="Expert training tips">
                     <Grid container spacing={6} alignItems="center">
                         <Grid size={{ xs: 12, md: 6 }}>
                             <Box
                                 component="img"
                                 src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800"
-                                alt="Training tips"
+                                alt="Athlete performing a strength training exercise"
                                 sx={{ width: '100%', borderRadius: 4, boxShadow: 3 }}
                             />
                         </Grid>
@@ -414,7 +298,7 @@ export default function WorkoutPage() {
                             <Typography variant="overline" color="primary" sx={{ fontWeight: 'bold' }}>
                                 Expert Advice
                             </Typography>
-                            <Typography variant="h3" gutterBottom sx={{ fontWeight: 'bold' }}>
+                            <Typography variant="h3" component="h2" gutterBottom sx={{ fontWeight: 'bold' }}>
                                 Training Tip of the Day
                             </Typography>
                             <Typography variant="body1" color="text.secondary" paragraph sx={{ fontSize: '1.1rem' }}>

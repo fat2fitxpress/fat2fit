@@ -90,7 +90,7 @@ export default function OneRepMaxCalculator() {
 
     return (
         <Box sx={{ maxWidth: 700, mx: 'auto', mt: 4 }}>
-            <Card variant="outlined" sx={{ p: 2 }}>
+            <Card variant="outlined" sx={{ p: 2, borderRadius: 4 }}>
                 <CardContent>
                     <Stack spacing={3}>
                         {/* Weight & Reps */}
@@ -124,7 +124,19 @@ export default function OneRepMaxCalculator() {
                             helperText="How many reps did you complete with this weight?"
                         />
 
-                        <Button variant="contained" size="large" fullWidth onClick={calculate} sx={{ py: 1.5, fontSize: '1.1rem' }}>
+                        <Button
+                            variant="contained"
+                            size="large"
+                            fullWidth
+                            onClick={calculate}
+                            sx={{
+                                py: 1.25,
+                                fontSize: '1rem',
+                                textTransform: 'none',
+                                fontWeight: 600,
+                                borderRadius: 4
+                            }}
+                        >
                             Calculate One Rep Max
                         </Button>
                     </Stack>
@@ -141,11 +153,11 @@ export default function OneRepMaxCalculator() {
 
                             {/* Formula comparison */}
                             <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap', mt: 3 }}>
-                                <Box sx={{ p: 1.5, bgcolor: 'action.hover', borderRadius: 2, minWidth: 120 }}>
+                                <Box sx={{ p: 1.5, bgcolor: 'action.hover', borderRadius: 4, minWidth: 120 }}>
                                     <Typography variant="caption" color="text.secondary">Epley</Typography>
                                     <Typography variant="h6" fontWeight="bold">{result.epley} {weightUnit}</Typography>
                                 </Box>
-                                <Box sx={{ p: 1.5, bgcolor: 'action.hover', borderRadius: 2, minWidth: 120 }}>
+                                <Box sx={{ p: 1.5, bgcolor: 'action.hover', borderRadius: 4, minWidth: 120 }}>
                                     <Typography variant="caption" color="text.secondary">Brzycki</Typography>
                                     <Typography variant="h6" fontWeight="bold">{result.brzycki} {weightUnit}</Typography>
                                 </Box>
@@ -183,7 +195,7 @@ export default function OneRepMaxCalculator() {
                                 </Table>
                             </TableContainer>
 
-                            <Box sx={{ mt: 3, textAlign: 'left', bgcolor: 'action.hover', p: 2, borderRadius: 2 }}>
+                            <Box sx={{ mt: 3, textAlign: 'left', bgcolor: 'action.hover', p: 2, borderRadius: 4 }}>
                                 <Typography variant="body2" color="text.secondary">
                                     <strong>Tip:</strong> The estimate is most accurate with 2-10 reps. Higher rep ranges (15+) tend to overestimate.
                                     Always use a spotter when attempting heavy lifts near your max.

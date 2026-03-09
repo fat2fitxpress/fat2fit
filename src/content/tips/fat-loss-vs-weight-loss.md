@@ -326,3 +326,4 @@ Focus on body recomposition: losing fat while preserving or building muscle. Thi
 Remember: progress isn't always reflected on the scale. Track body fat percentage, take measurements, progress photos, and notice how your clothes fit. These metrics provide a complete picture of your transformation.
 
 Whether you're just starting your fitness journey or looking to optimize your current approach, prioritizing body composition over scale weight will lead to better health outcomes, improved appearance, and sustainable results.
+

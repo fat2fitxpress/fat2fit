@@ -3,23 +3,24 @@ import { getAllPosts } from '@/lib/posts';
 import LandingPage from '@/components/LandingPage';
 
 export const metadata: Metadata = {
-  title: 'Fat 2 Fit - Transformation & Professional Fitness Blog',
-  description: 'Embark on your Fat 2 Fit journey with expert-led transformation guides, science-backed workout plans, nutrition guides, and free fitness calculators. Start your transformation today.',
+  title: { absolute: 'Fat2Fit - Best Fitness Blog, Workout Plans & Weight Loss Tools' },
+  description: 'Embark on your Fat2Fit journey with AI-powered fitness coaching, longevity training, and metabolic health guides. Get personalized workout plans, science-backed nutrition, and free calorie calculators.',
   keywords: [
     'Fat 2 Fit',
     'Fat2Fit',
-    'fitness platform',
-    'professional fitness blog',
+    'AI fitness coach',
+    'longevity training',
+    'metabolic optimization',
+    'biohacking for fat loss',
     'personalized workout plans',
     'nutrition guides',
-    'calorie calculator',
-    'weight loss tips',
-    'muscle building guide',
-    'HIIT workouts',
-    'diet plans',
-    'fitness tips',
-    'free fitness tools',
+    'gut health fitness',
+    'weight loss tools',
+    'muscle building protocols',
+    'HIIT for longevity',
+    'functional training 2026',
   ],
+
   alternates: {
     canonical: '/',
   },

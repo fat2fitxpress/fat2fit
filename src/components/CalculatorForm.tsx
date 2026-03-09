@@ -81,7 +81,7 @@ export default function CalculatorForm() {
 
     return (
         <Box sx={{ maxWidth: 700, mx: 'auto', mt: 4 }}>
-            <Card variant="outlined" sx={{ p: 2 }}>
+            <Card variant="outlined" sx={{ p: 2, borderRadius: 4 }}>
                 <CardContent>
                     <Stack spacing={3}>
                         {/* Gender and Age Row */}
@@ -196,7 +196,13 @@ export default function CalculatorForm() {
                             size="large"
                             fullWidth
                             onClick={calculate}
-                            sx={{ py: 1.5, fontSize: '1.1rem' }}
+                            sx={{
+                                py: 1.25,
+                                fontSize: '1rem',
+                                textTransform: 'none',
+                                fontWeight: 600,
+                                borderRadius: 4
+                            }}
                         >
                             Calculate Calories
                         </Button>
@@ -210,7 +216,7 @@ export default function CalculatorForm() {
                                 Your Results
                             </Typography>
                             <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
-                                <Box sx={{ p: 2, bgcolor: 'action.hover', borderRadius: 2, minWidth: 250 }}>
+                                <Box sx={{ p: 2, bgcolor: 'action.hover', borderRadius: 4, minWidth: 250 }}>
                                     <Typography variant="subtitle2" color="text.secondary">
                                         Basal Metabolic Rate (BMR)
                                     </Typography>
@@ -226,7 +232,7 @@ export default function CalculatorForm() {
                                         p: 2,
                                         bgcolor: 'primary.main',
                                         color: 'primary.contrastText',
-                                        borderRadius: 2,
+                                        borderRadius: 4,
                                         boxShadow: 2,
                                         minWidth: 250,
                                     }}

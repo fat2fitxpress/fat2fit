@@ -61,7 +61,7 @@ export default function BMICalculator() {
 
     return (
         <Box sx={{ maxWidth: 700, mx: 'auto', mt: 4 }}>
-            <Card variant="outlined" sx={{ p: 2 }}>
+            <Card variant="outlined" sx={{ p: 2, borderRadius: 4 }}>
                 <CardContent>
                     <Stack spacing={3}>
                         {/* Weight */}
@@ -119,7 +119,19 @@ export default function BMICalculator() {
                             </ToggleButtonGroup>
                         </Box>
 
-                        <Button variant="contained" size="large" fullWidth onClick={calculate} sx={{ py: 1.5, fontSize: '1.1rem' }}>
+                        <Button
+                            variant="contained"
+                            size="large"
+                            fullWidth
+                            onClick={calculate}
+                            sx={{
+                                py: 1.25,
+                                fontSize: '1rem',
+                                textTransform: 'none',
+                                fontWeight: 600,
+                                borderRadius: 4
+                            }}
+                        >
                             Calculate BMI
                         </Button>
                     </Stack>
@@ -140,7 +152,7 @@ export default function BMICalculator() {
                                     px: 3,
                                     py: 0.5,
                                     display: 'inline-block',
-                                    borderRadius: 2,
+                                    borderRadius: 4,
                                     bgcolor: result.color,
                                     color: '#fff',
                                 }}
@@ -174,7 +186,7 @@ export default function BMICalculator() {
                                 </Box>
                             </Box>
 
-                            <Box sx={{ mt: 3, textAlign: 'left', bgcolor: 'action.hover', p: 2, borderRadius: 2 }}>
+                            <Box sx={{ mt: 3, textAlign: 'left', bgcolor: 'action.hover', p: 2, borderRadius: 4 }}>
                                 <Typography variant="body2" color="text.secondary">
                                     <strong>Note:</strong> BMI is a screening tool and does not directly measure body fat.
                                     Athletes and muscular individuals may have a high BMI without excess fat.

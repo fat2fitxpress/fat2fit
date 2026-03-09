@@ -1,3 +1,4 @@
+'use client';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -32,6 +33,10 @@ interface DetailPageLayoutProps {
     ctaHref?: string;
     /** Schema markup to inject */
     schemas: Record<string, any>[];
+    /** Author of the content */
+    author?: string;
+    /** Published date */
+    date?: string;
 }
 
 /**
@@ -48,9 +53,12 @@ export default function DetailPageLayout({
     ctaHref,
     schemas,
     showBreadcrumbs = true,
+    author,
+    date,
 }: DetailPageLayoutProps) {
+
     return (
-        <Container maxWidth="md" sx={{ py: 8 }}>
+        <Container maxWidth="md" sx={{ py: 4 }}>
             {/* Schema Markup */}
             {schemas.map((schema, index) => (
                 <script
@@ -63,6 +71,24 @@ export default function DetailPageLayout({
             {/* Breadcrumbs Navigation */}
             {showBreadcrumbs && <BreadcrumbsNav items={breadcrumbs} />}
 
+            {/* Author and Date Byline */}
+            {(author || date) && (
+                <Box sx={{ mb: 3, display: 'flex', gap: 1, color: 'text.secondary' }}>
+                    {author && (
+                        <Typography variant="body2" component="span">
+                            By <strong>{author}</strong>
+                        </Typography>
+                    )}
+                    {author && date && <Typography variant="body2" component="span">•</Typography>}
+                    {date && (
+                        <Typography variant="body2" component="span">
+                            {date}
+                        </Typography>
+                    )}
+                </Box>
+            )}
+
+
             {/* Back Button */}
             <Link
                 href={backHref}
@@ -70,32 +96,43 @@ export default function DetailPageLayout({
                     textDecoration: 'none',
                     display: 'inline-flex',
                     alignItems: 'center',
-                    marginBottom: '2rem',
-                    color: '#1976d2',
+                    marginBottom: '1rem',
+                    color: 'inherit',
                 }}
             >
-                <ArrowBackIcon sx={{ mr: 1 }} />
-                {backLabel}
+                <Box sx={{ display: 'flex', alignItems: 'center', color: 'primary.main', '&:hover': { color: 'primary.light' } }}>
+                    <ArrowBackIcon sx={{ mr: 1 }} />
+                    {backLabel}
+                </Box>
             </Link>
 
             {/* Content Container */}
             <Box
                 sx={{
                     bgcolor: 'background.paper',
-                    p: { xs: 3, md: 6 },
+                    p: { xs: 2.5, md: 4 },
                     borderRadius: 4,
                     border: '1px solid',
                     borderColor: 'divider',
+                    '& a': {
+                        color: (theme) => theme.palette.mode === 'dark' ? '#fff' : 'primary.main',
+                        fontWeight: 600,
+                        textDecoration: 'underline',
+                        textDecorationColor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.4)' : 'rgba(25, 118, 210, 0.4)',
+                        '&:hover': {
+                            color: 'primary.light',
+                        }
+                    },
                     '& h1': {
                         color: 'primary.main',
                         fontWeight: 'bold',
-                        mb: 4,
+                        mb: 2.5,
                         fontSize: { xs: '2rem', md: '2.5rem' },
                     },
                     '& h2': {
                         color: 'text.primary',
-                        mt: 4,
-                        mb: 2,
+                        mt: 2.5,
+                        mb: 1.5,
                         fontWeight: 'bold',
                         borderBottom: '2px solid',
                         borderColor: 'primary.main',
@@ -103,19 +140,19 @@ export default function DetailPageLayout({
                         pb: 1,
                     },
                     '& h3': {
-                        mt: 3,
-                        mb: 1.5,
+                        mt: 2,
+                        mb: 1,
                         color: 'primary.light',
                         fontWeight: 'bold',
                     },
                     '& p': {
-                        mb: 2,
+                        mb: 1.5,
                         fontSize: 16,
                         lineHeight: 1.7,
                         color: 'text.secondary',
                     },
                     '& ul, & ol': {
-                        mb: 3,
+                        mb: 2,
                         pl: 3,
                     },
                     '& li': {
@@ -142,6 +179,7 @@ export default function DetailPageLayout({
                         borderRadius: 1,
                         '& p': { mb: 0 },
                     },
+
                     // ── Table styles ──────────────────────────────────────
                     '& .table-wrapper': {
                         overflowX: 'auto',
@@ -205,7 +243,7 @@ export default function DetailPageLayout({
             </Box>
 
             {/* Call to Action */}
-            <Box sx={{ mt: 8, textAlign: 'center' }}>
+            <Box sx={{ mt: 4, textAlign: 'center' }}>
                 <Typography variant="h6" gutterBottom color="text.primary">
                     {ctaHeading}
                 </Typography>
@@ -213,7 +251,15 @@ export default function DetailPageLayout({
                     <Button
                         variant="contained"
                         size="large"
-                        sx={{ mt: 2, borderRadius: 8, px: 6 }}
+                        sx={{
+                            mt: 2,
+                            borderRadius: 4,
+                            px: 6,
+                            py: 1.25,
+                            fontSize: '1rem',
+                            textTransform: 'none',
+                            fontWeight: 600
+                        }}
                     >
                         {ctaButtonText}
                     </Button>
