@@ -60,7 +60,9 @@ export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
                     alt="Fitness Background"
                     fill
                     priority
+                    fetchPriority="high"
                     sizes="100vw"
+                    quality={85}
                     style={{
                         objectFit: 'cover',
                         zIndex: 0,
@@ -262,7 +264,7 @@ export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
                                 }}
                             >
                                 <Image
-                                    src="/android_app_promo.png"
+                                    src="/android_app_promo.webp"
                                     alt="Fat2Fit Android App Preview"
                                     fill
                                     style={{ objectFit: 'cover' }}

@@ -170,11 +170,13 @@ export default function TipsPage() {
                 }}
             >
                 <Image
-                    src="/tips_hero_bg.jpg"
-                    alt="Fitness tips background"
+                    src="https://images.unsplash.com/photo-1594882645126-14020914d58d?q=80&w=1200&auto=format"
+                    alt="Scientific health research and fitness advice"
                     fill
                     priority
+                    fetchPriority="high"
                     sizes="100vw"
+                    quality={85}
                     style={{
                         objectFit: 'cover',
                         zIndex: 0,

@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { getAllDiets } from '@/lib/diets';
 import DietClient from './DietClient';
 
@@ -119,25 +120,17 @@ export default function DietPage() {
                     overflow: 'hidden',
                 }}
             >
-                <Box
-                    sx={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        right: 0,
-                        bottom: 0,
-                        backgroundImage: 'url(https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2000)',
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        '&::after': {
-                            content: '""',
-                            position: 'absolute',
-                            top: 0,
-                            left: 0,
-                            right: 0,
-                            bottom: 0,
-                            bgcolor: 'rgba(0,0,0,0.6)',
-                        },
+                <Image
+                    src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2000&auto=format"
+                    alt="Healthy Diet Background"
+                    fill
+                    priority
+                    fetchPriority="high"
+                    sizes="100vw"
+                    quality={85}
+                    style={{
+                        objectFit: 'cover',
+                        zIndex: 0,
                     }}
                 />
                 <Container maxWidth="md" sx={{ position: 'relative', zIndex: 1 }}>
@@ -147,9 +140,11 @@ export default function DietPage() {
                     <Typography variant="h5" sx={{ mb: 4, opacity: 0.9 }}>
                         Discover nutrition plans and healthy recipes tailored to your fitness journey.
                     </Typography>
-                    <Button variant="contained" size="large" sx={{ px: 4, py: 1.5, borderRadius: 8 }} component="a" href="#diet-plans">
-                        Explore Recipes
-                    </Button>
+                    <Link href="#diet-plans" style={{ textDecoration: 'none' }}>
+                        <Button variant="contained" size="large" sx={{ px: 4, py: 1.5, borderRadius: 4 }}>
+                            Explore Recipes
+                        </Button>
+                    </Link>
                 </Container>
             </Box>
 
@@ -183,6 +178,6 @@ export default function DietPage() {
 
                 <DietClient initialDiets={diets} />
             </Box>
-        </Box>
+        </Box >
     );
 }

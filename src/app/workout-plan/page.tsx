@@ -253,7 +253,9 @@ export default function WorkoutPage() {
                     alt="Transformation journey through professional workout plans"
                     fill
                     priority
+                    fetchPriority="high"
                     sizes="100vw"
+                    quality={85}
                     style={{
                         objectFit: 'cover',
                         zIndex: 0,

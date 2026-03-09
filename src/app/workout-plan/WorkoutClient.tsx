@@ -14,6 +14,7 @@ import Stack from '@mui/material/Stack';
 import TimerIcon from '@mui/icons-material/Timer';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export type WorkoutLevel = 'Beginner' | 'Intermediate' | 'Advanced';
 export type WorkoutCategory = 'Strength' | 'HIIT' | 'Cardio' | 'Core';
@@ -101,12 +102,16 @@ export default function WorkoutClient({ plans }: WorkoutClientProps) {
                                 }
                             }}
                         >
-                            <CardMedia
-                                component="img"
-                                height="200"
-                                image={plan.image}
-                                alt={plan.title}
-                            />
+                            <Box sx={{ position: 'relative', width: '100%', height: 200 }}>
+                                <Image
+                                    src={plan.image}
+                                    alt={plan.title}
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    quality={75}
+                                    style={{ objectFit: 'cover' }}
+                                />
+                            </Box>
                             <CardContent sx={{ flexGrow: 1, p: 3 }}>
                                 <Stack direction="row" spacing={1} sx={{ mb: 1 }}>
                                     <Typography variant="overline" color="primary" sx={{ fontWeight: 'bold' }}>

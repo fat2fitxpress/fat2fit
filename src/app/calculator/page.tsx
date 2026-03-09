@@ -116,11 +116,13 @@ export default function CalculatorPage() {
                 }}
             >
                 <Image
-                    src="/calculator_hero_bg.jpg"
-                    alt="Fitness calculator background"
+                    src="https://images.unsplash.com/photo-1554224155-6726b3f8981c?q=80&w=1200&auto=format"
+                    alt="Fitness calculators for TDEE, BMI, and Macros"
                     fill
                     priority
+                    fetchPriority="high"
                     sizes="100vw"
+                    quality={85}
                     style={{
                         objectFit: 'cover',
                         zIndex: 0,

@@ -15,6 +15,7 @@ import RestaurantIcon from '@mui/icons-material/Restaurant';
 import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import Link from 'next/link';
+import Image from 'next/image';
 import { DietDetail } from '@/lib/diets';
 
 interface DietClientProps {
@@ -72,12 +73,16 @@ export default function DietClient({ initialDiets }: DietClientProps) {
                                 }
                             }}
                         >
-                            <CardMedia
-                                component="img"
-                                height="200"
-                                image={diet.image}
-                                alt={diet.title}
-                            />
+                            <Box sx={{ position: 'relative', height: 200 }}>
+                                <Image
+                                    src={diet.image}
+                                    alt={diet.title}
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    quality={75}
+                                    style={{ objectFit: 'cover' }}
+                                />
+                            </Box>
                             <CardContent sx={{ flexGrow: 1, p: 3 }}>
                                 <Typography variant="overline" color="primary" sx={{ fontWeight: 'bold' }}>
                                     {diet.category}

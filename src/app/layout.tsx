@@ -151,6 +151,7 @@ export default function RootLayout({
         )}
         {/* Google Tag Manager */}
         {gtmId && <GoogleTagManager gtmId={gtmId} />}
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ''} />
         <ThemeRegistry>
           <ErrorBoundary>
             <Navbar />
@@ -169,7 +170,6 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ''} />
       </body>
     </html>
   );

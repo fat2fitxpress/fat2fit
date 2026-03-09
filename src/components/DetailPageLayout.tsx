@@ -7,6 +7,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Link from 'next/link';
+import Image from 'next/image';
 import BreadcrumbsNav from '@/components/BreadcrumbsNav';
 
 interface BreadcrumbItem {
