@@ -26,12 +26,15 @@ A comprehensive fitness and nutrition web application built with Next.js, provid
 ### 🧮 Fitness Calculators
 Six science-backed calculators to help track and optimize your fitness journey:
 
-1. **TDEE Calculator** - Calculate Total Daily Energy Expenditure using the Mifflin-St Jeor equation
-2. **BMI Calculator** - Assess body mass index with WHO classification
+1. **TDEE (Total Daily Energy Expenditure)** - Calculate maintenance calories using the Mifflin-St Jeor equation.
+2. **BMI Calculator** - Assess body mass index with WHO classification.
 3. **Body Fat % Calculator** - Estimate body fat using US Navy circumference method
 4. **Macro Calculator** - Get personalized protein, carbs, and fat targets
 5. **One Rep Max Calculator** - Estimate maximum lift capacity using multiple formulas (Epley, Brzycki, Lombardi)
-6. **Ideal Weight Calculator** - Find ideal weight range using four medical formulas (Devine, Robinson, Miller, Hamwi)
+6. **Ideal Weight Calculator** - Find ideal weight range using four medical formulas (Devine, Robinson, Miller, Hamwi).
+
+> [!NOTE]
+> All calculators now include **Authoritative Source Links** directly to peer-reviewed research (PubMed, WHO, DTIC) for transparency and credibility.
 
 ### 💡 Expert Tips & Blog
 - Latest fitness articles and expert advice
@@ -45,8 +48,9 @@ Six science-backed calculators to help track and optimize your fitness journey:
 
 ### 🌓 Theming & UX
 - Light/dark mode toggle with consistent typography across pages
-- Accessible link colors and contrast in both themes
-- Dedicated hero imagery for key sections (Home, Workout Plans, Diet, Tips, Calculators, Contact)
+- Accessible link colors and contrast in both themes.
+- **Hero Section Standardization**: Unified 300px hero height with centered layouts across all landing pages for a professional, consistent look.
+- Dedicated hero imagery for key sections (Home, Workout Plans, Diet, Tips, Calculators, Contact).
 
 ### 📧 Contact Form
 - **Integrated EmailJS**: Direct communication channel for user inquiries
@@ -226,8 +230,10 @@ Each markdown file uses frontmatter for metadata (title, description, date, etc.
   - **Cortisol belly fat**, **stress weight gain**, **high cortisol symptoms**
   - **GLP‑1 medications**, **Ozempic / Wegovy alternatives**, **natural appetite control**
   - **Sleep and fat loss**, **morning routine for weight loss**, **personalized wellness**
-  - **Best smartwatch 2026**, **best smart ring 2026**, **wearable fitness technology**
-- **Refined Hierarchy**: Proper SEO structure using semantic H1/H2 tags for titles and headings
+  - **Best smartwatch 2026 / best smart ring 2026** (wearable tracking)
+  - **Neurowellness / healthspan optimization**
+  - **GLP-1 metabolic health**
+- **Refined Hierarchy**: Proper SEO structure using semantic H1/H2 tags for titles and headings.
 - **Optimized Assets**: Automatic sitemap generation and PWA-ready manifest
 - **Security Headers**: Configured CSP, XSS protection, and HSTS for a secure experience
 

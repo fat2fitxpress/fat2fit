@@ -29,6 +29,8 @@ export const metadata: Metadata = {
         'biomarker tracking tools',
         'precision nutrition calculator',
         'longevity data assessment',
+        'AI fitness coach assessment',
+        'predictive health algorithms',
     ],
     alternates: {
         canonical: '/calculator',

@@ -21,6 +21,11 @@ export const metadata: Metadata = {
         'breathwork for recovery',
         'metabolic conditioning',
         'biohacking fitness',
+        'micro-workouts for busy people',
+        'neuro-adaptive training',
+        'strength training for longevity',
+        'somatic movement protocols',
+        'low-impact functional fitness',
     ],
     alternates: {
         canonical: '/workout-plan',
