@@ -4,8 +4,10 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
+import { useTheme } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
 
 import CalculatorForm from '@/components/CalculatorForm';
 import BMICalculator from '@/components/calculators/BMICalculator';
@@ -34,7 +36,7 @@ function TabPanel({ children, value, index }: TabPanelProps) {
 }
 
 const TABS = [
-    { label: 'TDEE Calculator', description: 'Calculate your Total Daily Energy Expenditure and maintenance calories.' },
+    { label: 'TDEE', description: 'Calculate your Total Daily Energy Expenditure (TDEE) and maintenance calories.' },
     { label: 'BMI', description: 'Calculate your Body Mass Index to assess whether your weight is healthy.' },
     { label: 'Body Fat %', description: "Estimate your body fat percentage using the US Navy method." },
     { label: 'Macros', description: 'Get your daily protein, carbs, and fat targets based on your goals.' },
@@ -43,10 +45,24 @@ const TABS = [
 ];
 
 export default function CalculatorTabs() {
+    const theme = useTheme();
+    const isDarkMode = theme.palette.mode === 'dark';
     const [tab, setTab] = React.useState(0);
 
     return (
         <Box>
+            <Typography
+                variant="h3"
+                component="h2"
+                sx={{
+                    fontWeight: 'bold',
+                    mb: 6,
+                    textAlign: 'center',
+                    color: isDarkMode ? 'inherit' : '#000000'
+                }}
+            >
+                Precision Fitness Calculators
+            </Typography>
             <Paper variant="outlined" sx={{ mb: 3, borderRadius: 4 }}>
                 <Tabs
                     value={tab}
@@ -95,7 +111,7 @@ export default function CalculatorTabs() {
             </Paper>
 
             {/* Tab description */}
-            <Typography variant="body1" color="text.secondary" sx={{ textAlign: 'center', mb: 1 }}>
+            <Typography variant="h6" color="text.secondary" sx={{ textAlign: 'center', mb: 0, fontWeight: 'bold' }}>
                 {TABS[tab].description}
             </Typography>
 
@@ -134,6 +150,12 @@ export default function CalculatorTabs() {
                             <li><strong>Active (1.725):</strong> Hard exercise/sports 6-7 days/week</li>
                             <li><strong>Very Active (1.9):</strong> Very hard exercise/sports &amp; physical job</li>
                         </Box>
+                        <Typography variant="body2" color="text.secondary" sx={{ mt: 3, fontStyle: 'italic', display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                            <strong>Source:</strong>
+                            <Link href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener" color="inherit" sx={{ textDecoration: 'underline' }}>
+                                Mifflin-St Jeor Study (PubMed)
+                            </Link>
+                        </Typography>
                     </Paper>
                 </Box>
             </TabPanel>
@@ -168,8 +190,11 @@ export default function CalculatorTabs() {
                             <li><strong>Obese Class II:</strong> BMI 35.0 – 39.9</li>
                             <li><strong>Obese Class III:</strong> BMI ≥ 40.0</li>
                         </Box>
-                        <Typography variant="body2" color="text.secondary" sx={{ mt: 2, fontStyle: 'italic' }}>
-                            Source: World Health Organization (WHO) — Global Database on Body Mass Index
+                        <Typography variant="body2" color="text.secondary" sx={{ mt: 3, fontStyle: 'italic', display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                            <strong>Source:</strong>
+                            <Link href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" target="_blank" rel="noopener" color="inherit" sx={{ textDecoration: 'underline' }}>
+                                World Health Organization (WHO) — BMI Classification
+                            </Link>
                         </Typography>
                     </Paper>
                 </Box>
@@ -208,9 +233,11 @@ export default function CalculatorTabs() {
                             <li><strong>Average:</strong> 18–24% / 25–31%</li>
                             <li><strong>Obese:</strong> 25%+ / 32%+</li>
                         </Box>
-                        <Typography variant="body2" color="text.secondary" sx={{ mt: 2, fontStyle: 'italic' }}>
-                            Source: Hodgdon, J.A. &amp; Beckett, M.B. (1984). &quot;Prediction of percent body fat for U.S. Navy men and women
-                            from body circumferences and height.&quot; Naval Health Research Center, Report No. 84-29.
+                        <Typography variant="body2" color="text.secondary" sx={{ mt: 3, fontStyle: 'italic', display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                            <strong>Source:</strong>
+                            <Link href="https://apps.dtic.mil/sti/citations/ADA153513" target="_blank" rel="noopener" color="inherit" sx={{ textDecoration: 'underline' }}>
+                                U.S. Navy Method — Hodgdon & Beckett (1984)
+                            </Link>
                         </Typography>
                     </Paper>
                 </Box>
@@ -253,8 +280,11 @@ export default function CalculatorTabs() {
                             <li><strong>Lean bulk:</strong> 110% of TDEE (surplus of ~250 cal/day)</li>
                             <li><strong>Aggressive bulk:</strong> 120% of TDEE (surplus of ~500 cal/day)</li>
                         </Box>
-                        <Typography variant="body2" color="text.secondary" sx={{ mt: 2, fontStyle: 'italic' }}>
-                            Sources: ISSN Position Stand on Protein (Jäger et al., 2017); Dietary Reference Intakes, National Academies Press.
+                        <Typography variant="body2" color="text.secondary" sx={{ mt: 3, fontStyle: 'italic', display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                            <strong>Source:</strong>
+                            <Link href="https://pubmed.ncbi.nlm.nih.gov/28642676/" target="_blank" rel="noopener" color="inherit" sx={{ textDecoration: 'underline' }}>
+                                ISSN Position Stand: Protein and Exercise (PubMed)
+                            </Link>
                         </Typography>
                     </Paper>
                 </Box>
@@ -293,9 +323,11 @@ export default function CalculatorTabs() {
                             <li><strong>Hypertrophy (6–12 reps):</strong> 65–85% of 1RM</li>
                             <li><strong>Endurance (13–20+ reps):</strong> 50–65% of 1RM</li>
                         </Box>
-                        <Typography variant="body2" color="text.secondary" sx={{ mt: 2, fontStyle: 'italic' }}>
-                            Sources: Epley, B. (1985). &quot;Poundage Chart.&quot; Boyd Epley Workout; Brzycki, M. (1993). &quot;Strength Testing—Predicting
-                            a One-Rep Max from Reps-to-Fatigue.&quot; JOPERD 64(1):88–90.
+                        <Typography variant="body2" color="text.secondary" sx={{ mt: 3, fontStyle: 'italic', display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                            <strong>Source:</strong>
+                            <Link href="https://pubmed.ncbi.nlm.nih.gov/23760359/" target="_blank" rel="noopener" color="inherit" sx={{ textDecoration: 'underline' }}>
+                                1RM Prediction Equation Validation (PubMed)
+                            </Link>
                         </Typography>
                     </Paper>
                 </Box>
@@ -334,9 +366,11 @@ export default function CalculatorTabs() {
                             and provide general guidelines. Individual ideal weight depends on body composition, frame size,
                             and overall health.
                         </Typography>
-                        <Typography variant="body2" color="text.secondary" sx={{ fontStyle: 'italic' }}>
-                            Sources: Devine, B.J. (1974). Pharm Clin N Am; Robinson, J.D. et al. (1983). Am J Emerg Med;
-                            Miller, D.R. et al. (1983). Anesthesiology; Hamwi, G.J. (1964). ADA Forecasting.
+                        <Typography variant="body2" color="text.secondary" sx={{ mt: 3, fontStyle: 'italic', display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                            <strong>Source:</strong>
+                            <Link href="https://pubmed.ncbi.nlm.nih.gov/4611317/" target="_blank" rel="noopener" color="inherit" sx={{ textDecoration: 'underline' }}>
+                                Devine Formula — Original Citation (PubMed)
+                            </Link>
                         </Typography>
                     </Paper>
                 </Box>

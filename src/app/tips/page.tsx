@@ -160,17 +160,16 @@ export default function TipsPage() {
             <Box
                 sx={{
                     position: 'relative',
-                    height: 280,
+                    height: 300,
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     textAlign: 'center',
-                    mb: 4,
                     overflow: 'hidden',
                 }}
             >
                 <Image
-                    src="https://images.unsplash.com/photo-1594882645126-14020914d58d?q=80&w=1200&auto=format"
+                    src="/tips_hero_bg.webp"
                     alt="Scientific health research and fitness advice"
                     fill
                     priority
@@ -216,14 +215,16 @@ export default function TipsPage() {
                 </Container>
             </Box>
 
-            <Container maxWidth="lg" sx={{ pb: 4 }}>
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(tipsSchema) }}
-                />
-                <TipsGrid posts={posts} />
-            </Container>
+            {/* Tips Content Section */}
+            <Box sx={{ bgcolor: 'action.hover', py: 8 }}>
+                <Container maxWidth="lg">
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{ __html: JSON.stringify(tipsSchema) }}
+                    />
+                    <TipsGrid posts={posts} title="Explore Our Fitness Tips" />
+                </Container>
+            </Box>
         </Box>
     );
 }
-

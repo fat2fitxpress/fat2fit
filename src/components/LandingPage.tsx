@@ -39,10 +39,11 @@ export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
             <Box
                 sx={{
                     position: 'relative',
-                    pt: 12,
-                    pb: 12,
+                    height: 300,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
                     textAlign: 'center',
-                    minHeight: '400px',
                     '&::before': {
                         content: '""',
                         position: 'absolute',
@@ -68,6 +69,17 @@ export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
                         zIndex: 0,
                     }}
                 />
+                <Box
+                    sx={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        bgcolor: 'rgba(0,0,0,0.55)',
+                        zIndex: 1,
+                    }}
+                />
                 <Container maxWidth="md" sx={{ position: 'relative', zIndex: 2 }}>
                     <Typography
                         component="h1"
@@ -85,7 +97,6 @@ export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
                         variant="h5"
                         paragraph
                         sx={{
-                            mb: 4,
                             color: 'rgba(255, 255, 255, 0.95)',
                             textShadow: '0 1px 5px rgba(0,0,0,0.2)',
                         }}
@@ -93,41 +104,21 @@ export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
                         Personalized diet plans, workout routines, and expert tips to help you
                         achieve your health goals faster and smarter.
                     </Typography>
-                    <Button
-                        variant="contained"
-                        size="large"
-                        component={Link}
-                        href="/calculator"
-                        sx={{
-                            px: 4,
-                            py: 1.5,
-                            fontSize: '1.1rem',
-                            borderRadius: 8,
-                            background: 'linear-gradient(45deg, #4285f4, #669df6)',
-                            boxShadow: '0 4px 20px rgba(66, 133, 244, 0.4)',
-                            '&:hover': {
-                                background: 'linear-gradient(45deg, #669df6, #8ab4f8)',
-                                boxShadow: '0 6px 25px rgba(66, 133, 244, 0.6)',
-                            },
-                        }}
-                    >
-                        Get Started
-                    </Button>
                 </Container>
             </Box>
 
             {/* Features Section */}
-            <Container sx={{ py: 10 }} maxWidth="lg">
-                <Typography variant="h4" component="h2" align="center" gutterBottom sx={{ mb: 6, fontWeight: 'bold' }}>
+            <Container sx={{ py: 8 }} maxWidth="lg">
+                <Typography variant="h3" component="h2" align="center" gutterBottom sx={{ mb: 6, fontWeight: 'bold', color: isDarkMode ? 'inherit' : '#000000' }}>
                     Everything You Need
                 </Typography>
                 <Grid container spacing={4}>
                     <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-                        <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', textAlign: 'center' }} elevation={0} variant="outlined">
+                        <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', textAlign: 'center', borderRadius: 4 }} elevation={0} variant="outlined">
                             <CardActionArea component={Link} href="/workout-plan" sx={{ height: '100%', p: 2 }}>
                                 <FitnessCenterIcon color="primary" sx={{ fontSize: 60, mb: 2 }} />
                                 <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div">
+                                    <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 'bold' }}>
                                         Workout Plans
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
@@ -138,11 +129,11 @@ export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
                         </Card>
                     </Grid>
                     <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-                        <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', textAlign: 'center' }} elevation={0} variant="outlined">
+                        <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', textAlign: 'center', borderRadius: 4 }} elevation={0} variant="outlined">
                             <CardActionArea component={Link} href="/diet" sx={{ height: '100%', p: 2 }}>
                                 <RestaurantMenuIcon color="primary" sx={{ fontSize: 60, mb: 2 }} />
                                 <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div">
+                                    <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 'bold' }}>
                                         Diet & Nutrition
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
@@ -153,11 +144,11 @@ export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
                         </Card>
                     </Grid>
                     <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-                        <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', textAlign: 'center' }} elevation={0} variant="outlined">
+                        <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', textAlign: 'center', borderRadius: 4 }} elevation={0} variant="outlined">
                             <CardActionArea component={Link} href="/calculator" sx={{ height: '100%', p: 2 }}>
                                 <CalculateIcon color="primary" sx={{ fontSize: 60, mb: 2 }} />
                                 <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div">
+                                    <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 'bold' }}>
                                         BMR Calculator
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
@@ -168,11 +159,11 @@ export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
                         </Card>
                     </Grid>
                     <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-                        <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', textAlign: 'center' }} elevation={0} variant="outlined">
+                        <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', textAlign: 'center', borderRadius: 4 }} elevation={0} variant="outlined">
                             <CardActionArea component={Link} href="/tips" sx={{ height: '100%', p: 2 }}>
                                 <LightbulbIcon color="primary" sx={{ fontSize: 60, mb: 2 }} />
                                 <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div">
+                                    <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 'bold' }}>
                                         Expert Tips
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary">
@@ -276,10 +267,10 @@ export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
             </Box>
 
             {/* Latest Tips Section */}
-            <Box sx={{ bgcolor: 'action.hover', py: 10 }}>
+            <Box sx={{ bgcolor: 'action.hover', py: 8 }}>
                 <Container maxWidth="lg">
                     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 6 }}>
-                        <Typography variant="h4" component="h2" sx={{ fontWeight: 'bold' }}>
+                        <Typography variant="h3" component="h2" sx={{ fontWeight: 'bold', color: isDarkMode ? 'inherit' : '#000000' }}>
                             Latest from the Blog
                         </Typography>
                         <Button component={Link} href="/tips" variant="text" size="large">

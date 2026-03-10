@@ -80,7 +80,7 @@ export default function CalculatorForm() {
     };
 
     return (
-        <Box sx={{ maxWidth: 700, mx: 'auto', mt: 4 }}>
+        <Box sx={{ maxWidth: 700, mx: 'auto', mt: 2 }}>
             <Card variant="outlined" sx={{ p: 2, borderRadius: 4 }}>
                 <CardContent>
                     <Stack spacing={3}>
@@ -210,9 +210,9 @@ export default function CalculatorForm() {
 
                     {/* Results Display */}
                     {result && (
-                        <Box sx={{ mt: 4, textAlign: 'center' }}>
-                            <Divider sx={{ mb: 4 }} />
-                            <Typography variant="h5" color="primary" gutterBottom>
+                        <Box sx={{ mt: 2, textAlign: 'center' }}>
+                            <Divider sx={{ mb: 2 }} />
+                            <Typography variant="h5" color="primary" gutterBottom sx={{ fontWeight: 'bold' }}>
                                 Your Results
                             </Typography>
                             <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -220,7 +220,7 @@ export default function CalculatorForm() {
                                     <Typography variant="subtitle2" color="text.secondary">
                                         Basal Metabolic Rate (BMR)
                                     </Typography>
-                                    <Typography variant="h4" fontWeight="bold">
+                                    <Typography variant="h4" fontWeight="bold" sx={{ color: (theme) => theme.palette.mode === 'light' ? '#000000' : 'inherit' }}>
                                         {result.bmr}
                                     </Typography>
                                     <Typography variant="caption" display="block">

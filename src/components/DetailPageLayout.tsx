@@ -59,7 +59,7 @@ export default function DetailPageLayout({
 }: DetailPageLayoutProps) {
 
     return (
-        <Container maxWidth="md" sx={{ py: 4 }}>
+        <Container maxWidth="md" sx={{ py: 3 }}>
             {/* Schema Markup */}
             {schemas.map((schema, index) => (
                 <script
@@ -125,7 +125,7 @@ export default function DetailPageLayout({
                         }
                     },
                     '& h1': {
-                        color: 'primary.main',
+                        color: (theme) => theme.palette.mode === 'light' ? '#000000' : 'primary.main',
                         fontWeight: 'bold',
                         mb: 2.5,
                         fontSize: { xs: '2rem', md: '2.5rem' },
@@ -135,10 +135,7 @@ export default function DetailPageLayout({
                         mt: 2.5,
                         mb: 1.5,
                         fontWeight: 'bold',
-                        borderBottom: '2px solid',
-                        borderColor: 'primary.main',
                         display: 'inline-block',
-                        pb: 1,
                     },
                     '& h3': {
                         mt: 2,

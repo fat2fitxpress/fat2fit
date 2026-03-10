@@ -193,7 +193,7 @@ export default function ContactPage() {
             <Box
                 sx={{
                     position: 'relative',
-                    height: 320,
+                    height: 300,
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -239,134 +239,135 @@ export default function ContactPage() {
                     </Typography>
                 </Container>
             </Box>
+            <Box sx={{ bgcolor: 'action.hover', py: 8 }}>
+                {/* Contact Form Section */}
+                <Container maxWidth="lg">
+                    <Grid container spacing={4}>
+                        {/* Contact Information */}
+                        <Grid size={{ xs: 12, md: 4 }}>
+                            <Typography variant="h3" gutterBottom sx={{ fontWeight: 'bold', mb: 4, color: (theme) => theme.palette.mode === 'light' ? '#000000' : 'inherit' }}>
+                                Contact Information
+                            </Typography>
 
-            {/* Contact Form Section */}
-            <Container sx={{ py: 10 }} maxWidth="lg">
-                <Grid container spacing={6}>
-                    {/* Contact Information */}
-                    <Grid size={{ xs: 12, md: 4 }}>
-                        <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold', mb: 4 }}>
-                            Contact Information
-                        </Typography>
-
-                        <Box sx={{ mb: 4 }}>
-                            <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                                <EmailIcon color="primary" sx={{ mr: 2, fontSize: 30 }} />
-                                <Box>
-                                    <Typography variant="subtitle2" color="text.secondary">
-                                        Email
-                                    </Typography>
-                                    <Typography variant="body1">
-                                        contact@fat2fitxpress.com
-                                    </Typography>
+                            <Box sx={{ mb: 4 }}>
+                                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                                    <EmailIcon color="primary" sx={{ mr: 2, fontSize: 30 }} />
+                                    <Box>
+                                        <Typography variant="subtitle2" color="text.secondary">
+                                            Email
+                                        </Typography>
+                                        <Typography variant="body1">
+                                            contact@fat2fitxpress.com
+                                        </Typography>
+                                    </Box>
                                 </Box>
                             </Box>
-                        </Box>
 
 
 
-                        <Box sx={{ mb: 4 }}>
-                            <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                                <LocationOnIcon color="primary" sx={{ mr: 2, fontSize: 30 }} />
-                                <Box>
-                                    <Typography variant="subtitle2" color="text.secondary">
-                                        Location
-                                    </Typography>
-                                    <Typography variant="body1">
-                                        Online Worldwide
-                                    </Typography>
+                            <Box sx={{ mb: 4 }}>
+                                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                                    <LocationOnIcon color="primary" sx={{ mr: 2, fontSize: 30 }} />
+                                    <Box>
+                                        <Typography variant="subtitle2" color="text.secondary">
+                                            Location
+                                        </Typography>
+                                        <Typography variant="body1">
+                                            Online Worldwide
+                                        </Typography>
+                                    </Box>
                                 </Box>
                             </Box>
-                        </Box>
+                        </Grid>
+
+                        {/* Contact Form */}
+                        <Grid size={{ xs: 12, md: 8 }}>
+                            <Card elevation={0} variant="outlined" sx={{ borderRadius: 4 }}>
+                                <CardContent sx={{ p: 4 }}>
+                                    <Typography variant="h5" gutterBottom sx={{ fontWeight: 'bold', mb: 3, color: (theme) => theme.palette.mode === 'light' ? '#000000' : 'inherit' }}>
+                                        Send Us a Message
+                                    </Typography>
+                                    <Box component="form" onSubmit={handleSubmit}>
+                                        <Grid container spacing={3}>
+                                            <Grid size={{ xs: 12, sm: 6 }}>
+                                                <TextField
+                                                    required
+                                                    fullWidth
+                                                    label="Name"
+                                                    name="name"
+                                                    value={formData.name}
+                                                    onChange={handleChange}
+                                                    error={!!errors.name}
+                                                    helperText={errors.name}
+                                                    variant="outlined"
+                                                />
+
+                                            </Grid>
+                                            <Grid size={{ xs: 12, sm: 6 }}>
+                                                <TextField
+                                                    required
+                                                    fullWidth
+                                                    label="Email"
+                                                    name="email"
+                                                    type="email"
+                                                    value={formData.email}
+                                                    onChange={handleChange}
+                                                    error={!!errors.email}
+                                                    helperText={errors.email}
+                                                    variant="outlined"
+                                                />
+
+                                            </Grid>
+                                            <Grid size={{ xs: 12 }}>
+                                                <TextField
+                                                    required
+                                                    fullWidth
+                                                    label="Subject"
+                                                    name="subject"
+                                                    value={formData.subject}
+                                                    onChange={handleChange}
+                                                    error={!!errors.subject}
+                                                    helperText={errors.subject}
+                                                    variant="outlined"
+                                                />
+
+                                            </Grid>
+                                            <Grid size={{ xs: 12 }}>
+                                                <TextField
+                                                    required
+                                                    fullWidth
+                                                    label="Message"
+                                                    name="message"
+                                                    multiline
+                                                    rows={6}
+                                                    value={formData.message}
+                                                    onChange={handleChange}
+                                                    error={!!errors.message}
+                                                    helperText={errors.message}
+                                                    variant="outlined"
+                                                />
+
+                                            </Grid>
+                                            <Grid size={{ xs: 12 }}>
+                                                <Button
+                                                    type="submit"
+                                                    variant="contained"
+                                                    size="large"
+                                                    fullWidth
+                                                    disabled={loading}
+                                                    startIcon={loading ? <CircularProgress size={20} color="inherit" /> : null}
+                                                >
+                                                    {loading ? 'Sending...' : 'Send Message'}
+                                                </Button>
+                                            </Grid>
+                                        </Grid>
+                                    </Box>
+                                </CardContent>
+                            </Card>
+                        </Grid>
                     </Grid>
-
-                    {/* Contact Form */}
-                    <Grid size={{ xs: 12, md: 8 }}>
-                        <Card elevation={0} variant="outlined">
-                            <CardContent sx={{ p: 4 }}>
-                                <Typography variant="h5" gutterBottom sx={{ fontWeight: 'bold', mb: 3 }}>
-                                    Send Us a Message
-                                </Typography>
-                                <Box component="form" onSubmit={handleSubmit}>
-                                    <Grid container spacing={3}>
-                                        <Grid size={{ xs: 12, sm: 6 }}>
-                                            <TextField
-                                                required
-                                                fullWidth
-                                                label="Name"
-                                                name="name"
-                                                value={formData.name}
-                                                onChange={handleChange}
-                                                error={!!errors.name}
-                                                helperText={errors.name}
-                                                variant="outlined"
-                                            />
-
-                                        </Grid>
-                                        <Grid size={{ xs: 12, sm: 6 }}>
-                                            <TextField
-                                                required
-                                                fullWidth
-                                                label="Email"
-                                                name="email"
-                                                type="email"
-                                                value={formData.email}
-                                                onChange={handleChange}
-                                                error={!!errors.email}
-                                                helperText={errors.email}
-                                                variant="outlined"
-                                            />
-
-                                        </Grid>
-                                        <Grid size={{ xs: 12 }}>
-                                            <TextField
-                                                required
-                                                fullWidth
-                                                label="Subject"
-                                                name="subject"
-                                                value={formData.subject}
-                                                onChange={handleChange}
-                                                error={!!errors.subject}
-                                                helperText={errors.subject}
-                                                variant="outlined"
-                                            />
-
-                                        </Grid>
-                                        <Grid size={{ xs: 12 }}>
-                                            <TextField
-                                                required
-                                                fullWidth
-                                                label="Message"
-                                                name="message"
-                                                multiline
-                                                rows={6}
-                                                value={formData.message}
-                                                onChange={handleChange}
-                                                error={!!errors.message}
-                                                helperText={errors.message}
-                                                variant="outlined"
-                                            />
-
-                                        </Grid>
-                                        <Grid size={{ xs: 12 }}>
-                                            <Button
-                                                type="submit"
-                                                variant="contained"
-                                                size="large"
-                                                fullWidth
-                                                disabled={loading}
-                                                startIcon={loading ? <CircularProgress size={20} color="inherit" /> : null}
-                                            >
-                                                {loading ? 'Sending...' : 'Send Message'}
-                                            </Button>
-                                        </Grid>
-                                    </Grid>
-                                </Box>
-                            </CardContent>
-                        </Card>
-                    </Grid>
-                </Grid>
-            </Container>
+                </Container>
+            </Box>
 
             <Snackbar
                 open={snackbar.open}

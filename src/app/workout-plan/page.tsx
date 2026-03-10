@@ -224,7 +224,7 @@ const breadcrumbSchema = {
 
 export default function WorkoutPage() {
     return (
-        <Box sx={{ bgcolor: 'background.default', pb: 10 }}>
+        <Box sx={{ bgcolor: 'background.default' }}>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(workoutListSchema) }}
@@ -237,13 +237,12 @@ export default function WorkoutPage() {
             <Box
                 sx={{
                     position: 'relative',
-                    height: '400px',
+                    height: '300px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     color: 'white',
                     textAlign: 'center',
-                    mb: 8,
                     overflow: 'hidden',
                 }}
             >
@@ -283,41 +282,6 @@ export default function WorkoutPage() {
             </Box>
 
             <WorkoutClient plans={workoutPlans} />
-
-            <Container>
-                {/* Training Tips Section */}
-                <Box sx={{ mt: 10, p: { xs: 3, md: 6 }, bgcolor: 'background.paper', borderRadius: 4, border: '1px solid', borderColor: 'divider' }} component="section" aria-label="Expert training tips">
-                    <Grid container spacing={6} alignItems="center">
-                        <Grid size={{ xs: 12, md: 6 }}>
-                            <Box
-                                component="img"
-                                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800"
-                                alt="Athlete performing a strength training exercise"
-                                sx={{ width: '100%', borderRadius: 4, boxShadow: 3 }}
-                            />
-                        </Grid>
-                        <Grid size={{ xs: 12, md: 6 }}>
-                            <Typography variant="overline" color="primary" sx={{ fontWeight: 'bold' }}>
-                                Expert Advice
-                            </Typography>
-                            <Typography variant="h3" component="h2" gutterBottom sx={{ fontWeight: 'bold' }}>
-                                Training Tip of the Day
-                            </Typography>
-                            <Typography variant="body1" color="text.secondary" paragraph sx={{ fontSize: '1.1rem' }}>
-                                Consistency is key. It&apos;s not about being perfect, it&apos;s about being better than you were yesterday. Start small, stay committed, and you&apos;ll see the results you desire.
-                            </Typography>
-                            <Typography variant="body1" color="text.secondary" paragraph sx={{ fontSize: '1.1rem' }}>
-                                Focus on progressive overload — gradually increase weight, reps, or sets to keep challenging your muscles and driving growth.
-                            </Typography>
-                            <Link href="/tips" style={{ textDecoration: 'none' }}>
-                                <Button variant="contained" size="large" sx={{ mt: 2, borderRadius: 8 }}>
-                                    Read More Tips
-                                </Button>
-                            </Link>
-                        </Grid>
-                    </Grid>
-                </Box>
-            </Container>
         </Box>
     );
 }

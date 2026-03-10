@@ -90,7 +90,7 @@ export default function BodyFatCalculator() {
     const categories = gender === 'male' ? BODY_FAT_CATEGORIES_MALE : BODY_FAT_CATEGORIES_FEMALE;
 
     return (
-        <Box sx={{ maxWidth: 700, mx: 'auto', mt: 4 }}>
+        <Box sx={{ maxWidth: 700, mx: 'auto', mt: 2 }}>
             <Card variant="outlined" sx={{ p: 2, borderRadius: 4 }}>
                 <CardContent>
                     <Stack spacing={3}>
@@ -190,9 +190,9 @@ export default function BodyFatCalculator() {
                     </Stack>
 
                     {result && (
-                        <Box sx={{ mt: 4, textAlign: 'center' }}>
-                            <Divider sx={{ mb: 4 }} />
-                            <Typography variant="h5" color="primary" gutterBottom>
+                        <Box sx={{ mt: 2, textAlign: 'center' }}>
+                            <Divider sx={{ mb: 2 }} />
+                            <Typography variant="h5" color="primary" gutterBottom sx={{ fontWeight: 'bold' }}>
                                 Your Body Fat Percentage
                             </Typography>
                             <Typography variant="h2" fontWeight="bold" sx={{ color: result.color }}>
@@ -206,7 +206,7 @@ export default function BodyFatCalculator() {
                             </Typography>
 
                             {/* Category gauge */}
-                            <Box sx={{ mt: 4, px: 2 }}>
+                            <Box sx={{ mt: 2, px: 2 }}>
                                 <Box sx={{ display: 'flex', gap: 0.5, mb: 1 }}>
                                     {categories.map((cat) => (
                                         <Box

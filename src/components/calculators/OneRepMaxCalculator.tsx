@@ -89,7 +89,7 @@ export default function OneRepMaxCalculator() {
     };
 
     return (
-        <Box sx={{ maxWidth: 700, mx: 'auto', mt: 4 }}>
+        <Box sx={{ maxWidth: 700, mx: 'auto', mt: 2 }}>
             <Card variant="outlined" sx={{ p: 2, borderRadius: 4 }}>
                 <CardContent>
                     <Stack spacing={3}>
@@ -142,9 +142,9 @@ export default function OneRepMaxCalculator() {
                     </Stack>
 
                     {result && (
-                        <Box sx={{ mt: 4, textAlign: 'center' }}>
-                            <Divider sx={{ mb: 4 }} />
-                            <Typography variant="h5" color="primary" gutterBottom>
+                        <Box sx={{ mt: 2, textAlign: 'center' }}>
+                            <Divider sx={{ mb: 2 }} />
+                            <Typography variant="h5" color="primary" gutterBottom sx={{ fontWeight: 'bold' }}>
                                 Estimated One Rep Max
                             </Typography>
                             <Typography variant="h2" fontWeight="bold" color="primary.main">
@@ -168,7 +168,7 @@ export default function OneRepMaxCalculator() {
                             </Box>
 
                             {/* Percentage table */}
-                            <TableContainer sx={{ mt: 4 }}>
+                            <TableContainer sx={{ mt: 2 }}>
                                 <Table size="small">
                                     <TableHead>
                                         <TableRow>

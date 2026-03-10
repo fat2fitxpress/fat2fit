@@ -19,7 +19,7 @@ interface BreadcrumbsNavProps {
 
 export default function BreadcrumbsNav({ items }: BreadcrumbsNavProps) {
     return (
-        <Box sx={{ mb: 3 }}>
+        <Box sx={{ mb: 2 }}>
             <Breadcrumbs
                 separator={<NavigateNextIcon fontSize="small" />}
                 aria-label="breadcrumb"

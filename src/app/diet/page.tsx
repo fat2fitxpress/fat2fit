@@ -110,13 +110,12 @@ export default function DietPage() {
             <Box
                 sx={{
                     position: 'relative',
-                    height: '400px',
+                    height: '300px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     color: 'white',
                     textAlign: 'center',
-                    mb: 8,
                     overflow: 'hidden',
                 }}
             >
@@ -133,11 +132,22 @@ export default function DietPage() {
                         zIndex: 0,
                     }}
                 />
-                <Container maxWidth="md" sx={{ position: 'relative', zIndex: 1 }}>
-                    <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: 'bold' }}>
+                <Box
+                    sx={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        bgcolor: 'rgba(0,0,0,0.5)',
+                        zIndex: 1,
+                    }}
+                />
+                <Container maxWidth="md" sx={{ position: 'relative', zIndex: 2 }}>
+                    <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: 'bold', color: '#ffffff' }}>
                         Fuel Your Ambition
                     </Typography>
-                    <Typography variant="h5" sx={{ mb: 4, opacity: 0.9 }}>
+                    <Typography variant="h5" sx={{ mb: 4, opacity: 0.9, color: 'rgba(255,255,255,0.9)' }}>
                         Discover nutrition plans and healthy recipes tailored to your fitness journey.
                     </Typography>
                     <Link href="#diet-plans" style={{ textDecoration: 'none' }}>
@@ -157,27 +167,12 @@ export default function DietPage() {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
 
-            <Box id="diet-plans">
-                <Container maxWidth="lg" sx={{ mb: 6 }}>
-                    <Typography
-                        variant="h3"
-                        component="h2"
-                        sx={{ fontWeight: 'bold', mb: 2, textAlign: 'center' }}
-                    >
-                        Choose the best meal plan for your goal
-                    </Typography>
-                    <Typography
-                        variant="body1"
-                        color="text.secondary"
-                        sx={{ maxWidth: 800, mx: 'auto', textAlign: 'center' }}
-                    >
-                        Explore weight-loss, muscle-building, vegan, and balanced diets with clear calories, prep time,
-                        and categories so you can quickly find a plan that matches your lifestyle and fitness targets.
-                    </Typography>
+            {/* Plans Section */}
+            <Box id="diet-plans" sx={{ bgcolor: 'action.hover', py: 8 }}>
+                <Container maxWidth="lg">
+                    <DietClient initialDiets={diets} />
                 </Container>
-
-                <DietClient initialDiets={diets} />
             </Box>
-        </Box >
+        </Box>
     );
 }

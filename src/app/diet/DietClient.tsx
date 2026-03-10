@@ -16,6 +16,7 @@ import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useTheme } from '@mui/material/styles';
 import { DietDetail } from '@/lib/diets';
 
 interface DietClientProps {
@@ -23,6 +24,8 @@ interface DietClientProps {
 }
 
 export default function DietClient({ initialDiets }: DietClientProps) {
+    const theme = useTheme();
+    const isDarkMode = theme.palette.mode === 'dark';
     const [selectedCategory, setSelectedCategory] = React.useState<string>('All');
 
     const categories = ['All', 'Weight Loss', 'Muscle Building', 'Vegan', 'Balanced'];
@@ -33,6 +36,18 @@ export default function DietClient({ initialDiets }: DietClientProps) {
 
     return (
         <Container>
+            <Typography
+                variant="h3"
+                component="h2"
+                sx={{
+                    fontWeight: 'bold',
+                    mb: 6,
+                    textAlign: 'center',
+                    color: isDarkMode ? 'inherit' : '#000000'
+                }}
+            >
+                Choose the best meal plan for your goal
+            </Typography>
             {/* Category Filter Chips */}
             <Stack direction="row" spacing={2} justifyContent="center" sx={{ mb: 6, flexWrap: 'wrap', gap: 2 }}>
                 {categories.map((category) => (
@@ -111,7 +126,11 @@ export default function DietClient({ initialDiets }: DietClientProps) {
                                 <Button
                                     fullWidth
                                     variant="outlined"
-                                    sx={{ borderRadius: 4 }}
+                                    sx={{
+                                        borderRadius: 4,
+                                        fontWeight: 600,
+                                        textTransform: 'none'
+                                    }}
                                     startIcon={<RestaurantIcon />}
                                     component={Link}
                                     href={`/diet/${diet.slug}`}
@@ -138,7 +157,14 @@ export default function DietClient({ initialDiets }: DietClientProps) {
                         <Typography variant="overline" color="primary" sx={{ fontWeight: 'bold' }}>
                             Expert Advice
                         </Typography>
-                        <Typography variant="h3" gutterBottom sx={{ fontWeight: 'bold' }}>
+                        <Typography
+                            variant="h3"
+                            gutterBottom
+                            sx={{
+                                fontWeight: 'bold',
+                                color: isDarkMode ? 'inherit' : '#000000'
+                            }}
+                        >
                             The 80/20 Rule
                         </Typography>
                         <Typography variant="body1" color="text.secondary" paragraph sx={{ fontSize: '1.1rem' }}>

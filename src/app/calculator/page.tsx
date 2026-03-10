@@ -106,17 +106,16 @@ export default function CalculatorPage() {
             <Box
                 sx={{
                     position: 'relative',
-                    height: 320,
+                    height: '300px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     textAlign: 'center',
-                    mb: 8,
                     overflow: 'hidden',
                 }}
             >
                 <Image
-                    src="https://images.unsplash.com/photo-1554224155-6726b3f8981c?q=80&w=1200&auto=format"
+                    src="/calculator_hero_bg.jpg"
                     alt="Fitness calculators for TDEE, BMI, and Macros"
                     fill
                     priority
@@ -154,18 +153,21 @@ export default function CalculatorPage() {
                 </Container>
             </Box>
 
-            <Container maxWidth="lg" sx={{ pb: 6 }}>
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(calculatorSchema) }}
-                />
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-                />
+            {/* Calculators Section */}
+            <Box sx={{ bgcolor: 'action.hover', py: 8 }}>
+                <Container maxWidth="lg">
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{ __html: JSON.stringify(calculatorSchema) }}
+                    />
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+                    />
 
-                <CalculatorTabs />
-            </Container>
+                    <CalculatorTabs />
+                </Container>
+            </Box>
         </Box>
     );
 }

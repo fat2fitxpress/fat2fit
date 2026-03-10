@@ -77,7 +77,7 @@ export default function RelatedContent({ items, title = 'Related Content' }: Rel
                                     size="small"
                                     sx={{ mb: 1.5 }}
                                 />
-                                <Typography variant="h6" component="h3" sx={{ fontWeight: 'bold' }}>
+                                <Typography variant="h5" component="h3" sx={{ fontWeight: 'bold' }}>
                                     {item.title}
                                 </Typography>
                             </CardContent>
