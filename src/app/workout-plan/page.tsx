@@ -242,13 +242,15 @@ export default function WorkoutPage() {
             <Box
                 sx={{
                     position: 'relative',
-                    height: '300px',
+                    height: { xs: 'auto', md: 300 },
+                    minHeight: { xs: 350, md: 300 },
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     color: 'white',
                     textAlign: 'center',
                     overflow: 'hidden',
+                    py: { xs: 8, md: 0 },
                 }}
             >
                 {/* Optimized background image */}
@@ -277,7 +279,16 @@ export default function WorkoutPage() {
                     }}
                 />
                 <Container maxWidth="md" sx={{ position: 'relative', zIndex: 1 }} component="section" aria-label="Workout transformation hero">
-                    <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: 'bold' }}>
+                    <Typography
+                        variant="h2"
+                        component="h1"
+                        gutterBottom
+                        sx={{
+                            fontWeight: 'bold',
+                            fontSize: { xs: '2.5rem', sm: '3rem', md: '3.75rem' },
+                            lineHeight: 1.2,
+                        }}
+                    >
                         Transform Your Body
                     </Typography>
                     <Typography variant="h5" sx={{ mb: 4, opacity: 0.9 }}>

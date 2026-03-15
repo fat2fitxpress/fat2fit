@@ -39,11 +39,13 @@ export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
             <Box
                 sx={{
                     position: 'relative',
-                    height: 300,
+                    height: { xs: 'auto', md: 300 },
+                    minHeight: { xs: 350, md: 300 },
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     textAlign: 'center',
+                    py: { xs: 8, md: 0 },
                     '&::before': {
                         content: '""',
                         position: 'absolute',
@@ -89,6 +91,8 @@ export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
                             fontWeight: 'bold',
                             color: '#ffffff',
                             textShadow: '0 2px 10px rgba(0,0,0,0.3)',
+                            fontSize: { xs: '2.5rem', sm: '3rem', md: '3.75rem' },
+                            lineHeight: 1.2,
                         }}
                     >
                         Your Express Journey to Fitness
