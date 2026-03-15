@@ -40,6 +40,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             'high cortisol symptoms',
             'morning routine to lower cortisol',
             'sleep and cortisol',
+            'bio-syncing',
+            'circadian rhythm fitness',
+            'morning cortisol light exposure',
+            'vagus nerve stimulation',
+            'hormonal fat loss',
         );
     }
 
@@ -50,6 +55,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             'Wegovy alternatives',
             'Ozempic natural alternatives',
             'GLP-1 weight loss',
+            'GLP-1 companion workouts',
+            'prevent muscle loss GLP-1',
+            'natural GLP-1 boosters',
+            'metabolic flexibility',
+            'high protein fat loss',
         );
     }
 
@@ -65,10 +75,25 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             'fitness wearable technology',
             'health tracking wearables',
             'wearable fitness device comparison',
+            'AI fitness coaching 2026',
+            'Casio health smartwatch',
+            'biometric readiness score',
         );
     }
 
-    if (slug === '10000-steps-vs-30-minute-workout') {
+    if (slug === 'recovery-rest-importance') {
+        extraKeywords.push(
+            'cold plunge recovery',
+            'cognitive resilience',
+            'sleep hygiene 2026',
+            'infrared sauna benefits',
+            'active recovery sessions',
+            'muscle repair science',
+            'overtraining prevention',
+        );
+    }
+
+    if (slug === '10000-steps-vs-30-minute-workout' || slug === 'japanese-interval-walking') {
         extraKeywords.push(
             '10000 steps vs 30 minute workout',
             'walking vs gym for weight loss',
@@ -78,6 +103,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             'best daily step goal 2026',
             'calories burned in 10000 steps',
             'walking health benefits',
+            'functional longevity',
+            'zone 2 walking',
+            'VO2 max improvement',
+            'mitochondrial health exercises',
+            'longevity biohacking',
         );
     }
 
