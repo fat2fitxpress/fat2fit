@@ -108,12 +108,14 @@ export default function CalculatorPage() {
             <Box
                 sx={{
                     position: 'relative',
-                    height: '300px',
+                    height: { xs: 'auto', md: 300 },
+                    minHeight: { xs: 350, md: 300 },
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     textAlign: 'center',
                     overflow: 'hidden',
+                    py: { xs: 8, md: 0 },
                 }}
             >
                 <Image
@@ -141,7 +143,17 @@ export default function CalculatorPage() {
                     }}
                 />
                 <Container maxWidth="md" sx={{ position: 'relative', zIndex: 2 }}>
-                    <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: 'bold', color: '#ffffff' }}>
+                    <Typography
+                        variant="h2"
+                        component="h1"
+                        gutterBottom
+                        sx={{
+                            fontWeight: 'bold',
+                            color: '#ffffff',
+                            fontSize: { xs: '2.5rem', sm: '3rem', md: '3.75rem' },
+                            lineHeight: 1.2,
+                        }}
+                    >
                         Fitness Calculators
                     </Typography>
                     <Typography
