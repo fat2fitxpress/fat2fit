@@ -68,6 +68,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         );
     }
 
+    if (slug === '10000-steps-vs-30-minute-workout') {
+        extraKeywords.push(
+            '10000 steps vs 30 minute workout',
+            'walking vs gym for weight loss',
+            'is 10000 steps enough',
+            'NEAT vs exercise',
+            'walking for fat loss',
+            'best daily step goal 2026',
+            'calories burned in 10000 steps',
+            'walking health benefits',
+        );
+    }
+
     return {
         title: `${post.title} | Fat2Fit`,
         description: post.excerpt,
