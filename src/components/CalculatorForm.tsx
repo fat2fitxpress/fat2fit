@@ -125,9 +125,10 @@ export default function CalculatorForm() {
                                 exclusive
                                 onChange={(e, val) => val && setWeightUnit(val)}
                                 sx={{ minWidth: 140, height: 56 }}
+                                aria-label="Weight Unit selection"
                             >
-                                <ToggleButton value="kg">Kg</ToggleButton>
-                                <ToggleButton value="lbs">Lbs</ToggleButton>
+                                <ToggleButton value="kg" aria-label="Kilograms">Kg</ToggleButton>
+                                <ToggleButton value="lbs" aria-label="Pounds">Lbs</ToggleButton>
                             </ToggleButtonGroup>
                         </Box>
 
@@ -168,9 +169,10 @@ export default function CalculatorForm() {
                                 exclusive
                                 onChange={(e, val) => val && setHeightUnit(val)}
                                 sx={{ minWidth: 140, height: 56 }}
+                                aria-label="Height Unit selection"
                             >
-                                <ToggleButton value="cm">Cm</ToggleButton>
-                                <ToggleButton value="ft">Ft/In</ToggleButton>
+                                <ToggleButton value="cm" aria-label="Centimeters">Cm</ToggleButton>
+                                <ToggleButton value="ft" aria-label="Feet and Inches">Ft/In</ToggleButton>
                             </ToggleButtonGroup>
                         </Box>
 

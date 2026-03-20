@@ -150,6 +150,7 @@ export default function DietClient({ initialDiets }: DietClientProps) {
                         <Box
                             component="img"
                             src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=800"
+                            alt="Healthy food bowl representing a balanced diet"
                             sx={{ width: '100%', borderRadius: 4, boxShadow: 3 }}
                         />
                     </Grid>

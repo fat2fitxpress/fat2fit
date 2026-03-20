@@ -45,6 +45,18 @@ export default function Footer() {
                     <Typography variant="body2" color="text.secondary" align="center">
                         Your express journey to fitness.
                     </Typography>
+                    <Stack direction="row" spacing={3} sx={{ mt: 2 }}>
+                        <Typography variant="body2">
+                            <Link href="/terms-of-service" color="text.secondary" sx={{ textDecoration: 'none', '&:hover': { color: 'primary.main', textDecoration: 'underline' } }}>
+                                Terms of Service
+                            </Link>
+                        </Typography>
+                        <Typography variant="body2">
+                            <Link href="/privacy-policy" color="text.secondary" sx={{ textDecoration: 'none', '&:hover': { color: 'primary.main', textDecoration: 'underline' } }}>
+                                Privacy Policy
+                            </Link>
+                        </Typography>
+                    </Stack>
                 </Stack>
                 <Box mt={3}>
                     <Copyright />

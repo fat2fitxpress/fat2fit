@@ -146,9 +146,9 @@ export default function MacroCalculator() {
                                     onChange={(e) => setWeightVal(e.target.value)}
                                     InputProps={{ endAdornment: <InputAdornment position="end">{weightUnit}</InputAdornment> }}
                                 />
-                                <ToggleButtonGroup color="primary" value={weightUnit} exclusive onChange={(_, v) => v && setWeightUnit(v)} sx={{ minWidth: 140, height: 56 }}>
-                                    <ToggleButton value="kg">Kg</ToggleButton>
-                                    <ToggleButton value="lbs">Lbs</ToggleButton>
+                                <ToggleButtonGroup color="primary" value={weightUnit} exclusive onChange={(_, v) => v && setWeightUnit(v)} sx={{ minWidth: 140, height: 56 }} aria-label="Weight Unit selection">
+                                    <ToggleButton value="kg" aria-label="Kilograms">Kg</ToggleButton>
+                                    <ToggleButton value="lbs" aria-label="Pounds">Lbs</ToggleButton>
                                 </ToggleButtonGroup>
                             </Box>
                             <Typography variant="caption" color="text.secondary" sx={{ mt: 0.5, ml: 1.75, display: 'block' }}>
