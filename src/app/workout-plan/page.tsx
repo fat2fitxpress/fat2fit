@@ -10,8 +10,8 @@ import type { Metadata } from 'next';
 import WorkoutClient, { WorkoutPlan } from './WorkoutClient';
 
 export const metadata: Metadata = {
-    title: 'Workout Plans - Strength, HIIT & Cardio Training',
-    description: 'Scientifically-designed workout plans for longevity and performance. Choose from functional training, HIIT, and strength programs optimized for metabolic health.',
+    title: 'Workout Plans - Strength, HIIT, Cardio & Reverse Running | Fat2Fit',
+    description: 'Scientifically-designed workout plans for weight loss, muscle building, and longevity. Strength training, HIIT, reverse running, and functional programs for busy professionals.',
     keywords: [
         'workout plans',
         'functional training routines',
@@ -26,6 +26,13 @@ export const metadata: Metadata = {
         'strength training for longevity',
         'somatic movement protocols',
         'low-impact functional fitness',
+        'reverse running benefits',
+        'reverse running workout plan',
+        'progressive overload for women',
+        'women strength training program',
+        'best weight loss workout plan',
+        'workout plan for busy professionals',
+        'beginner strength training program',
     ],
     alternates: {
         canonical: '/workout-plan',

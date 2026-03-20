@@ -6,8 +6,8 @@ import CalculatorTabs from '@/components/calculators/CalculatorTabs';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-    title: 'Free Fitness Calculators - TDEE, BMI & Macros',
-    description: 'Free AI-powered fitness calculators: TDEE, BMI, body fat %, and macro breakdown. Science-backed tools for metabolic health and biomarker tracking.',
+    title: 'Free Fitness Calculators - TDEE, BMI, Macros & BMR | Fat2Fit',
+    description: 'Free online fitness calculators: TDEE, BMR, BMI, body fat %, and macro breakdown. Science-backed tools for weight loss, muscle building, and metabolic health optimization.',
     keywords: [
         'calorie calculator',
         'TDEE calculator',
@@ -31,6 +31,12 @@ export const metadata: Metadata = {
         'longevity data assessment',
         'AI fitness coach assessment',
         'predictive health algorithms',
+        'online fitness coaching for weight loss',
+        'TDEE calculator for busy professionals',
+        'body recomposition calculator',
+        'how many calories should I eat',
+        'free calorie calculator online',
+        'macro split for weight loss',
     ],
     alternates: {
         canonical: '/calculator',
