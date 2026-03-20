@@ -10,8 +10,8 @@ import { getAllDiets } from '@/lib/diets';
 import DietClient from './DietClient';
 
 export const metadata: Metadata = {
-    title: 'Healthy Meal Plans & Nutrition Guides',
-    description: 'Discover bio-individual meal plans and gut health nutrition guides. Anti-inflammatory recipes, microbiome optimization, and keto/vegan diets for weight loss.',
+    title: 'Healthy Meal Plans & Nutrition Guides for Weight Loss | Fat2Fit',
+    description: 'Science-backed meal plans and nutrition guides for sustainable weight loss and muscle building. Anti-inflammatory recipes, gut health optimization, keto, vegan, and high-protein diets for busy professionals.',
     keywords: [
         'meal plans',
         'nutrition guide',
@@ -34,6 +34,11 @@ export const metadata: Metadata = {
         'GLP-1 friendly diet ideas',
         'metabolic health nutrition',
         'personalized meal planning',
+        'best weight loss diet for busy professionals',
+        'calorie deficit meal plan',
+        'protein meal plan for weight loss',
+        'easy meal prep for fat loss',
+        'sustainable diet for weight loss 2026',
     ],
     alternates: {
         canonical: '/diet',
