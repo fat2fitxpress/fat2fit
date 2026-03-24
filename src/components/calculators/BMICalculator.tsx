@@ -103,8 +103,17 @@ export default function BMICalculator() {
                                 />
                             ) : (
                                 <Box sx={{ display: 'flex', gap: 2, flexGrow: 1 }}>
-                                    <TextField label="Feet" type="number" fullWidth value={heightFt} onChange={(e) => setHeightFt(e.target.value)} />
-                                    <TextField label="Inches" type="number" fullWidth value={heightIn} onChange={(e) => setHeightIn(e.target.value)} />
+                                    <TextField
+                                        label="Feet"
+                                        fullWidth
+                                        value={heightFt}
+                                        onChange={(e) => {
+                                            const val = e.target.value.replace(/[^0-9]/g, '');
+                                            setHeightFt(val);
+                                        }}
+                                        inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
+                                    />
+                                    <TextField label="Inches" type="number" fullWidth value={heightIn} onChange={(e) => setHeightIn(e.target.value)} inputProps={{ step: 0.1, min: 0, max: 11.9 }} />
                                 </Box>
                             )}
                             <ToggleButtonGroup

@@ -3,11 +3,11 @@
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import CardActionArea from '@mui/material/CardActionArea';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTheme } from '@mui/material/styles';
 import type { Post } from '@/lib/posts';
 
@@ -43,6 +43,7 @@ export default function TipsGrid({ posts, title }: { posts: Post[], title?: stri
                                 bgcolor: 'background.paper',
                                 border: '1px solid',
                                 borderColor: 'divider',
+                                overflow: 'hidden',
                                 transition: 'transform 0.3s ease-in-out',
                                 '&:hover': {
                                     transform: 'translateY(-8px)',
@@ -50,6 +51,19 @@ export default function TipsGrid({ posts, title }: { posts: Post[], title?: stri
                                 }
                             }}
                         >
+                            {/* T1: Image section for visual engagement */}
+                            {post.image && (
+                                <Box sx={{ position: 'relative', width: '100%', height: 200 }}>
+                                    <Image
+                                        src={post.image}
+                                        alt={post.title}
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        quality={75}
+                                        style={{ objectFit: 'cover' }}
+                                    />
+                                </Box>
+                            )}
                             <CardContent sx={{ flexGrow: 1, p: 2.5 }}>
                                 <Typography variant="overline" color="primary" sx={{ fontWeight: 'bold', display: 'block', mb: 1 }}>
                                     Expert Tip
@@ -89,4 +103,3 @@ export default function TipsGrid({ posts, title }: { posts: Post[], title?: stri
         </Box>
     );
 }
-

@@ -36,7 +36,7 @@ interface WorkoutClientProps {
     plans: WorkoutPlan[];
 }
 
-const categories: Array<WorkoutCategory | 'All'> = ['All', 'Strength', 'HIIT', 'Cardio', 'Core'];
+const categories: Array<WorkoutCategory | 'All'> = ['Strength', 'HIIT', 'Cardio', 'Core', 'All'];
 
 export default function WorkoutClient({ plans }: WorkoutClientProps) {
     const theme = useTheme();
@@ -131,7 +131,7 @@ export default function WorkoutClient({ plans }: WorkoutClientProps) {
                                             {plan.description}
                                         </Typography>
 
-                                        <Stack direction="row" spacing={2} alignItems="center" sx={{ mb: 1 }}>
+                                        <Stack direction="row" spacing={2} alignItems="center" sx={{ mt: 2, mb: 1 }}>
                                             <Stack direction="row" spacing={0.5} alignItems="center">
                                                 <TimerIcon sx={{ fontSize: 18, color: 'text.secondary' }} />
                                                 <Typography variant="caption" color="text.secondary">

@@ -19,6 +19,10 @@ export function getDietBySlug(slug: string): DietDetail | null {
     try {
         const realSlug = slug.replace(/\.md$/, '');
         const fullPath = path.join(dietsDirectory, `${realSlug}.md`);
+        const resolvedPath = path.resolve(fullPath);
+        if (!resolvedPath.startsWith(path.resolve(dietsDirectory))) {
+            return null;
+        }
         if (!fs.existsSync(fullPath)) return null;
 
         const fileContents = fs.readFileSync(fullPath, 'utf8');

@@ -1,6 +1,9 @@
 # Allow all crawlers
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /*?*
 
 # Sitemap location
 Sitemap: https://fat2fitxpress.com/sitemap.xml

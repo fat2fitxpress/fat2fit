@@ -139,8 +139,7 @@ export function writeSitemap(): void {
     const sitemap = generateSitemap();
     const publicPath = path.join(process.cwd(), 'public', 'sitemap.xml');
     fs.writeFileSync(publicPath, sitemap, 'utf-8');
-    console.log('✓ Sitemap generated successfully!');
-    console.log(`  Location: ${publicPath}`);
+
 }
 
 // Run if called directly

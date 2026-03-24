@@ -28,7 +28,7 @@ export default function DietClient({ initialDiets }: DietClientProps) {
     const isDarkMode = theme.palette.mode === 'dark';
     const [selectedCategory, setSelectedCategory] = React.useState<string>('All');
 
-    const categories = ['All', 'Weight Loss', 'Muscle Building', 'Vegan', 'Balanced'];
+    const categories = ['All', 'Weight Loss', 'Muscle Building', 'Vegan', 'Balanced', 'Indian'];
 
     const filteredDiets = selectedCategory === 'All'
         ? initialDiets
@@ -68,9 +68,9 @@ export default function DietClient({ initialDiets }: DietClientProps) {
                 ))}
             </Stack>
 
-            <Grid container spacing={4}>
+            <Grid container spacing={3} justifyContent="center">
                 {filteredDiets.map((diet, index) => (
-                    <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
+                    <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
                         <Card
                             elevation={0}
                             sx={{
