@@ -15,6 +15,10 @@ export interface WorkoutDetail {
 export function getWorkoutBySlug(slug: string): WorkoutDetail {
     const realSlug = slug.replace(/\.md$/, '');
     const fullPath = path.join(workoutsDirectory, `${realSlug}.md`);
+    const resolvedPath = path.resolve(fullPath);
+    if (!resolvedPath.startsWith(path.resolve(workoutsDirectory))) {
+        throw new Error('Invalid slug');
+    }
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
 

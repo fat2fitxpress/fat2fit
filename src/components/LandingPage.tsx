@@ -10,16 +10,39 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardActionArea from '@mui/material/CardActionArea';
 import { useTheme } from '@mui/material/styles';
-import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
-import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
-import CalculateIcon from '@mui/icons-material/Calculate';
-import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import AndroidIcon from '@mui/icons-material/Android';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import Link from 'next/link';
 import Image from 'next/image';
 import TipsGrid from '@/components/TipsGrid';
 import type { Post } from '@/lib/posts';
+
+const featureCards = [
+    {
+        title: 'Workout Plans',
+        description: 'Curated exercise routines tailored to your fitness level and goals.',
+        href: '/workout-plan',
+        image: '/feature_workout.png',
+    },
+    {
+        title: 'Diet & Nutrition',
+        description: 'Healthy meal plans and nutritional advice to fuel your body right.',
+        href: '/diet',
+        image: '/feature_diet.png',
+    },
+    {
+        title: 'BMR Calculator',
+        description: 'Calculate your basal metabolic rate to understand your daily calorie needs.',
+        href: '/calculator',
+        image: '/feature_calculator.png',
+    },
+    {
+        title: 'Expert Tips',
+        description: 'Latest insights and articles to keep you motivated and informed.',
+        href: '/tips',
+        image: '/feature_tips.png',
+    },
+];
 
 export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
     const theme = useTheme();
@@ -35,17 +58,17 @@ export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
             }}
         >
 
-            {/* Hero Section */}
+            {/* Hero Section - C1: Increased to 70vh */}
             <Box
                 sx={{
                     position: 'relative',
-                    height: { xs: 'auto', md: 300 },
-                    minHeight: { xs: 350, md: 300 },
+                    height: { xs: 'auto', md: '70vh' },
+                    minHeight: { xs: 400, md: '70vh' },
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     textAlign: 'center',
-                    py: { xs: 8, md: 0 },
+                    py: { xs: 10, md: 0 },
                     '&::before': {
                         content: '""',
                         position: 'absolute',
@@ -103,84 +126,104 @@ export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
                         sx={{
                             color: 'rgba(255, 255, 255, 0.95)',
                             textShadow: '0 1px 5px rgba(0,0,0,0.2)',
+                            maxWidth: 600,
+                            mx: 'auto',
                         }}
                     >
                         Personalized diet plans, workout routines, and expert tips to help you
                         achieve your health goals faster and smarter.
                     </Typography>
+                    <Box sx={{ mt: 4 }}>
+                        <Button
+                            component={Link}
+                            href="/workout-plan"
+                            variant="contained"
+                            size="large"
+                            sx={{
+                                px: 4,
+                                py: 1.5,
+                                fontWeight: 'bold',
+                                fontSize: '1.1rem',
+                                borderRadius: 3,
+                            }}
+                        >
+                            Start Your Journey
+                        </Button>
+                    </Box>
                 </Container>
             </Box>
 
-            {/* Features Section */}
+            {/* Features Section - H1: Redesigned with background images */}
             <Container sx={{ py: 8 }} maxWidth="lg">
                 <Typography variant="h3" component="h2" align="center" gutterBottom sx={{ mb: 6, fontWeight: 'bold', color: isDarkMode ? 'inherit' : '#000000' }}>
                     Everything You Need
                 </Typography>
                 <Grid container spacing={4}>
-                    <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-                        <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', textAlign: 'center', borderRadius: 4 }} elevation={0} variant="outlined">
-                            <CardActionArea component={Link} href="/workout-plan" sx={{ height: '100%', p: 2 }}>
-                                <FitnessCenterIcon color="primary" sx={{ fontSize: 60, mb: 2 }} />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 'bold' }}>
-                                        Workout Plans
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        Curated exercise routines tailored to your fitness level and goals.
-                                    </Typography>
-                                </CardContent>
-                            </CardActionArea>
-                        </Card>
-                    </Grid>
-                    <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-                        <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', textAlign: 'center', borderRadius: 4 }} elevation={0} variant="outlined">
-                            <CardActionArea component={Link} href="/diet" sx={{ height: '100%', p: 2 }}>
-                                <RestaurantMenuIcon color="primary" sx={{ fontSize: 60, mb: 2 }} />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 'bold' }}>
-                                        Diet & Nutrition
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        Healthy meal plans and nutritional advice to fuel your body right.
-                                    </Typography>
-                                </CardContent>
-                            </CardActionArea>
-                        </Card>
-                    </Grid>
-                    <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-                        <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', textAlign: 'center', borderRadius: 4 }} elevation={0} variant="outlined">
-                            <CardActionArea component={Link} href="/calculator" sx={{ height: '100%', p: 2 }}>
-                                <CalculateIcon color="primary" sx={{ fontSize: 60, mb: 2 }} />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 'bold' }}>
-                                        BMR Calculator
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        Calculate your basal metabolic rate to understand your daily calorie needs.
-                                    </Typography>
-                                </CardContent>
-                            </CardActionArea>
-                        </Card>
-                    </Grid>
-                    <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-                        <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', textAlign: 'center', borderRadius: 4 }} elevation={0} variant="outlined">
-                            <CardActionArea component={Link} href="/tips" sx={{ height: '100%', p: 2 }}>
-                                <LightbulbIcon color="primary" sx={{ fontSize: 60, mb: 2 }} />
-                                <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 'bold' }}>
-                                        Expert Tips
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        Latest insights and articles to keep you motivated and informed.
-                                    </Typography>
-                                </CardContent>
-                            </CardActionArea>
-                        </Card>
-                    </Grid>
+                    {featureCards.map((card) => (
+                        <Grid key={card.title} size={{ xs: 12, sm: 6, md: 3 }}>
+                            <Card
+                                sx={{
+                                    height: '100%',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    borderRadius: 4,
+                                    overflow: 'hidden',
+                                    position: 'relative',
+                                }}
+                                elevation={2}
+                            >
+                                <CardActionArea
+                                    component={Link}
+                                    href={card.href}
+                                    sx={{
+                                        height: '100%',
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        alignItems: 'stretch',
+                                    }}
+                                >
+                                    <Box
+                                        sx={{
+                                            position: 'relative',
+                                            height: 180,
+                                            width: '100%',
+                                            overflow: 'hidden',
+                                        }}
+                                    >
+                                        <Image
+                                            src={card.image}
+                                            alt={card.title}
+                                            fill
+                                            sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 25vw"
+                                            style={{ objectFit: 'cover' }}
+                                        />
+                                        <Box
+                                            sx={{
+                                                position: 'absolute',
+                                                bottom: 0,
+                                                left: 0,
+                                                right: 0,
+                                                height: '50%',
+                                                background: 'linear-gradient(to top, rgba(0,0,0,0.6), transparent)',
+                                            }}
+                                        />
+                                    </Box>
+                                    <CardContent sx={{ flexGrow: 1, p: 2.5 }}>
+                                        <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 'bold' }}>
+                                            {card.title}
+                                        </Typography>
+                                        <Typography variant="body2" color="text.secondary">
+                                            {card.description}
+                                        </Typography>
+                                    </CardContent>
+                                </CardActionArea>
+                            </Card>
+                        </Grid>
+                    ))}
                 </Grid>
             </Container>
 
-            {/* Android App Promotion Section */}
+            {/* Android App Promotion Section - H2: Properly disabled button */}
             <Box
                 sx={{
                     py: { xs: 8, md: 10 },
@@ -205,7 +248,7 @@ export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
                                 Get Fat2Fit on Your Android Device
                             </Typography>
                             <Typography variant="h6" sx={{ mb: 4, color: 'text.secondary', fontWeight: 'normal', lineHeight: 1.6 }}>
-                                We're hard at work building the ultimate fitness companion for your mobile. Take your workout plans and nutrition tracking wherever you go.
+                                We&apos;re hard at work building the ultimate fitness companion for your mobile. Take your workout plans and nutrition tracking wherever you go.
                             </Typography>
 
                             <Box sx={{ mb: 4 }}>
@@ -215,7 +258,7 @@ export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
                                 </Box>
                                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 1.5 }}>
                                     <CheckCircleOutlineIcon color="primary" sx={{ mr: 1.5 }} />
-                                    <Typography variant="body1">Real-time calorie & macro tracking</Typography>
+                                    <Typography variant="body1">Real-time calorie &amp; macro tracking</Typography>
                                 </Box>
                                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                     <CheckCircleOutlineIcon color="primary" sx={{ mr: 1.5 }} />
@@ -230,11 +273,14 @@ export default function LandingPage({ recentPosts }: { recentPosts: Post[] }) {
                                 sx={{
                                     borderRadius: 2,
                                     borderWidth: 2,
+                                    pointerEvents: 'none',
+                                    cursor: 'default',
+                                    opacity: 0.6,
                                     '&.Mui-disabled': {
                                         borderWidth: 2,
-                                        color: 'text.secondary',
-                                        borderColor: 'divider'
-                                    }
+                                        color: 'text.disabled',
+                                        borderColor: 'action.disabled',
+                                    },
                                 }}
                             >
                                 Google Play Store (Coming Soon)

@@ -46,6 +46,9 @@ export const lightTheme = createTheme({
                 root: {
                     textTransform: 'none',
                     borderRadius: 20,
+                    '&:hover': {
+                        color: '#ffffff',
+                    },
                 },
             },
         },
@@ -88,6 +91,9 @@ export const darkTheme = createTheme({
                 root: {
                     textTransform: 'none',
                     borderRadius: 20,
+                    '&:hover': {
+                        color: '#ffffff',
+                    },
                 },
             },
         },

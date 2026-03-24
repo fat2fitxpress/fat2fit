@@ -14,29 +14,23 @@ export const metadata: Metadata = {
     description: 'Science-backed meal plans and nutrition guides for sustainable weight loss and muscle building. Anti-inflammatory recipes, gut health optimization, keto, vegan, and high-protein diets for busy professionals.',
     keywords: [
         'meal plans',
-        'nutrition guide',
         'healthy recipes',
-        'diet plans',
         'keto diet',
         'vegan meals',
         'mediterranean diet',
         'muscle building nutrition',
         'weight loss meals',
         'high protein meal plan',
-        'fat loss meal plan',
         'meal prep for weight loss',
         'meal plan for busy professionals',
         'nutrigenomics diet',
         'anti-inflammatory meal plan',
         'gut health recipes',
-        'microbiome optimization',
         'glucose-friendly meals',
         'GLP-1 friendly diet ideas',
         'metabolic health nutrition',
         'personalized meal planning',
-        'best weight loss diet for busy professionals',
         'calorie deficit meal plan',
-        'protein meal plan for weight loss',
         'easy meal prep for fat loss',
         'sustainable diet for weight loss 2026',
     ],
@@ -115,7 +109,8 @@ export default function DietPage() {
             <Box
                 sx={{
                     position: 'relative',
-                    height: '300px',
+                    height: { xs: 'auto', md: '70vh' },
+                    minHeight: { xs: 400, md: '70vh' },
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -125,7 +120,7 @@ export default function DietPage() {
                 }}
             >
                 <Image
-                    src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2000&auto=format"
+                    src="/diet_hero_bg.png"
                     alt="Healthy Diet Background"
                     fill
                     priority

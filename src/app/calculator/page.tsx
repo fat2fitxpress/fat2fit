@@ -114,8 +114,8 @@ export default function CalculatorPage() {
             <Box
                 sx={{
                     position: 'relative',
-                    height: { xs: 'auto', md: 300 },
-                    minHeight: { xs: 350, md: 300 },
+                    height: { xs: 'auto', md: '70vh' },
+                    minHeight: { xs: 400, md: '70vh' },
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',

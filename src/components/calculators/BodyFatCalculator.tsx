@@ -36,24 +36,33 @@ function getCategory(bf: number, gender: string) {
 }
 
 export default function BodyFatCalculator() {
-    const [unit, setUnit] = React.useState<'cm' | 'in'>('in');
+    const [unit, setUnit] = React.useState<'cm' | 'in'>('cm');
     const [gender, setGender] = React.useState('male');
     const [waist, setWaist] = React.useState('');
     const [neck, setNeck] = React.useState('');
     const [hip, setHip] = React.useState('');
+    const [heightUnit, setHeightUnit] = React.useState<'cm' | 'ft'>('cm');
     const [heightVal, setHeightVal] = React.useState('');
+    const [heightFt, setHeightFt] = React.useState('');
+    const [heightIn, setHeightIn] = React.useState('');
     const [result, setResult] = React.useState<{ bf: number; category: string; color: string; leanMass: number; fatMass: number } | null>(null);
     const [weightForMass, setWeightForMass] = React.useState('');
-    const [weightUnit, setWeightUnit] = React.useState<'kg' | 'lbs'>('lbs');
+    const [weightUnit, setWeightUnit] = React.useState<'kg' | 'lbs'>('kg');
 
     const calculate = () => {
-        // Convert all to cm for the US Navy formula
         const toCm = unit === 'in' ? 2.54 : 1;
         const waistCm = parseFloat(waist) * toCm;
         const neckCm = parseFloat(neck) * toCm;
         const hipCm = parseFloat(hip) * toCm;
-        const heightCm = parseFloat(heightVal) * toCm;
 
+        let heightCm: number;
+        if (heightUnit === 'cm') {
+            heightCm = parseFloat(heightVal);
+        } else {
+            const ft = parseInt(heightFt) || 0;
+            const inch = parseFloat(heightIn) || 0;
+            heightCm = (ft * 12 + inch) * 2.54;
+        }
         if (!waistCm || !neckCm || !heightCm) {
             alert('Please fill in all required fields.');
             return;
@@ -102,7 +111,7 @@ export default function BodyFatCalculator() {
 
                         <Divider />
 
-                        {/* Measurement unit toggle */}
+                        {/* Measurement unit toggle for circumferences */}
                         <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                             <ToggleButtonGroup color="primary" value={unit} exclusive onChange={(_, v) => v && setUnit(v)} size="small">
                                 <ToggleButton value="in">Inches</ToggleButton>
@@ -110,16 +119,46 @@ export default function BodyFatCalculator() {
                             </ToggleButtonGroup>
                         </Box>
 
-                        {/* Measurements */}
+                        {/* Height with Ft/In or Cm toggle */}
+                        <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
+                            {heightUnit === 'cm' ? (
+                                <TextField
+                                    label="Height"
+                                    type="number"
+                                    fullWidth
+                                    value={heightVal}
+                                    onChange={(e) => setHeightVal(e.target.value)}
+                                    InputProps={{ endAdornment: <InputAdornment position="end">cm</InputAdornment> }}
+                                />
+                            ) : (
+                                <Box sx={{ display: 'flex', gap: 2, flexGrow: 1 }}>
+                                    <TextField
+                                        label="Feet"
+                                        fullWidth
+                                        value={heightFt}
+                                        onChange={(e) => {
+                                            const val = e.target.value.replace(/[^0-9]/g, '');
+                                            setHeightFt(val);
+                                        }}
+                                        inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
+                                    />
+                                    <TextField label="Inches" type="number" fullWidth value={heightIn} onChange={(e) => setHeightIn(e.target.value)} inputProps={{ step: 0.1, min: 0, max: 11.9 }} />
+                                </Box>
+                            )}
+                            <ToggleButtonGroup
+                                color="primary"
+                                value={heightUnit}
+                                exclusive
+                                onChange={(_, val) => val && setHeightUnit(val)}
+                                sx={{ minWidth: 140, height: 56 }}
+                            >
+                                <ToggleButton value="cm">Cm</ToggleButton>
+                                <ToggleButton value="ft">Ft/In</ToggleButton>
+                            </ToggleButtonGroup>
+                        </Box>
+
+                        {/* Neck, Waist, and Hip Measurements */}
                         <Box sx={{ display: 'flex', gap: 2 }}>
-                            <TextField
-                                label="Height"
-                                type="number"
-                                fullWidth
-                                value={heightVal}
-                                onChange={(e) => setHeightVal(e.target.value)}
-                                InputProps={{ endAdornment: <InputAdornment position="end">{unit}</InputAdornment> }}
-                            />
                             <TextField
                                 label="Neck"
                                 type="number"

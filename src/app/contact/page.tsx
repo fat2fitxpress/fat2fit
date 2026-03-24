@@ -17,6 +17,7 @@ import Alert from '@mui/material/Alert';
 import CircularProgress from '@mui/material/CircularProgress';
 import emailjs from '@emailjs/browser';
 import Image from 'next/image';
+import { sanitizeFormInput } from '@/lib/sanitize';
 
 export default function ContactPage() {
     const [formData, setFormData] = React.useState({
@@ -132,18 +133,11 @@ export default function ContactPage() {
             return;
         }
 
-        // Basic input sanitization (remove potential XSS)
-        const sanitize = (input: string) => {
-            return input.replace(/<script[^>]*>.*?<\/script>/gi, '')
-                .replace(/<[^>]+>/g, '')
-                .trim();
-        };
-
         const sanitizedData = {
-            name: sanitize(formData.name),
-            email: sanitize(formData.email),
-            subject: sanitize(formData.subject),
-            message: sanitize(formData.message),
+            name: sanitizeFormInput(formData.name, { maxLength: 100 }),
+            email: sanitizeFormInput(formData.email, { maxLength: 100 }),
+            subject: sanitizeFormInput(formData.subject, { maxLength: 200 }),
+            message: sanitizeFormInput(formData.message, { maxLength: 2000 }),
         };
 
         try {
