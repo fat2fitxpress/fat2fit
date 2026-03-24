@@ -9,6 +9,7 @@ import Logo from './Logo';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
+import VisitorCounter from './VisitorCounter';
 
 const navLinks = [
     { label: 'Home', href: '/' },
@@ -114,6 +115,7 @@ export default function Footer() {
                 <Divider sx={{ my: 4 }} />
 
                 <Copyright />
+                <VisitorCounter />
             </Container>
         </Box>
     );
