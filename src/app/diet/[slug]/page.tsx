@@ -33,6 +33,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             'weight loss recipes',
             'muscle building diet',
             'meal prep ideas',
+            // 2026 trending nutrition
+            'fibermaxxing recipes',
+            'microbiome personalization',
+            'metabolic flexibility diet',
+            'GLP-1 friendly meals',
+            'gut health meal plan',
+            'longevity diet plan',
+            'anti-inflammatory recipes',
+            'high protein meal prep',
             diet.title.toLowerCase(),
             diet.category?.toLowerCase() || ''
         ],

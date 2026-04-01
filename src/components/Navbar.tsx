@@ -20,6 +20,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Logo from './Logo';
+import SearchBar from './SearchBar';
 
 const pages = [
     { name: 'Home', path: '/' },
@@ -164,8 +165,9 @@ export default function Navbar() {
                             })}
                         </Box>
 
-                        {/* Theme Toggle */}
-                        <Box sx={{ flexGrow: 0 }}>
+                        {/* Theme Toggle & Search */}
+                        <Box sx={{ flexGrow: 0, display: 'flex', alignItems: 'center' }}>
+                            <SearchBar />
                             <IconButton
                                 onClick={colorMode.toggleColorMode}
                                 color="inherit"

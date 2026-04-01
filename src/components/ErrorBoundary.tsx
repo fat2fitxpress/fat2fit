@@ -69,7 +69,7 @@ class ErrorBoundary extends Component<Props, State> {
                         </Typography>
 
                         <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
-                            We encountered an unexpected error. Don't worry, your data is safe.
+                            We encountered an unexpected error. Don&apos;t worry, your data is safe.
                         </Typography>
 
                         {process.env.NODE_ENV === 'development' && this.state.error && (
