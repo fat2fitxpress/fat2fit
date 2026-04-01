@@ -33,7 +33,7 @@ interface DetailPageLayoutProps {
     /** Optional URL for the CTA button (defaults to backHref) */
     ctaHref?: string;
     /** Schema markup to inject */
-    schemas: Record<string, any>[];
+    schemas: Record<string, unknown>[];
     /** Author of the content */
     author?: string;
     /** Published date */

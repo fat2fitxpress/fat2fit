@@ -36,7 +36,7 @@ interface WorkoutClientProps {
     plans: WorkoutPlan[];
 }
 
-const categories: Array<WorkoutCategory | 'All'> = ['Strength', 'HIIT', 'Cardio', 'Core', 'All'];
+const categories: Array<WorkoutCategory | 'All'> = ['All', 'Strength', 'HIIT', 'Cardio', 'Core'];
 
 export default function WorkoutClient({ plans }: WorkoutClientProps) {
     const theme = useTheme();
